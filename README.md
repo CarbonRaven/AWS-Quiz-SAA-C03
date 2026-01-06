@@ -81,7 +81,7 @@ AWS-Quiz-SAA-C03/
 │   │   ├── index.html          # Quiz interface
 │   │   └── dashboard.html      # Progress dashboard
 │   └── data/                   # SQLite database (created at runtime)
-├── quiz-questions/             # Question bank (1018 JSON files)
+├── questions/                  # Question bank (1018 JSON files)
 ├── docker-compose.yml          # Docker orchestration
 ├── .dockerignore              # Docker build exclusions
 └── README.md
@@ -111,7 +111,7 @@ Questions are stored as JSON files with the following structure:
 
 ## Adding Custom Questions
 
-1. Create a JSON file in `quiz-questions/` following the format above
+1. Create a JSON file in `questions/` following the format above
 2. Rebuild the Docker container or re-run the import:
 
 ```bash

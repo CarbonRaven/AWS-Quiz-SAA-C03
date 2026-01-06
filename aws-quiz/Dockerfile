@@ -16,10 +16,10 @@ COPY aws-quiz/static/ static/
 RUN mkdir -p data
 
 # Copy question files
-COPY quiz-questions/ /questions/quiz-questions/
+COPY questions/ /data/questions/
 
 # Update import script path for container
-RUN sed -i 's|Path(__file__).parent.parent / "quiz-questions"|Path("/questions/quiz-questions")|g' import_questions.py
+RUN sed -i 's|Path(__file__).parent.parent / "questions"|Path("/data/questions")|g' import_questions.py
 
 # Import questions at build time
 RUN python import_questions.py

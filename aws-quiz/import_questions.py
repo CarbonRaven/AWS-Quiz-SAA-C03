@@ -7,7 +7,7 @@ from pathlib import Path
 from models import get_db, init_db
 
 # Path to JSON questions (relative to this script)
-JSON_DIR = Path(__file__).parent.parent / "quiz-questions"
+JSON_DIR = Path(__file__).parent.parent / "questions"
 
 # AWS services to detect in questions for auto-tagging
 AWS_SERVICES = [
