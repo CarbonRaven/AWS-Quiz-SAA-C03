@@ -17,11 +17,11 @@ COPY aws-quiz/static/ static/
 RUN mkdir -p data
 
 # Copy question source files
-COPY json_questions/ /questions/json_questions/
+COPY quiz-questions/ /questions/quiz-questions/
 COPY page*.txt /questions/
 
 # Update import script paths for container
-RUN sed -i 's|Path(__file__).parent.parent / "json_questions"|Path("/questions/json_questions")|g' import_questions.py && \
+RUN sed -i 's|Path(__file__).parent.parent / "quiz-questions"|Path("/questions/quiz-questions")|g' import_questions.py && \
     sed -i 's|QUESTIONS_DIR = Path(__file__).parent.parent|QUESTIONS_DIR = Path("/questions")|g' parse_text_questions.py && \
     sed -i 's|QUESTIONS_DIR = Path(__file__).parent.parent|QUESTIONS_DIR = Path("/questions")|g' create_missing_questions.py
 
