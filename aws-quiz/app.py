@@ -5,7 +5,8 @@ import json
 from flask import Flask, render_template, jsonify, request, session
 from models import (
     init_db, get_questions_for_session, get_question,
-    record_answer, get_dashboard_stats, get_filter_counts, get_all_tags
+    record_answer, get_dashboard_stats, get_filter_counts, get_all_tags,
+    get_question_explanation
 )
 
 app = Flask(__name__)
@@ -128,9 +129,13 @@ def submit_answer():
     session['current_index'] = current_index + 1
     session.modified = True
 
+    # Get explanation for the question
+    explanation = get_question_explanation(question['id'])
+
     return jsonify({
         'is_correct': is_correct,
         'correct_answer': correct_answer,
+        'explanation': explanation,
         'score': session['score'],
         'has_next': session['current_index'] < len(questions)
     })

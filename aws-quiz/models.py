@@ -25,7 +25,8 @@ def init_db():
             options TEXT NOT NULL,  -- JSON
             correct_answer TEXT NOT NULL,
             community_vote TEXT,
-            tags TEXT DEFAULT '[]'  -- JSON array of AWS service tags
+            tags TEXT DEFAULT '[]',  -- JSON array of AWS service tags
+            explanation TEXT  -- Answer explanation
         );
 
         CREATE TABLE IF NOT EXISTS answer_history (
@@ -55,6 +56,13 @@ def init_db():
         CREATE INDEX IF NOT EXISTS idx_question_stats_review
             ON question_stats(next_review);
     """)
+
+    # Migration: Add explanation column to existing tables if it doesn't exist
+    cursor = conn.execute("PRAGMA table_info(questions)")
+    columns = [row[1] for row in cursor.fetchall()]
+    if 'explanation' not in columns:
+        conn.execute("ALTER TABLE questions ADD COLUMN explanation TEXT")
+
     conn.commit()
     conn.close()
 
@@ -322,3 +330,60 @@ def get_all_tags():
     # Sort by count descending
     sorted_tags = sorted(tag_counts.items(), key=lambda x: -x[1])
     return [{'tag': tag, 'count': count} for tag, count in sorted_tags]
+
+
+def get_question_explanation(question_id):
+    """Get or generate explanation for a question."""
+    conn = get_db()
+    row = conn.execute(
+        """SELECT q.*, q.explanation as stored_explanation
+           FROM questions q WHERE q.id = ?""",
+        (question_id,)
+    ).fetchone()
+    conn.close()
+
+    if not row:
+        return None
+
+    # If we have a stored explanation, use it
+    if row['stored_explanation']:
+        return row['stored_explanation']
+
+    # Generate a basic explanation from the question data
+    options = json.loads(row['options'])
+    correct = row['correct_answer']
+    community_vote = json.loads(row['community_vote']) if row['community_vote'] else {}
+
+    # Build explanation
+    explanation_parts = []
+
+    # Correct answer text
+    if len(correct) == 1 and correct in options:
+        explanation_parts.append(f"**Correct Answer ({correct}):** {options[correct]}")
+    elif len(correct) > 1:
+        # Multiple correct answers
+        answers = [f"{c}: {options.get(c, '')}" for c in correct if c in options]
+        explanation_parts.append(f"**Correct Answers:** " + " | ".join(answers))
+
+    # Community vote info
+    if community_vote:
+        vote_str = ", ".join([f"{k}: {v}" for k, v in community_vote.items()])
+        explanation_parts.append(f"\n**Community Vote:** {vote_str}")
+
+    # Why other options are wrong (brief)
+    wrong_options = [k for k in options.keys() if k not in correct]
+    if wrong_options and len(correct) == 1:
+        explanation_parts.append(f"\n**Why not the others?** Options {', '.join(wrong_options)} don't fully meet the requirements or have operational/cost drawbacks compared to the correct answer.")
+
+    return "\n".join(explanation_parts) if explanation_parts else "No explanation available."
+
+
+def save_explanation(question_id, explanation):
+    """Save a custom explanation for a question."""
+    conn = get_db()
+    conn.execute(
+        "UPDATE questions SET explanation = ? WHERE id = ?",
+        (explanation, question_id)
+    )
+    conn.commit()
+    conn.close()

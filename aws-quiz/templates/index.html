@@ -186,6 +186,17 @@
                         The correct answer is <span class="font-semibold" x-text="correctAnswer"></span>
                     </div>
                 </div>
+
+                <!-- Explanation -->
+                <div x-show="answered && explanation" class="mt-4 p-4 bg-gray-700/50 rounded-lg border border-gray-600">
+                    <div class="flex items-center gap-2 mb-2">
+                        <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span class="font-semibold text-blue-400">Explanation</span>
+                    </div>
+                    <div class="text-sm text-gray-300 whitespace-pre-line" x-html="formatExplanation(explanation)"></div>
+                </div>
             </div>
         </div>
 
@@ -258,6 +269,7 @@
                 answered: false,
                 isCorrect: false,
                 correctAnswer: null,
+                explanation: null,
                 hasNext: false,
                 score: 0,
                 totalQuestions: 0,
@@ -343,6 +355,7 @@
                     this.answered = false;
                     this.isCorrect = false;
                     this.correctAnswer = null;
+                    this.explanation = null;
                 },
 
                 selectAnswer(key) {
@@ -364,6 +377,7 @@
                         this.answered = true;
                         this.isCorrect = data.is_correct;
                         this.correctAnswer = data.correct_answer;
+                        this.explanation = data.explanation;
                         this.hasNext = data.has_next;
                         this.score = data.score;
                     } finally {
@@ -388,6 +402,14 @@
                     this.sessionAnswers = [];
                     // Refresh filter counts
                     this.updateCounts();
+                },
+
+                formatExplanation(text) {
+                    if (!text) return '';
+                    // Convert markdown-like formatting to HTML
+                    return text
+                        .replace(/\*\*(.+?)\*\*/g, '<strong class="text-orange-400">$1</strong>')
+                        .replace(/\n/g, '<br>');
                 }
             }
         }
