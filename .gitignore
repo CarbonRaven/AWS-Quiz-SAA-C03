@@ -36,8 +36,9 @@ Thumbs.db
 .coverage
 htmlcov/
 
-# Screenshots (reference images, not needed for app)
-*.png
+# Screenshots (keep app screenshots, ignore others)
+!screenshots/*.png
+/*.png
 
 # Temporary files
 /tmp/

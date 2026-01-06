@@ -46,8 +46,6 @@ cd aws-quiz
 pip install -r requirements.txt
 
 # Import questions and start
-python ../parse_text_questions.py
-python ../create_missing_questions.py
 python import_questions.py
 python app.py
 ```
@@ -59,11 +57,17 @@ Access the quiz at `http://localhost:5050`
 ### Quiz Setup
 Select question count, filter mode, and AWS service tags to customize your study session.
 
+![Quiz Setup](screenshots/01-setup.png)
+
 ### Quiz Interface
 Answer questions with immediate feedback showing correct answers.
 
+![Quiz Interface](screenshots/03-quiz.png)
+
 ### Progress Dashboard
 Track your overall progress, accuracy rates, and review schedule.
+
+![Progress Dashboard](screenshots/02-dashboard.png)
 
 ## Project Structure
 
@@ -73,8 +77,6 @@ AWS-Quiz-SAA-C03/
 │   ├── app.py                   # Flask web server
 │   ├── models.py                # Database models & SM-2 algorithm
 │   ├── import_questions.py      # JSON to SQLite importer
-│   ├── parse_text_questions.py  # Text file parser
-│   ├── create_missing_questions.py  # Missing answer generator
 │   ├── requirements.txt         # Python dependencies
 │   ├── Dockerfile              # Container configuration
 │   ├── templates/              # HTML templates
@@ -82,6 +84,7 @@ AWS-Quiz-SAA-C03/
 │   │   └── dashboard.html      # Progress dashboard
 │   └── data/                   # SQLite database (created at runtime)
 ├── questions/                  # Question bank (1018 JSON files)
+├── screenshots/                # Application screenshots
 ├── docker-compose.yml          # Docker orchestration
 ├── .dockerignore              # Docker build exclusions
 └── README.md
