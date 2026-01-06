@@ -8,25 +8,21 @@ RUN pip install --no-cache-dir -r requirements.txt gunicorn
 
 # Copy application code
 COPY aws-quiz/app.py aws-quiz/models.py ./
-COPY aws-quiz/import_questions.py aws-quiz/parse_text_questions.py ./
-COPY aws-quiz/create_missing_questions.py ./
+COPY aws-quiz/import_questions.py ./
 COPY aws-quiz/templates/ templates/
 COPY aws-quiz/static/ static/
 
 # Create data directory for SQLite database
 RUN mkdir -p data
 
-# Copy question source files
+# Copy question files
 COPY quiz-questions/ /questions/quiz-questions/
-COPY page*.txt /questions/
 
-# Update import script paths for container
-RUN sed -i 's|Path(__file__).parent.parent / "quiz-questions"|Path("/questions/quiz-questions")|g' import_questions.py && \
-    sed -i 's|QUESTIONS_DIR = Path(__file__).parent.parent|QUESTIONS_DIR = Path("/questions")|g' parse_text_questions.py && \
-    sed -i 's|QUESTIONS_DIR = Path(__file__).parent.parent|QUESTIONS_DIR = Path("/questions")|g' create_missing_questions.py
+# Update import script path for container
+RUN sed -i 's|Path(__file__).parent.parent / "quiz-questions"|Path("/questions/quiz-questions")|g' import_questions.py
 
 # Import questions at build time
-RUN python parse_text_questions.py && python create_missing_questions.py && python import_questions.py
+RUN python import_questions.py
 
 # Set environment variables
 ENV FLASK_APP=app.py

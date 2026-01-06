@@ -82,7 +82,6 @@ AWS-Quiz-SAA-C03/
 │   │   └── dashboard.html      # Progress dashboard
 │   └── data/                   # SQLite database (created at runtime)
 ├── quiz-questions/             # Question bank (1018 JSON files)
-├── page*.txt                   # Source question files
 ├── docker-compose.yml          # Docker orchestration
 ├── .dockerignore              # Docker build exclusions
 └── README.md
