@@ -1,0 +1,13 @@
+{
+  "id": 400,
+  "topic": "Topic 1",
+  "question": "A hospital recently deployed a RESTful API with Amazon API Gateway and AWS Lambda. The hospital uses API Gateway and Lambda to upload reports that are in PDF format and an average of 6 MB each.\n\nThe hospital needs to reduce the amount of time it takes to upload the reports. The hospital has already measured the network bandwidth and found that the upload speed is not a concern. The hospital wants the solution to use minimal development effort.\n\nWhat should a solutions architect recommend?",
+  "options": {
+    "A": "Modify the Lambda function to accept base64-encoded payloads. Call Lambda directly with the base64-encoded payloads.",
+    "B": "Configure the API Gateway API to use the multipart/form-data content type. Call API Gateway with the file as multipart/form-data.",
+    "C": "Modify the Lambda function to use the S3 Transfer Acceleration endpoint. Upload the files directly to S3 by using the Transfer Acceleration endpoint.",
+    "D": "Configure the API Gateway API to use S3 integration. Use a presigned URL to upload the files to Amazon S3."
+  },
+  "correct_answer": "D",
+  "explanation": "S3 presigned URLs allow direct upload to S3, bypassing API Gateway's 10 MB payload limit and Lambda's 6 MB synchronous payload limit. This reduces upload time by eliminating the API Gateway/Lambda intermediary. S3 Transfer Acceleration helps with geographic distance, not the upload architecture. Base64 encoding increases payload size. Multipart uploads through API Gateway still have size limits."
+}

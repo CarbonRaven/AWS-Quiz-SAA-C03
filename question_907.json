@@ -1,0 +1,13 @@
+{
+  "id": 907,
+  "topic": "Topic 1",
+  "question": "A company wants to use an AWS CloudFormation stack for its application in a test environment. The company stores the CloudFormation template in an Amazon S3 bucket that blocks public access. The company wants to grant CloudFormation access to the template in the S3 bucket based on specific user requests to create the test environment. The solution must follow security best practices.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Create a gateway VPC endpoint for Amazon S3. Configure the CloudFormation stack to use the S3 object URL.",
+    "B": "Create an Amazon API Gateway REST API that has the S3 bucket as the target. Configure the CloudFormation stack to use the API Gateway URL.",
+    "C": "Create a presigned URL for the template object. Configure the CloudFormation stack to use the presigned URL.",
+    "D": "Allow public access to the template object in the S3 bucket. Block the public access after the test environment is created."
+  },
+  "correct_answer": "C",
+  "explanation": "Presigned URLs provide temporary, secure access to S3 objects without making them public. This follows security best practices by granting time-limited access based on specific user requests."
+}

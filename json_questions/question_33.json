@@ -1,0 +1,15 @@
+{
+  "question_number": 33,
+  "topic": 1,
+  "question_text": "A company runs an online marketplace web application on AWS. The application serves hundreds of thousands of users during peak hours. The company needs a scalable, near-real-time solution to share the details of millions of financial transactions with several other internal applications. Transactions also need to be processed to remove sensitive data before being stored in a document database for low-latency retrieval.\nWhat should a solutions architect recommend to meet these requirements?",
+  "options": {
+    "A": "Store the transactions data into Amazon DynamoD",
+    "B": "Other applications can consume transaction files stored in Amazon S3.",
+    "C": "Stream the transactions data into Amazon Kinesis Data Streams. Use AWS Lambda integration to remove sensitive data from every transaction and then store the transactions data in Amazon DynamoD",
+    "D": "Store the batched transactions data in Amazon S3 as files. Use AWS Lambda to process every file and remove sensitive data before updating the files in Amazon S3. The Lambda function then stores the data in Amazon DynamoD"
+  },
+  "correct_answer": "C",
+  "community_vote": {
+    "C": "87%"
+  }
+}

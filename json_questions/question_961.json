@@ -1,0 +1,16 @@
+{
+  "question_number": 961,
+  "topic": 1,
+  "question_text": "A company uses AWS to host its public ecommerce website. The website uses an AWS Global Accelerator accelerator for traffic from the internet. The Global Accelerator accelerator forwards the traffic to an Application Load Balancer (ALB) that is the entry point for an Auto Scaling group. The company recently identified a DDoS attack on the website. The company needs a solution to mitigate future attacks. Which solution will meet these requirements with the LEAST implementation effort?",
+  "options": {
+    "A": "Configure an AWS WAF web ACL for the Global Accelerator accelerator to block traffic by using rate-based rules",
+    "B": "Configure an AWS Lambda function to read the ALB metrics to block attacks by updating a VPC network ACL",
+    "C": "Configure an AWS WAF web ACL on the ALB to block traffic by using rate-based rules",
+    "D": "Configure an Amazon CloudFront distribution in front of the Global Accelerator accelerator"
+  },
+  "correct_answer": "C",
+  "community_vote": {
+    "C": "83%",
+    "A": "17%"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": 942,
+  "topic": "Topic 1",
+  "question": "A company regularly uploads confidential data to Amazon S3 buckets for analysis.\n\nThe company's security policies mandate that the objects must be encrypted at rest. The company must automatically rotate the encryption key every year. The company must be able to track key rotation by using AWS CloudTrail. The company also must minimize costs for the encryption key.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Use server-side encryption with customer-provided keys (SSE-C)",
+    "B": "Use server-side encryption with Amazon S3 managed keys (SSE-S3)",
+    "C": "Use server-side encryption with AWS KMS keys (SSE-KMS)",
+    "D": "Use server-side encryption with customer managed AWS KMS keys"
+  },
+  "correct_answer": "C",
+  "explanation": "SSE-KMS with AWS managed keys provides automatic annual key rotation, CloudTrail logging for key usage, and lower cost than customer managed keys. SSE-S3 doesn't provide CloudTrail visibility."
+}

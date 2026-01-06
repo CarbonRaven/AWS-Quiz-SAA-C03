@@ -1,0 +1,15 @@
+{
+  "question_number": 692,
+  "topic": 1,
+  "question_text": "A company is deploying an application in three AWS Regions using an Application Load Balancer. Amazon Route 53 will be used to distribute traffic between these Regions. Which Route 53 configuration should a solutions architect use to provide the MOST high-performing experience?",
+  "options": {
+    "A": "Create an A record with a latency policy.",
+    "B": "Create an A record with a geolocation policy.",
+    "C": "Create a CNAME record with a failover policy.",
+    "D": "Create a CNAME record with a geoproximity policy."
+  },
+  "correct_answer": "A",
+  "community_vote": {
+    "A": "88%"
+  }
+}

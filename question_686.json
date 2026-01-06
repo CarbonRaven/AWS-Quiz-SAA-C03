@@ -1,0 +1,13 @@
+{
+  "id": 686,
+  "topic": "Topic 1",
+  "question": "A company is creating an application. The company stores data from tests of the application in multiple on-premises locations.\n\nThe company needs to connect the on-premises locations to VPCs in an AWS Region in the AWS Cloud. The number of accounts and VPCs will increase during the next year. The network architecture must simplify the administration of new connections and must provide the ability to scale.\n\nWhich solution will meet these requirements with the LEAST administrative overhead?",
+  "options": {
+    "A": "Create a peering connection between the VPCs. Create a VPN connection between the VPCs and the on-premises locations.",
+    "B": "Launch an Amazon EC2 instance. On the instance, include VPN software that uses a VPN connection to connect all VPCs and on-premises locations.",
+    "C": "Create a transit gateway. Create VPC attachments for the VPC connections. Create VPN attachments for the on-premises connections.",
+    "D": "Create an AWS Direct Connect connection between the on-premises locations and a central VPC. Connect the central VPC to other VPCs by using peering connections."
+  },
+  "correct_answer": "C",
+  "explanation": "AWS Transit Gateway acts as a central hub for connecting VPCs and on-premises networks. It scales easily as new VPCs and accounts are added, requiring only new attachments rather than complex peering meshes. VPN attachments provide on-premises connectivity."
+}

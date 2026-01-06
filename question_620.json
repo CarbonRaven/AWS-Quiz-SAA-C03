@@ -1,0 +1,13 @@
+{
+  "id": 620,
+  "topic": "Topic 1",
+  "question": "A company is planning to deploy a business-critical application in the AWS Cloud. The application requires durable storage with consistent, low-latency performance.\n\nWhich type of storage should a solutions architect recommend to meet these requirements?",
+  "options": {
+    "A": "Instance store volume",
+    "B": "Amazon ElastiCache for Memcached cluster",
+    "C": "Provisioned IOPS SSD Amazon Elastic Block Store (Amazon EBS) volume",
+    "D": "Throughput Optimized HDD Amazon Elastic Block Store (Amazon EBS) volume"
+  },
+  "correct_answer": "C",
+  "explanation": "Provisioned IOPS SSD (io1/io2) EBS volumes provide durable storage with consistent, low-latency performance. Instance stores are not durable, ElastiCache is for caching not storage, and Throughput Optimized HDD is optimized for throughput not latency."
+}

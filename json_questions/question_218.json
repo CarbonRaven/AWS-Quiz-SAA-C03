@@ -1,0 +1,16 @@
+{
+  "question_number": 218,
+  "topic": 1,
+  "question_text": "A company has a web server running on an Amazon EC2 instance in a public subnet with an Elastic IP address. The default security group is assigned to the EC2 instance. The default network ACL has been modified to block all traffic. A solutions architect needs to make the web server accessible from everywhere on port 443.\n\nWhich combination of steps will accomplish this task? (Choose two.)",
+  "options": {
+    "A": "Create a security group with a rule to allow TCP port 443 from source 0.0.0.0/0.",
+    "B": "Create a security group with a rule to allow TCP port 443 to destination 0.0.0.0/0.",
+    "C": "Update the network ACL to allow TCP port 443 from source 0.0.0.0/0.",
+    "D": "Update the network ACL to allow inbound/outbound TCP port 443 from source 0.0.0.0/0 and to destination 0.0.0.0/0.",
+    "E": "Update the network ACL to allow inbound TCP port 443 from source 0.0.0.0/0 and outbound TCP port 32768-65535 to destination 0.0.0.0/0."
+  },
+  "correct_answer": "AE",
+  "community_vote": {
+    "AE": "74%"
+  }
+}

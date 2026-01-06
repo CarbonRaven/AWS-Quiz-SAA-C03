@@ -1,0 +1,15 @@
+{
+  "question_number": 629,
+  "topic": 1,
+  "question_text": "A company runs a production database on Amazon RDS for MySQL. The company wants to upgrade the database version for security compliance reasons. Because the database contains critical data, the company wants a quick solution to upgrade and test functionality without losing any data. Which solution will meet these requirements with the LEAST operational overhead?",
+  "options": {
+    "A": "Create an RDS manual snapshot. Upgrade to the new version of Amazon RDS for MySQL.",
+    "B": "Use native backup and restore. Restore the data to the upgraded new version of Amazon RDS for MySQL.",
+    "C": "Use AWS Database Migration Service (AWS DMS) to replicate the data to the upgraded new version of Amazon RDS for MySQL.",
+    "D": "Use Amazon RDS Blue/Green Deployments to deploy and test production changes."
+  },
+  "correct_answer": "D",
+  "community_vote": {
+    "D": "100%"
+  }
+}

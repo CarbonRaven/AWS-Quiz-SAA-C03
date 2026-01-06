@@ -1,0 +1,13 @@
+{
+  "id": 782,
+  "topic": "Topic 1",
+  "question": "A company wants to deploy an internal web application on AWS. The web application must be accessible only from the company's office. The company needs to download security patches for the web application from the internet.\n\nThe company has created a VPC and has configured an AWS Site-to-Site VPN connection to the company's office. A solutions architect must design a secure architecture for the web application.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Deploy the web application on Amazon EC2 instances in public subnets behind a public Application Load Balancer (ALB). Attach an internet gateway to the VPC. Set the inbound source of the ALB's security group to 0.0.0.0/0.",
+    "B": "Deploy the web application on Amazon EC2 instances in private subnets behind an internal Application Load Balancer (ALB). Deploy NAT gateways in public subnets. Attach an internet gateway to the VPC. Set the inbound source of the ALB's security group to the company's office network CIDR block.",
+    "C": "Deploy the web application on Amazon EC2 instances in public subnets behind an internal Application Load Balancer (ALB). Deploy NAT gateways in private subnets. Attach an internet gateway to the VPC. Set the outbound destination of the ALB's security group to the company's office network CIDR block.",
+    "D": "Deploy the web application on Amazon EC2 instances in private subnets behind a public Application Load Balancer (ALB). Attach an internet gateway to the VPC. Set the outbound destination of the ALB's security group to 0.0.0.0/0."
+  },
+  "correct_answer": "B",
+  "explanation": "Private subnets with an internal ALB ensure the application is only accessible via VPN from the office. NAT gateways in public subnets allow instances to download security patches from the internet. The ALB security group restricts inbound access to the office CIDR block for additional security."
+}

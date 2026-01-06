@@ -1,0 +1,15 @@
+{
+  "question_number": 521,
+  "topic": 1,
+  "question_text": "A retail company has several businesses. The IT team for each business manages its own AWS account. Each team account is part of an organization in AWS Organizations. Each team monitors its product inventory levels in an Amazon DynamoDB table in the team's own AWS account.\n\nThe company is deploying a central inventory reporting application into a shared AWS account. The application must be able to read items from all the teams' DynamoDB tables.\n\nWhich authentication option will meet these requirements MOST securely?",
+  "options": {
+    "A": "Integrate DynamoDB with AWS Secrets Manager in the inventory application account. Configure the application to use the correct secret from Secrets Manager to authenticate and read the DynamoDB table. Schedule secret rotation for every 30 days.",
+    "B": "Configure the application to use the correct certificate to authenticate and read the DynamoDB table.",
+    "C": "In every business account, create an IAM role named BU_ROLE with a policy that gives the role access to the DynamoDB table and a trust policy to trust a specific role in the inventory application account. In the inventory account, create a role named APP_ROLE that allows access to the STS AssumeRole API operation. Configure the application to use APP_ROLE and assume the crossaccount role BU_ROLE to read the DynamoDB table.",
+    "D": "Integrate DynamoDB with AWS Certificate Manager (ACM). Generate identity certificates to authenticate DynamoD"
+  },
+  "correct_answer": "C",
+  "community_vote": {
+    "C": "100%"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": 967,
+  "topic": "Topic 1",
+  "question": "A solutions architect is designing an application that helps users fill out and submit registration forms. The solutions architect plans to use a two-tier architecture that includes a web application server tier and a worker tier.\n\nThe application needs to process submitted forms quickly. The application needs to process each form exactly once. The solution must ensure that no data is lost.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Use an Amazon Simple Queue Service (Amazon SQS) FIFO queue between the web application server tier and the worker tier to store and forward form data.",
+    "B": "Use an Amazon API Gateway HTTP API between the web application server tier and the worker tier to store and forward form data.",
+    "C": "Use an Amazon Simple Queue Service (Amazon SQS) standard queue between the web application server tier and the worker tier to store and forward form data.",
+    "D": "Use an AWS Step Functions workflow. Create a synchronous workflow between the web application server tier and the worker tier that stores and forwards form data."
+  },
+  "correct_answer": "A",
+  "explanation": "SQS FIFO queues provide exactly-once processing, which is required to process each form exactly once. FIFO queues also maintain message order and provide deduplication, ensuring no data is lost and each form is processed only once."
+}

@@ -1,0 +1,13 @@
+{
+  "id": 625,
+  "topic": "Topic 1",
+  "question": "A company is hosting a website behind multiple Application Load Balancers. The company has different distribution rights for its content around the world. A solutions architect needs to ensure that users are served the correct content without violating distribution rights.\n\nWhich configuration should the solutions architect choose to meet these requirements?",
+  "options": {
+    "A": "Configure Amazon CloudFront with AWS WAF.",
+    "B": "Configure Application Load Balancers with AWS WAF.",
+    "C": "Configure Amazon Route 53 with a geolocation policy.",
+    "D": "Configure Amazon Route 53 with a geoproximity routing policy."
+  },
+  "correct_answer": "C",
+  "explanation": "Route 53 geolocation routing policy routes traffic based on the geographic location of users, allowing different content to be served based on the user's location. This is ideal for enforcing content distribution rights by region."
+}

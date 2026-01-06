@@ -1,0 +1,15 @@
+{
+  "question_number": 762,
+  "topic": 1,
+  "question_text": "A company stores multiple Amazon Machine Images (AMIs) in an AWS account to launch its Amazon EC2 instances. The AMIs contain critical data and configurations that are necessary for the company’s operations. The company wants to implement a solution that will recover accidentally deleted AMIs quickly and efficiently. Which solution will meet these requirements with the LEAST operational overhead?",
+  "options": {
+    "A": "Create Amazon Elastic Block Store (Amazon EBS) snapshots of the AMIs. Store the snapshots in a separate AWS account.",
+    "B": "Copy all AMIs to another AWS account periodically.",
+    "C": "Create a retention rule in Recycle Bin.",
+    "D": "Upload the AMIs to an Amazon S3 bucket that has Cross-Region Replication."
+  },
+  "correct_answer": "C",
+  "community_vote": {
+    "C": "100%"
+  }
+}

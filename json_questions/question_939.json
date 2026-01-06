@@ -1,0 +1,16 @@
+{
+  "question_number": 939,
+  "topic": 1,
+  "question_text": "A company uses an Amazon RDS for MySQL instance. To prepare for end-of-year processing, the company added a read replica to accommodate extra read-only queries from the company's reporting tool. The read replica CPU usage was 60% and the primary instance CPU usage was 60%. After end-of-year activities are complete, the read replica has a constant 25% CPU usage. The primary instance still has a constant 60% CPU usage. The company wants to rightsize the database and still provide enough performance for future growth. Which solution will meet these requirements?",
+  "options": {
+    "A": "Delete the read replica Do not make changes to the primary instance",
+    "B": "Resize the read replica to a smaller instance size Do not make changes to the primary instance",
+    "C": "Resize the read replica to a larger instance size Resize the primary instance to a smaller instance size",
+    "D": "Delete the read replica Resize the primary instance to a larger instance"
+  },
+  "correct_answer": "B",
+  "community_vote": {
+    "B": "53%",
+    "D": "47%"
+  }
+}

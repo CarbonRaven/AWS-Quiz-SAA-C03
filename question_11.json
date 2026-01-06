@@ -1,0 +1,13 @@
+{
+  "id": 11,
+  "topic": "Topic 1",
+  "question": "A company has an application that runs on Amazon EC2 instances and uses an Amazon Aurora database. The EC2 instances connect to the database by using user names and passwords that are stored locally in a file. The company wants to minimize the operational overhead of credential management.\nWhat should a solutions architect do to accomplish this goal?",
+  "options": {
+    "A": "Use AWS Secrets Manager. Turn on automatic rotation.",
+    "B": "Use AWS Systems Manager Parameter Store. Turn on automatic rotation.",
+    "C": "Create an Amazon S3 bucket to store objects that are encrypted with an AWS Key Management Service (AWS KMS) encryption key. Migrate the credential file to the S3 bucket. Point the application to the S3 bucket.",
+    "D": "Create an encrypted Amazon Elastic Block Store (Amazon EBS) volume for each EC2 instance. Attach the new EBS volume to each EC2 instance. Migrate the credential file to the new EBS volume. Point the application to the new EBS volume."
+  },
+  "correct_answer": "A",
+  "explanation": "AWS Secrets Manager is designed specifically for credential management and provides built-in automatic rotation for RDS/Aurora databases, minimizing operational overhead."
+}

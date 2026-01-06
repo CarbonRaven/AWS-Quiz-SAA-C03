@@ -1,0 +1,14 @@
+{
+  "id": 364,
+  "topic": "Topic 1",
+  "question": "A company runs a web application that is deployed on Amazon EC2 instances in the private subnet of a VPC. An Application Load Balancer (ALB) that is in a public subnet directs traffic to the EC2 instances. AWS WAF is associated with the ALB. The application logs show that an unusually large amount of traffic from random IP addresses is overwhelming the application. A solutions architect needs to implement a solution to prevent the malicious traffic from overloading the application.\n\nWhich solution will meet these requirements? (Choose two.)",
+  "options": {
+    "A": "Create an Amazon CloudFront distribution to point to the ALB.",
+    "B": "Create a rate-based rule in AWS WAF and add the rule to the web ACL.",
+    "C": "Create an AWS WAF IP set and add the IP set as a condition in a rule.",
+    "D": "Create an Amazon CloudFront distribution with an origin access control (OAC) and associate the distribution with an ALB.",
+    "E": "Enable health checks in the ALB."
+  },
+  "correct_answer": ["B", "D"],
+  "explanation": "Rate-based rules in WAF automatically block IPs that exceed request thresholds, preventing DDoS-style attacks. CloudFront with OAC provides DDoS protection through AWS Shield Standard and edge caching. IP sets require knowing specific IPs to block (random IPs make this impractical). ALB health checks don't prevent traffic overload."
+}

@@ -1,0 +1,13 @@
+{
+  "id": 633,
+  "topic": "Topic 1",
+  "question": "A company manages an application that stores data on an Amazon RDS for PostgreSQL Multi-AZ DB instance. Increases in traffic are causing performance problems. The company determines that database queries are the primary reason for the slow performance.\n\nWhat should a solutions architect do to improve the application's performance?",
+  "options": {
+    "A": "Serve read traffic from the Multi-AZ standby replica.",
+    "B": "Configure the DB instance to use Transfer Acceleration.",
+    "C": "Create a read replica from the source DB instance. Serve read traffic from the read replica.",
+    "D": "Use Amazon Kinesis Data Firehose between the application and Amazon RDS to increase the concurrency of database requests."
+  },
+  "correct_answer": "C",
+  "explanation": "Read replicas offload read queries from the primary database, improving performance. The Multi-AZ standby replica cannot serve read traffic as it's only for failover. Transfer Acceleration is for S3, not RDS."
+}

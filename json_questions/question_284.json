@@ -1,0 +1,15 @@
+{
+  "question_number": 284,
+  "topic": 1,
+  "question_text": "As part of budget planning, management wants a report of AWS billed items listed by user. The data will be used to create department budgets. A solutions architect needs to determine the most efficient way to obtain this report information.\n\nWhich solution meets these requirements?",
+  "options": {
+    "A": "Run a query with Amazon Athena to generate the report.",
+    "B": "Create a report in Cost Explorer and download the report.",
+    "C": "Access the bill details from the billing dashboard and download the bill.",
+    "D": "Modify a cost budget in AWS Budgets to alert with Amazon Simple Email Service (Amazon SES)."
+  },
+  "correct_answer": "B",
+  "community_vote": {
+    "B": "100%"
+  }
+}

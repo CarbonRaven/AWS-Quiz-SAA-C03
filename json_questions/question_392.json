@@ -1,0 +1,15 @@
+{
+  "question_number": 392,
+  "topic": 1,
+  "question_text": "A company wants to deploy a new public web application on AWS. The application includes a web server tier that uses Amazon EC2 instances. The application also includes a database tier that uses an Amazon RDS for MySQL DB instance.\n\nThe application must be secure and accessible for global customers that have dynamic IP addresses.\n\nHow should a solutions architect configure the security groups to meet these requirements?",
+  "options": {
+    "A": "Configure the security group for the web servers to allow inbound traffic on port 443 from 0.0.0.0/0. Configure the security group for the DB instance to allow inbound traffic on port 3306 from the security group of the web servers.",
+    "B": "Configure the security group for the web servers to allow inbound traffic on port 443 from the IP addresses of the customers. Configure the security group for the DB instance to allow inbound traffic on port 3306 from the security group of the web servers.",
+    "C": "Configure the security group for the web servers to allow inbound traffic on port 443 from the IP addresses of the customers. Configure the security group for the DB instance to allow inbound traffic on port 3306 from the IP addresses of the customers.",
+    "D": "Configure the security group for the web servers to allow inbound traffic on port 443 from 0.0.0.0/0. Configure the security group for the DB instance to allow inbound traffic on port 3306 from 0.0.0.0/0."
+  },
+  "correct_answer": "A",
+  "community_vote": {
+    "A": "86%"
+  }
+}

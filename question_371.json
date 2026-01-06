@@ -1,0 +1,14 @@
+{
+  "id": 371,
+  "topic": "Topic 1",
+  "question": "A solutions architect is using Amazon S3 to design the storage architecture of a new digital media application. The media files must be resilient to the loss of an Availability Zone. Some files are accessed frequently while other files are rarely accessed in an unpredictable pattern. The solutions architect must minimize the costs of storing and retrieving the media files.\n\nWhich storage option meets these requirements? (Choose two.)",
+  "options": {
+    "A": "S3 Standard",
+    "B": "S3 Intelligent-Tiering",
+    "C": "S3 Standard-Infrequent Access (S3 Standard-IA)",
+    "D": "S3 One Zone-Infrequent Access (S3 One Zone-IA)",
+    "E": "S3 Glacier Deep Archive"
+  },
+  "correct_answer": ["A", "B"],
+  "explanation": "S3 Standard and S3 Intelligent-Tiering both provide multi-AZ resilience. S3 Intelligent-Tiering is ideal for unpredictable access patterns as it automatically moves data between frequent and infrequent access tiers. S3 Standard handles frequently accessed files. One Zone-IA doesn't survive AZ loss. Glacier Deep Archive has retrieval delays unsuitable for media access."
+}

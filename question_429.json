@@ -1,0 +1,13 @@
+{
+  "id": 429,
+  "topic": "Topic 1",
+  "question": "The following IAM policy is attached to an IAM group. This is the only policy applied to the group.\n\n{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Sid\": \"1\",\n      \"Effect\": \"Allow\",\n      \"Action\": \"ec2:*\",\n      \"Resource\": \"*\",\n      \"Condition\": {\n        \"StringEquals\": {\n          \"ec2:Region\": \"us-east-1\"\n        }\n      }\n    },\n    {\n      \"Sid\": \"2\",\n      \"Effect\": \"Deny\",\n      \"Action\": [\n        \"ec2:StopInstances\",\n        \"ec2:TerminateInstances\"\n      ],\n      \"Resource\": \"*\",\n      \"Condition\": {\n        \"BoolIfExists\": {\n          \"aws:MultiFactorAuthPresent\": false\n        }\n      }\n    }\n  ]\n}\n\nWhat are the effective IAM permissions of this policy for group members?",
+  "options": {
+    "A": "Group members are permitted any Amazon EC2 action within the us-east-1 Region. Statements after the Allow permission are not applied.",
+    "B": "Group members are denied any Amazon EC2 permissions in the us-east-1 Region unless they are logged in with multi-factor authentication (MFA).",
+    "C": "Group members are allowed the ec2:StopInstances and ec2:TerminateInstances permissions for all Regions when logged in with multi-factor authentication (MFA). Group members are permitted any other Amazon EC2 action.",
+    "D": "Group members are allowed the ec2:StopInstances and ec2:TerminateInstances permissions for the us-east-1 Region only when logged in with multi-factor authentication (MFA). Group members are permitted any other Amazon EC2 action within the us-east-1 Region."
+  },
+  "correct_answer": "D",
+  "explanation": "The first statement allows all EC2 actions in us-east-1. The second statement denies Stop/Terminate when MFA is NOT present (aws:MultiFactorAuthPresent: false). Combined: all EC2 actions allowed in us-east-1, but Stop/Terminate require MFA. Both statements are evaluated. The Deny applies regardless of Allow statements when MFA condition isn't met."
+}

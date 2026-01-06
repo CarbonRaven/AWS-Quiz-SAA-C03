@@ -1,0 +1,13 @@
+{
+  "id": 304,
+  "topic": "Topic 1",
+  "question": "A company recently created a disaster recovery site in a different AWS Region. The company needs to transfer large amounts of data back and forth between NFS file systems in the two Regions on a periodic basis.\n\nWhich solution will meet these requirements with the LEAST operational overhead?",
+  "options": {
+    "A": "Use AWS DataSync.",
+    "B": "Use AWS Snowball devices.",
+    "C": "Set up an SFTP server on Amazon EC2.",
+    "D": "Use AWS Database Migration Service (AWS DMS)."
+  },
+  "correct_answer": "A",
+  "explanation": "AWS DataSync is designed for automated, periodic data transfers between NFS file systems across regions with minimal operational overhead. Snowball is for one-time large migrations. SFTP on EC2 requires manual management. DMS is for database migrations, not NFS file systems."
+}

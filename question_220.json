@@ -1,0 +1,13 @@
+{
+  "id": 220,
+  "topic": "Topic 1",
+  "question": "A solutions architect is designing a new API using Amazon API Gateway that will receive requests from users. The volume of requests is highly variable; several hours can pass without receiving a single request. The data processing will take place asynchronously, but should be completed within a few seconds after a request is made.\nWhich compute service should the solutions architect have the API invoke to deliver the requirements at the lowest cost?",
+  "options": {
+    "A": "An AWS Glue job",
+    "B": "An AWS Lambda function",
+    "C": "A containerized service hosted in Amazon Elastic Kubernetes Service (Amazon EKS)",
+    "D": "A containerized service hosted in Amazon ECS with Amazon EC2"
+  },
+  "correct_answer": "B",
+  "explanation": "Lambda is ideal for variable, sporadic workloads with seconds-long processing. You only pay for actual execution time with no idle costs. EKS and ECS require running infrastructure even when idle. Glue is for ETL batch jobs, not API request processing."
+}

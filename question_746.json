@@ -1,0 +1,14 @@
+{
+  "id": 746,
+  "topic": "Topic 1",
+  "question": "A company is deploying an application that processes streaming data in near-real time. The company plans to use Amazon EC2 instances for the workload. The network architecture must be configurable to provide the lowest possible latency between nodes.\n\nWhich combination of network solutions will meet these requirements? (Choose two.)",
+  "options": {
+    "A": "Enable and configure enhanced networking on each EC2 instance.",
+    "B": "Group the EC2 instances in separate accounts.",
+    "C": "Run the EC2 instances in a cluster placement group.",
+    "D": "Attach multiple elastic network interfaces to each EC2 instance.",
+    "E": "Use Amazon Elastic Block Store (Amazon EBS) optimized instance types."
+  },
+  "correct_answer": ["A", "C"],
+  "explanation": "Enhanced networking provides higher bandwidth, higher packet per second performance, and lower latency. Cluster placement groups place instances close together in a single AZ for low-latency, high-throughput network communication between instances."
+}

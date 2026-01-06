@@ -1,0 +1,14 @@
+{
+  "id": 291,
+  "topic": "Topic 1",
+  "question": "A media company uses Amazon CloudFront for its publicly available streaming video content. The company wants to secure the video content that is hosted in Amazon S3 by controlling who has access. Some of the company's users are using a custom HTTP client that does not support cookies. Some of the company's users are unable to change the hardcoded URLs that they are using for access.\n\nWhich services or methods will meet these requirements with the LEAST impact to the users? (Choose two.)",
+  "options": {
+    "A": "Signed cookies",
+    "B": "Signed URLs",
+    "C": "AWS AppSync",
+    "D": "JSON Web Token (JWT)",
+    "E": "AWS Secrets Manager"
+  },
+  "correct_answer": ["A", "B"],
+  "explanation": "Signed cookies (A) work for users who can use cookies with their HTTP clients. Signed URLs (B) work for users with hardcoded URLs or clients that don't support cookies - the signature is embedded in the URL. Using both methods accommodates all user types with least impact. AppSync is for GraphQL APIs. JWT and Secrets Manager don't integrate directly with CloudFront content access control."
+}

@@ -1,0 +1,13 @@
+{
+  "id": 927,
+  "topic": "Topic 1",
+  "question": "A company is building an application in the AWS Cloud. The application is hosted on Amazon EC2 instances behind an Application Load Balancer (ALB). The company uses Amazon Route 53 for the DNS.\n\nThe company needs a managed solution with proactive engagement to detect against DDoS attacks.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Enable AWS Config. Configure an AWS Config managed rule that detects DDoS attacks.",
+    "B": "Enable AWS WAF on the ALB. Create an AWS WAF web ACL with rules to detect and prevent DDoS attacks. Associate the web ACL with the ALB.",
+    "C": "Store the ALB access logs in an Amazon S3 bucket. Configure Amazon GuardDuty to detect and take automated preventative actions for DDoS attacks.",
+    "D": "Subscribe to AWS Shield Advanced. Configure hosted zones in Route 53. Add ALB resources as protected resources."
+  },
+  "correct_answer": "D",
+  "explanation": "AWS Shield Advanced provides managed DDoS protection with proactive engagement from the AWS DDoS Response Team (DRT). It includes 24/7 access to DRT and cost protection during attacks."
+}

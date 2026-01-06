@@ -1,0 +1,13 @@
+{
+  "id": 548,
+  "topic": "Topic 1",
+  "question": "A company has separate AWS accounts for its finance, data analytics, and development departments. Because of costs and security concerns, the company wants to control which services each AWS account can use.\n\nWhich solution will meet these requirements with the LEAST operational overhead?",
+  "options": {
+    "A": "Use AWS Systems Manager templates to control which AWS services each department can use.",
+    "B": "Create organization units (OUs) for each department in AWS Organizations. Attach service control policies (SCPs) to the OUs.",
+    "C": "Use AWS CloudFormation to automatically provision only the AWS services that each department can use.",
+    "D": "Set up a list of products in AWS Service Catalog in the AWS accounts to manage and control the usage of specific AWS services."
+  },
+  "correct_answer": "B",
+  "explanation": "SCPs attached to OUs in AWS Organizations provide centralized, preventive controls that restrict which services accounts can use. This is the most operationally efficient way to enforce service restrictions across multiple accounts. CloudFormation and Service Catalog don't prevent direct service usage."
+}

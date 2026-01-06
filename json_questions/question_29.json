@@ -1,0 +1,13 @@
+{
+  "question_number": 29,
+  "topic": 1,
+  "question_text": "A company provides a Voice over Internet Protocol (VoIP) service that uses UDP connections. The service consists of Amazon EC2 instances that run in an Auto Scaling group. The company has deployments across multiple AWS Regions.\nThe company needs to route users to the Region with the lowest latency. The company also needs automated failover between Regions.\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Deploy a Network Load Balancer (NLB) and an associated target group. Associate the target group with the Auto Scaling group. Use the NLB as an AWS Global Accelerator endpoint in each Region.",
+    "B": "Deploy an Amazon CloudFront distribution that uses the weighted record as an origin.",
+    "C": "Deploy a Network Load Balancer (NLB) and an associated target group. Associate the target group with the Auto Scaling group. Create an Amazon Route 53 latency record that points to aliases for each NL",
+    "D": "Deploy an Application Load Balancer (ALB) and an associated target group. Associate the target group with the Auto Scaling group. Create an Amazon Route 53 weighted record that points to aliases for each AL"
+  },
+  "correct_answer": "C",
+  "community_vote": null
+}

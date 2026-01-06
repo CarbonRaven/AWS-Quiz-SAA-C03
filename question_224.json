@@ -1,0 +1,14 @@
+{
+  "id": 224,
+  "topic": "Topic 1",
+  "question": "A company recently migrated its web application to AWS by rehosting the application on Amazon EC2 instances in a single AWS Region. The company wants to redesign its application architecture to be highly available and fault tolerant. Traffic must reach all running EC2 instances randomly.\nWhich combination of steps should the company take to meet these requirements? (Choose two.)",
+  "options": {
+    "A": "Create an Amazon Route 53 failover routing policy.",
+    "B": "Create an Amazon Route 53 weighted routing policy.",
+    "C": "Create an Amazon Route 53 multivalue answer routing policy.",
+    "D": "Launch three EC2 instances: two instances in one Availability Zone and one instance in another Availability Zone.",
+    "E": "Launch four EC2 instances: two instances in one Availability Zone and two instances in another Availability Zone."
+  },
+  "correct_answer": ["C", "E"],
+  "explanation": "Multivalue answer routing returns multiple healthy IP addresses randomly, distributing traffic across all instances (C). Four instances across two AZs provides fault tolerance - if one AZ fails, two instances remain (E). Three instances with 2:1 split doesn't provide equal redundancy."
+}

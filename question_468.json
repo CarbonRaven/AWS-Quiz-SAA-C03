@@ -1,0 +1,13 @@
+{
+  "id": 468,
+  "topic": "Topic 1",
+  "question": "A company is developing a microservices application that will provide a search catalog for customers. The company must use REST APIs to present the frontend of the application to users. The REST APIs must access the backend services that the company hosts in containers in private VPC subnets.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Design a WebSocket API by using Amazon API Gateway. Host the application in Amazon Elastic Container Service (Amazon ECS) in a private subnet. Create a private VPC link for API Gateway to access Amazon ECS.",
+    "B": "Design a REST API by using Amazon API Gateway. Host the application in Amazon Elastic Container Service (Amazon ECS) in a private subnet. Create a private VPC link for API Gateway to access Amazon ECS.",
+    "C": "Design a WebSocket API by using Amazon API Gateway. Host the application in Amazon Elastic Container Service (Amazon ECS) in a private subnet. Create a security group for API Gateway to access Amazon ECS.",
+    "D": "Design a REST API by using Amazon API Gateway. Host the application in Amazon Elastic Container Service (Amazon ECS) in a private subnet. Create a security group for API Gateway to access Amazon ECS."
+  },
+  "correct_answer": "B",
+  "explanation": "The requirement is for REST APIs, not WebSocket APIs. VPC Link is the correct mechanism to allow API Gateway to access resources in private VPC subnets. Security groups alone don't provide the network path from API Gateway to private subnets."
+}

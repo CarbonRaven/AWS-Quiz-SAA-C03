@@ -1,0 +1,13 @@
+{
+  "id": 482,
+  "topic": "Topic 1",
+  "question": "A company wants to migrate 100 GB of historical data from an on-premises location to an Amazon S3 bucket. The company has a 100 megabits per second (Mbps) internet connection on premises. The company needs to encrypt the data in transit to the S3 bucket. The company will store new data directly in Amazon S3.\n\nWhich solution will meet these requirements with the LEAST operational overhead?",
+  "options": {
+    "A": "Use the s3 sync command in the AWS CLI to move the data directly to an S3 bucket",
+    "B": "Use AWS DataSync to migrate the data from the on-premises location to an S3 bucket",
+    "C": "Use AWS Snowball to move the data to an S3 bucket",
+    "D": "Set up an IPsec VPN from the on-premises location to AWS. Use the s3 cp command in the AWS CLI to move the data directly to an S3 bucket"
+  },
+  "correct_answer": "B",
+  "explanation": "AWS DataSync provides automated, secure data transfer with built-in encryption in transit. For 100 GB over 100 Mbps, online transfer is feasible (approximately 2+ hours). DataSync offers lower operational overhead than CLI commands and includes automatic retry and validation."
+}

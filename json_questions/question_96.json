@@ -1,0 +1,16 @@
+{
+  "question_number": 96,
+  "topic": 1,
+  "question_text": "An Amazon EC2 administrator created the following policy associated with an IAM group containing several users:\n\nWhat is the effect of this policy?",
+  "options": {
+    "A": "Users can terminate an EC2 instance in any AWS Region except us-east-1.",
+    "B": "Users can terminate an EC2 instance with the IP address 10.100.100.1 in the us-east-1 Region.",
+    "C": "Users can terminate an EC2 instance in the us-east-1 Region when the user's source IP is 10.100.100.254.",
+    "D": "Users cannot terminate an EC2 instance in the us-east-1 Region when the user's source IP is 10.100.100.254."
+  },
+  "correct_answer": "C",
+  "community_vote": {
+    "C": "72%",
+    "D": "28%"
+  }
+}

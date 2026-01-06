@@ -1,0 +1,13 @@
+{
+  "id": 589,
+  "topic": "Topic 1",
+  "question": "A company runs a web application on Amazon EC2 instances in an Auto Scaling group behind an Application Load Balancer that has sticky sessions enabled. The web server currently hosts the user session state. The company wants to ensure high availability and avoid user session state loss in the event of a web server outage.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Use an Amazon ElastiCache for Memcached instance to store the session data. Update the application to use ElastiCache for Memcached to store the session state.",
+    "B": "Use Amazon ElastiCache for Redis to store the session state. Update the application to use ElastiCache for Redis to store the session state.",
+    "C": "Use an AWS Storage Gateway cached volume to store session data. Update the application to use AWS Storage Gateway cached volume to store the session state.",
+    "D": "Use Amazon RDS to store the session state. Update the application to use Amazon RDS to store the session state."
+  },
+  "correct_answer": "B",
+  "explanation": "ElastiCache for Redis provides high availability with replication and persistence, ensuring session data survives server outages. Redis supports data persistence unlike Memcached. This allows any server to access session state, improving availability."
+}

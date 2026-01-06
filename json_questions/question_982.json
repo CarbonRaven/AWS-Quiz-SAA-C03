@@ -1,0 +1,15 @@
+{
+  "question_number": 982,
+  "topic": 1,
+  "question_text": "A company has an Amazon S3 bucket that contains sensitive data files. The company has an application that runs on virtual machines in an on-premises data center. The company currently uses AWS IAM Identity Center. The application requires temporary access to files in the S3 bucket. The company wants to grant the application secure access to the files in the S3 bucket. Which solution will meet these requirements?",
+  "options": {
+    "A": "Create an S3 bucket policy that permits access to the bucket from the public IP address range of the company’s on-premises data center.",
+    "B": "Use IAM Roles Anywhere to obtain security credentials in IAM Identity Center that grant access to the S3 bucket. Configure the virtual machines to assume the role by using the AWS CLI.",
+    "C": "Install the AWS CLI on the virtual machine. Configure the AWS CLI with access keys from an IAM user that has access to the bucket.",
+    "D": "Create an IAM user and policy that grants access to the bucket. Store the access key and secret key for the IAM user in AWS Secrets Manager. Configure the application to retrieve the access key and secret key at startup."
+  },
+  "correct_answer": "B",
+  "community_vote": {
+    "B": "89%"
+  }
+}

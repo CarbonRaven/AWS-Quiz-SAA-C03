@@ -1,0 +1,13 @@
+{
+  "id": 914,
+  "topic": "Topic 1",
+  "question": "A company has developed a non-production application that is composed of multiple microservices for each of the company's business units. A single development team maintains all the microservices.\n\nThe current architecture uses a static web frontend and a Java-based backend that contains the application logic. The architecture also uses a MySQL database that the company hosts on an Amazon EC2 instance.\n\nThe company needs to ensure that the application is secure and available globally.\n\nWhich solution will meet these requirements with the LEAST operational overhead?",
+  "options": {
+    "A": "Use Amazon CloudFront and AWS Amplify to host the static web frontend. Refactor the microservices to use AWS Lambda functions that the microservices access by using Amazon API Gateway. Migrate the MySQL database to an Amazon EC2 Reserved Instance.",
+    "B": "Use Amazon CloudFront and Amazon S3 to host the static web frontend. Refactor the microservices to use AWS Lambda functions that the microservices access by using Amazon API Gateway. Migrate the MySQL database to Amazon RDS for MySQL.",
+    "C": "Use Amazon CloudFront and Amazon S3 to host the static web frontend. Refactor the microservices to use AWS Lambda functions that are in a target group behind a Network Load Balancer. Migrate the MySQL database to Amazon RDS for MySQL.",
+    "D": "Use Amazon S3 to host the static web frontend. Refactor the microservices to use AWS Lambda functions that are in a target group behind an Application Load Balancer. Migrate the MySQL database to an Amazon EC2 Reserved Instance."
+  },
+  "correct_answer": "B",
+  "explanation": "CloudFront with S3 provides global static content delivery. API Gateway with Lambda is the standard serverless microservices pattern. RDS for MySQL reduces operational overhead compared to self-managed EC2."
+}

@@ -1,0 +1,13 @@
+{
+  "question_number": 7,
+  "topic": 1,
+  "question_text": "A company has an application that ingests incoming messages. Dozens of other applications and microservices then quickly consume these messages. The number of messages varies drastically and sometimes increases suddenly to 100,000 each second. The company wants to decouple the solution and increase scalability.\nWhich solution meets these requirements?",
+  "options": {
+    "A": "Persist the messages to Amazon Kinesis Data Analytics. Configure the consumer applications to read and process the messages.",
+    "B": "Configure the consumer applications to read from DynamoDB to process the messages.",
+    "C": "Write the messages to Amazon Kinesis Data Streams with a single shard. Use an AWS Lambda function to preprocess messages and store them in Amazon DynamoD",
+    "D": "Publish the messages to an Amazon Simple Notification Service (Amazon SNS) topic with multiple Amazon Simple Queue Service (Amazon SOS) subscriptions. Configure the consumer applications to process the messages from the queues."
+  },
+  "correct_answer": "D",
+  "community_vote": null
+}

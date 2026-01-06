@@ -1,0 +1,13 @@
+{
+  "id": 768,
+  "topic": "Topic 1",
+  "question": "A company has a business-critical application that runs on Amazon EC2 instances. The application stores data in an Amazon DynamoDB table. The company must be able to revert the table to any point within the last 24 hours.\n\nWhich solution meets these requirements with the LEAST operational overhead?",
+  "options": {
+    "A": "Configure point-in-time recovery for the table.",
+    "B": "Use AWS Backup for the table.",
+    "C": "Use an AWS Lambda function to make an on-demand backup of the table every hour.",
+    "D": "Turn on streams on the table to capture a log of all changes to the table in the last 24 hours. Store a copy of the stream in an Amazon S3 bucket."
+  },
+  "correct_answer": "A",
+  "explanation": "DynamoDB Point-in-Time Recovery (PITR) provides continuous backups of your table data and allows you to restore to any point in time within the last 35 days (minimum 1 second granularity). It requires minimal operational overhead as it's a built-in feature that just needs to be enabled."
+}

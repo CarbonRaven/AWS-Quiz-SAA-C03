@@ -1,0 +1,13 @@
+{
+  "id": 671,
+  "topic": "Topic 1",
+  "question": "A company runs its applications on Amazon EC2 instances. The company performs periodic financial assessments of its AWS costs. The company recently identified unusual spending.\n\nThe company needs a solution to prevent unusual spending. The solution must monitor costs and notify responsible stakeholders in the event of unusual spending.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Use an AWS Budgets template to create a zero spend budget.",
+    "B": "Create an AWS Cost Anomaly Detection monitor in the AWS Billing and Cost Management console.",
+    "C": "Create AWS Pricing Calculator estimates for the current running workload pricing details.",
+    "D": "Use Amazon CloudWatch to monitor costs and to identify unusual spending."
+  },
+  "correct_answer": "B",
+  "explanation": "AWS Cost Anomaly Detection uses machine learning to continuously monitor cost and usage patterns, automatically detecting unusual spending. It can send alerts to stakeholders when anomalies are detected, meeting both monitoring and notification requirements."
+}

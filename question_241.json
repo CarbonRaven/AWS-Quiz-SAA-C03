@@ -1,0 +1,13 @@
+{
+  "id": 241,
+  "topic": "Topic 1",
+  "question": "An online learning company is migrating to the AWS Cloud. The company maintains its student records in a PostgreSQL database. The company needs a solution in which its data is available and online across multiple AWS Regions at all times.\nWhich solution will meet these requirements with the LEAST amount of operational overhead?",
+  "options": {
+    "A": "Migrate the PostgreSQL database to a PostgreSQL cluster on Amazon EC2 instances.",
+    "B": "Migrate the PostgreSQL database to an Amazon RDS for PostgreSQL DB instance with the Multi-AZ feature turned on.",
+    "C": "Migrate the PostgreSQL database to an Amazon RDS for PostgreSQL DB instance. Create a read replica in another Region.",
+    "D": "Migrate the PostgreSQL database to an Amazon RDS for PostgreSQL DB instance. Set up DB snapshots to be copied to another Region."
+  },
+  "correct_answer": "C",
+  "explanation": "Cross-region read replica keeps data available across multiple regions with continuous replication and minimal operational overhead. Multi-AZ only provides availability within one region. Snapshots don't provide continuous availability. EC2 clusters require significant operational effort."
+}

@@ -1,0 +1,13 @@
+{
+  "id": 751,
+  "topic": "Topic 1",
+  "question": "A solutions architect is designing an AWS Identity and Access Management (IAM) authorization model for a company's AWS account. The company has designated five specific employees to have full access to AWS services and resources in the AWS account.\n\nThe solutions architect has created an IAM user for each of the five designated employees and has created an IAM user group.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Attach the AdministratorAccess resource-based policy to the IAM user group. Place each of the five designated employee IAM users in the IAM user group.",
+    "B": "Attach the SystemAdministrator identity-based policy to the IAM user group. Place each of the five designated employee IAM users in the IAM user group.",
+    "C": "Attach the AdministratorAccess identity-based policy to the IAM user group. Place each of the five designated employee IAM users in the IAM user group.",
+    "D": "Attach the SystemAdministrator resource-based policy to the IAM user group. Place each of the five designated employee IAM users in the IAM user group."
+  },
+  "correct_answer": "C",
+  "explanation": "AdministratorAccess is an AWS managed identity-based policy that provides full access to AWS services and resources. It should be attached to the IAM user group, and all designated employees should be added to this group. Resource-based policies cannot be attached to IAM groups."
+}

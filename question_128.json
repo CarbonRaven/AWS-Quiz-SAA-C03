@@ -1,0 +1,13 @@
+{
+  "id": 128,
+  "topic": "Topic 1",
+  "question": "A company wants to run applications in containers in the AWS Cloud. These applications are stateless and can tolerate disruptions within the underlying infrastructure. The company needs a solution that minimizes cost and operational overhead.\nWhat should a solutions architect do to meet these requirements?",
+  "options": {
+    "A": "Use Spot Instances in an Amazon EC2 Auto Scaling group to run the application containers.",
+    "B": "Use Spot Instances in an Amazon Elastic Kubernetes Service (Amazon EKS) managed node group.",
+    "C": "Use On-Demand Instances in an Amazon EC2 Auto Scaling group to run the application containers.",
+    "D": "Use On-Demand Instances in an Amazon Elastic Kubernetes Service (Amazon EKS) managed node group."
+  },
+  "correct_answer": "B",
+  "explanation": "EKS managed node groups reduce operational overhead for container orchestration. Spot Instances minimize cost for stateless, fault-tolerant applications. EKS with Spot Instances in managed node groups provides both cost optimization and reduced operational burden."
+}

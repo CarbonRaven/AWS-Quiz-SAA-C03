@@ -1,0 +1,13 @@
+{
+  "id": 410,
+  "topic": "Topic 1",
+  "question": "A company is deploying a new application on Amazon EC2 instances. The application writes data to Amazon Elastic Block Store (Amazon EBS) volumes. The company needs to ensure that all data that is written to the EBS volumes is encrypted at rest.\n\nWhich solution will meet this requirement?",
+  "options": {
+    "A": "Create an IAM role that specifies EBS encryption. Attach the role to the EC2 instances.",
+    "B": "Create the EBS volumes as encrypted volumes. Attach the EBS volumes to the EC2 instances.",
+    "C": "Create an EC2 instance tag that has a key of Encrypt and a value of True. Tag all instances that require encryption at the EBS level.",
+    "D": "Create an AWS Key Management Service (AWS KMS) key policy that enforces EBS encryption in the account. Ensure that the key policy is active."
+  },
+  "correct_answer": "B",
+  "explanation": "EBS encryption is enabled at volume creation time by specifying encrypted: true. Once enabled, all data stored on the volume is encrypted at rest. IAM roles don't control EBS encryption. Tags don't enforce encryption. KMS key policies define key usage permissions but don't automatically encrypt volumes."
+}

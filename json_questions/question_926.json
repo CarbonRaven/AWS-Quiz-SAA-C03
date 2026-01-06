@@ -1,0 +1,16 @@
+{
+  "question_number": 926,
+  "topic": 1,
+  "question_text": "A company runs its customer-facing web application on containers. The workload uses Amazon Elastic Container Service (Amazon ECS) on AWS Fargate. The web application is resource intensive. The web application needs to be available 24 hours a day, 7 days a week for customers. The company expects the application to experience short bursts of high traffic. The workload must be highly available. Which solution will meet these requirements MOST cost-effectively?",
+  "options": {
+    "A": "Configure an ECS capacity provider with Fargate. Conduct load testing by using a third-party tool. Rightsize the Fargate tasks in Amazon CloudWatch.",
+    "B": "Configure an ECS capacity provider with Fargate for steady state and Fargate Spot for burst traffic.",
+    "C": "Configure an ECS capacity provider with Fargate Spot for steady state and Fargate for burst traffic.",
+    "D": "Configure an ECS capacity provider with Fargate. Use AWS Compute Optimizer to rightsize the Fargate task."
+  },
+  "correct_answer": "D",
+  "community_vote": {
+    "D": "51%",
+    "B": "49%"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "question_number": 391,
+  "topic": 1,
+  "question_text": "A company needs a backup strategy for its three-tier stateless web application. The web application runs on Amazon EC2 instances in an Auto Scaling group with a dynamic scaling policy that is configured to respond to scaling events. The database tier runs on Amazon RDS for PostgreSQL. The web application does not require temporary local storage on the EC2 instances. The company\u2019s recovery point objective (RPO) is 2 hours.\n\nThe backup strategy must maximize scalability and optimize resource utilization for this environment.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Take snapshots of Amazon Elastic Block Store (Amazon EBS) volumes of the EC2 instances and database every 2 hours to meet the RPO.",
+    "B": "Configure a snapshot lifecycle policy to take Amazon Elastic Block Store (Amazon EBS) snapshots. Enable automated backups in Amazon RDS to meet the RPO.",
+    "C": "Retain the latest Amazon Machine Images (AMIs) of the web and application tiers. Enable automated backups in Amazon RDS and use point-in-time recovery to meet the RPO.",
+    "D": "Take snapshots of Amazon Elastic Block Store (Amazon EBS) volumes of the EC2 instances every 2 hours. Enable automated backups in Amazon RDS and use point-in-time recovery to meet the RPO."
+  },
+  "correct_answer": "C",
+  "community_vote": {
+    "C": "89%"
+  }
+}

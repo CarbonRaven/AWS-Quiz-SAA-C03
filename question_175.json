@@ -1,0 +1,13 @@
+{
+  "id": 175,
+  "topic": "Topic 1",
+  "question": "An ecommerce company has an order-processing application that uses Amazon API Gateway and an AWS Lambda function. The application stores data in an Amazon Aurora PostgreSQL database. During a recent sales event, a sudden surge in customer orders occurred. Some customers experienced timeouts, and the application did not process the orders of those customers.\nA solutions architect determined that the CPU utilization and memory utilization were high on the database because of a large number of open connections. The solutions architect needs to prevent the timeout errors while making the least possible changes to the application.\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Configure provisioned concurrency for the Lambda function. Modify the database to be a global database in multiple AWS Regions.",
+    "B": "Use Amazon RDS Proxy to create a proxy for the database. Modify the Lambda function to use the RDS Proxy endpoint instead of the database endpoint.",
+    "C": "Create a read replica for the database in a different AWS Region. Use query string parameters in API Gateway to route traffic to the read replica.",
+    "D": "Migrate the data from Aurora PostgreSQL to Amazon DynamoDB by using AWS Database Migration Service (AWS DMS). Modify the Lambda function to use the DynamoDB table."
+  },
+  "correct_answer": "B",
+  "explanation": "RDS Proxy pools and shares database connections, reducing the connection overhead that causes high CPU/memory with Lambda's concurrent executions. It requires minimal application change (just the endpoint). This directly addresses the connection pooling issue causing timeouts."
+}

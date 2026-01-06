@@ -1,0 +1,14 @@
+{
+  "id": 752,
+  "topic": "Topic 1",
+  "question": "A company has a multi-tier payment processing application that is based on virtual machines (VMs). The communication between the tiers occurs asynchronously through a third-party middleware solution that guarantees exactly-once delivery.\n\nThe company needs a solution that requires the least amount of infrastructure management. The solution must guarantee exactly-once delivery for application messaging.\n\nWhich combination of actions will meet these requirements? (Choose two.)",
+  "options": {
+    "A": "Use AWS Lambda for the compute layers in the architecture.",
+    "B": "Use Amazon EC2 instances for the compute layers in the architecture.",
+    "C": "Use Amazon Simple Notification Service (Amazon SNS) as the messaging component between the compute layers.",
+    "D": "Use Amazon Simple Queue Service (Amazon SQS) FIFO queues as the messaging component between the compute layers.",
+    "E": "Use containers that are based on Amazon Elastic Kubernetes Service (Amazon EKS) for the compute layers in the architecture."
+  },
+  "correct_answer": ["A", "D"],
+  "explanation": "AWS Lambda provides serverless compute with minimal infrastructure management. Amazon SQS FIFO queues guarantee exactly-once processing and message ordering, which meets the requirement for exactly-once delivery. EC2 and EKS require more infrastructure management, and SNS does not guarantee exactly-once delivery."
+}

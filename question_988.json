@@ -1,0 +1,14 @@
+{
+  "id": 988,
+  "topic": "Topic 1",
+  "question": "A company is designing the architecture for a new mobile app that uses the AWS Cloud. The company uses organizational units (OUs) in AWS Organizations to manage its accounts. The company wants to tag Amazon EC2 instances with data sensitivity by using values of sensitive and nonsensitive. IAM identities must not be able to delete a tag or create instances without a tag.\n\nWhich combination of steps will meet these requirements? (Choose two.)",
+  "options": {
+    "A": "In Organizations, create a new tag policy that specifies the data sensitivity tag key and the required values. Enforce the tag values for the EC2 instances. Attach the tag policy to the appropriate OU.",
+    "B": "In Organizations, create a new service control policy (SCP) that specifies the data sensitivity tag key and the required tag values. Enforce the tag values for the EC2 instances. Attach the SCP to the appropriate OU.",
+    "C": "Create a tag policy to deny running instances when a tag key is not specified. Create another tag policy that prevents identities from deleting tags. Attach the tag policies to the appropriate OU.",
+    "D": "Create a service control policy (SCP) to deny creating instances when a tag key is not specified. Create another SCP that prevents identities from deleting tags. Attach the SCPs to the appropriate OU.",
+    "E": "Create an AWS Config rule to check if EC2 instances use the data sensitivity tag and the specified values. Configure an AWS Lambda function to delete the resource if a noncompliant resource is found."
+  },
+  "correct_answer": ["A", "D"],
+  "explanation": "Tag policies define and enforce tag standards including required values. SCPs can prevent IAM identities from creating untagged instances and deleting tags. Together, they ensure compliance with tagging requirements across the organization."
+}

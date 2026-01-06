@@ -1,0 +1,13 @@
+{
+  "id": 290,
+  "topic": "Topic 1",
+  "question": "A company hosts a web application on multiple Amazon EC2 instances. The EC2 instances are in an Auto Scaling group that scales in response to user demand. The company wants to optimize cost savings without making a long-term commitment.\n\nWhich EC2 instance purchasing option should a solutions architect recommend to meet these requirements?",
+  "options": {
+    "A": "Dedicated Instances only",
+    "B": "On-Demand Instances only",
+    "C": "A mix of On-Demand Instances and Spot Instances",
+    "D": "A mix of On-Demand Instances and Reserved Instances"
+  },
+  "correct_answer": "C",
+  "explanation": "On-Demand provides baseline capacity without commitment. Spot Instances provide significant cost savings (up to 90%) for additional capacity that can handle interruptions. Auto Scaling can use mixed instance policies. Reserved Instances require long-term commitment (1 or 3 years). Dedicated Instances are more expensive. On-Demand only doesn't optimize costs."
+}

@@ -1,0 +1,13 @@
+{
+  "id": 1004,
+  "topic": "Topic 1",
+  "question": "A company hosts its enterprise resource planning (ERP) system in the us-east-1 Region. The system runs on Amazon EC2 instances. Customers use a public API that is hosted on the EC2 instances to exchange information with the ERP system. International customers report slow API response times from their data centers.\n\nWhich solution will improve response times for the international customers MOST cost-effectively?",
+  "options": {
+    "A": "Create an AWS Direct Connect connection that has a public virtual interface (VIF) to provide connectivity from each customer's data center to us-east-1. Route customer API requests by using a Direct Connect gateway to the ERP system API.",
+    "B": "Set up an Amazon CloudFront distribution in front of the API. Configure the CachingOptimized managed cache policy to provide improved cache efficiency.",
+    "C": "Set up AWS Global Accelerator. Configure listeners for the necessary ports. Configure endpoint groups for the appropriate Regions to distribute traffic. Create an endpoint in the group for the API.",
+    "D": "Use AWS Site-to-Site VPN to establish dedicated VPN tunnels between Regions and customer networks. Route traffic to the API over the VPN connections."
+  },
+  "correct_answer": "C",
+  "explanation": "AWS Global Accelerator improves performance for global users by routing traffic through the AWS global network, reducing latency for dynamic API traffic. Unlike CloudFront, Global Accelerator is optimized for non-cacheable dynamic content like APIs, and is more cost-effective than Direct Connect for multiple international customers."
+}

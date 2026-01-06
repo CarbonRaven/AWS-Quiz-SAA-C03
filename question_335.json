@@ -1,0 +1,13 @@
+{
+  "id": 335,
+  "topic": "Topic 1",
+  "question": "A company is experiencing sudden increases in demand. The company needs to provision large Amazon EC2 instances from an Amazon Machine Image (AMI). The instances will run in an Auto Scaling group. The company needs a solution that provides minimum initialization latency to meet the demand.\n\nWhich solution meets these requirements?",
+  "options": {
+    "A": "Use the aws ec2 register-image command to create an AMI from a snapshot. Use AWS Step Functions to replace the AMI in the Auto Scaling group.",
+    "B": "Enable Amazon Elastic Block Store (Amazon EBS) fast snapshot restore on a snapshot. Provision an AMI by using the snapshot. Replace the AMI in the Auto Scaling group with the new AMI.",
+    "C": "Enable AMI creation and define lifecycle rules in Amazon Data Lifecycle Manager (Amazon DLM). Create an AWS Lambda function that modifies the AMI in the Auto Scaling group.",
+    "D": "Use Amazon EventBridge to invoke AWS Backup lifecycle policies that provision AMIs. Configure Auto Scaling group capacity limits as an event source in EventBridge."
+  },
+  "correct_answer": "B",
+  "explanation": "EBS fast snapshot restore eliminates the initialization latency when launching instances from snapshots. Large volumes normally have latency as data is loaded from S3. Fast snapshot restore pre-warms the volume for immediate full performance. Other options don't address initialization latency."
+}

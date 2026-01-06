@@ -1,0 +1,15 @@
+{
+  "question_number": 398,
+  "topic": 1,
+  "question_text": "A company needs to transfer 600 TB of data from its on-premises network-attached storage (NAS) system to the AWS Cloud. The data transfer must be complete within 2 weeks. The data is sensitive and must be encrypted in transit. The company\u2019s internet connection can support an upload speed of 100 Mbps.\n\nWhich solution meets these requirements MOST cost-effectively?",
+  "options": {
+    "A": "Use Amazon S3 multi-part upload functionality to transfer the files over HTTPS.",
+    "B": "Create a VPN connection between the on-premises NAS system and the nearest AWS Region. Transfer the data over the VPN connection.",
+    "C": "Use the AWS Snow Family console to order several AWS Snowball Edge Storage Optimized devices. Use the devices to transfer the data to Amazon S3.",
+    "D": "Set up a 10 Gbps AWS Direct Connect connection between the company location and the nearest AWS Region. Transfer the data over a VPN connection into the Region to store the data in Amazon S3."
+  },
+  "correct_answer": "C",
+  "community_vote": {
+    "C": "100%"
+  }
+}

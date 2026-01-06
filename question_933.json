@@ -1,0 +1,13 @@
+{
+  "id": 933,
+  "topic": "Topic 1",
+  "question": "A company hosts an ecommerce application that stores all data in a single Amazon RDS for MySQL DB instance that is fully managed by AWS. The company needs to mitigate the risk of a single point of failure.\n\nWhich solution will meet these requirements with the LEAST implementation effort?",
+  "options": {
+    "A": "Modify the RDS DB instance to use a Multi-AZ deployment. Apply the changes during the next maintenance window.",
+    "B": "Migrate the current database to a new Amazon DynamoDB Multi-AZ deployment. Use AWS Database Migration Service (AWS DMS) with a heterogeneous migration strategy to migrate the current RDS DB instance to DynamoDB tables.",
+    "C": "Create a new RDS DB instance in a Multi-AZ deployment. Manually restore the data from the existing RDS DB instance from the most recent snapshot.",
+    "D": "Configure the DB instance in an Amazon EC2 Auto Scaling group with a minimum group size of three. Use Amazon Route 53 simple routing to distribute requests to all DB instances."
+  },
+  "correct_answer": "A",
+  "explanation": "Modifying an existing RDS instance to Multi-AZ is a simple configuration change that requires the least effort. AWS handles the synchronous replication and automatic failover."
+}

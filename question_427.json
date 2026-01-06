@@ -1,0 +1,13 @@
+{
+  "id": 427,
+  "topic": "Topic 1",
+  "question": "A solutions architect is implementing a complex Java application with a MySQL database. The Java application must be deployed on Apache Tomcat and must be highly available.\n\nWhat should the solutions architect do to meet these requirements?",
+  "options": {
+    "A": "Deploy the application in AWS Lambda. Configure an Amazon API Gateway API to connect with the Lambda functions.",
+    "B": "Deploy the application by using AWS Elastic Beanstalk. Configure a load-balanced environment and a rolling deployment policy.",
+    "C": "Migrate the database to Amazon ElastiCache. Configure the ElastiCache security group to allow access from the application.",
+    "D": "Launch an Amazon EC2 instance. Install a MySQL server on the EC2 instance. Configure the application on the server. Create an AMI. Use the AMI to create a launch template with an Auto Scaling group."
+  },
+  "correct_answer": "B",
+  "explanation": "Elastic Beanstalk supports Java/Tomcat applications natively and provides load-balanced, highly available environments with rolling deployments. Lambda isn't suitable for Tomcat-based applications. ElastiCache is for caching, not replacing MySQL databases. Manual EC2 setup requires more operational overhead and doesn't mention the database tier."
+}

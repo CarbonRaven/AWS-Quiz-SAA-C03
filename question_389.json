@@ -1,0 +1,13 @@
+{
+  "id": 389,
+  "topic": "Topic 1",
+  "question": "A company receives 10 TB of instrumentation data each day from several machines located at a single factory. The data consists of JSON files stored on a storage area network (SAN) in an on-premises data center located within the factory. The company wants to send this data to Amazon S3 where it can be accessed by several additional systems that provide critical near-real-time analytics. A secure transfer is important because the data is considered sensitive.\n\nWhich solution offers the MOST reliable data transfer?",
+  "options": {
+    "A": "AWS DataSync over AWS Direct Connect",
+    "B": "AWS DataSync over public internet",
+    "C": "AWS Database Migration Service (AWS DMS) over public internet",
+    "D": "AWS Database Migration Service (AWS DMS) over AWS Direct Connect"
+  },
+  "correct_answer": "A",
+  "explanation": "AWS DataSync over Direct Connect provides the most reliable and secure data transfer. DataSync is designed for transferring large amounts of data to S3 with automatic integrity verification. Direct Connect provides dedicated, consistent network connectivity. Public internet is less reliable for large transfers. DMS is for database migration, not file transfer."
+}

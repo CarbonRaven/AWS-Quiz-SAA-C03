@@ -1,0 +1,14 @@
+{
+  "id": 423,
+  "topic": "Topic 1",
+  "question": "A solutions architect wants to use the following JSON text as an identity-based policy to grant specific permissions:\n\n{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Sid\": \"\",\n      \"Effect\": \"Allow\",\n      \"Action\": [\n        \"ssm:ListDocuments\",\n        \"ssm:GetDocument\"\n      ],\n      \"Resource\": \"*\"\n    }\n  ]\n}\n\nWhich IAM principals can the solutions architect attach this policy to? (Choose two.)",
+  "options": {
+    "A": "Role",
+    "B": "Group",
+    "C": "Organization",
+    "D": "Amazon Elastic Container Service (Amazon ECS) resource",
+    "E": "Amazon EC2 resource"
+  },
+  "correct_answer": ["A", "B"],
+  "explanation": "Identity-based policies can be attached to IAM users, groups, and roles. The policy shown grants SSM read permissions (ListDocuments, GetDocument). Organizations use SCPs, not identity-based policies. ECS and EC2 resources use resource-based policies or IAM roles, not direct policy attachment."
+}

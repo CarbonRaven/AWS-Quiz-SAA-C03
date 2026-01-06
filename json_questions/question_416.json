@@ -1,0 +1,16 @@
+{
+  "question_number": 416,
+  "topic": 1,
+  "question_text": "A rapidly growing global ecommerce company is hosting its web application on AWS. The web application includes static content and dynamic content. The website stores online transaction processing (OLTP) data in an Amazon RDS database The website\u2019s users are experiencing slow page loads.\n\nWhich combination of actions should a solutions architect take to resolve this issue? (Choose two.)",
+  "options": {
+    "A": "Configure an Amazon Redshift cluster.",
+    "B": "Set up an Amazon CloudFront distribution.",
+    "C": "Host the dynamic web content in Amazon S3.",
+    "D": "Create a read replica for the RDS DB instance.",
+    "E": "Configure a Multi-AZ deployment for the RDS DB instance."
+  },
+  "correct_answer": "BD",
+  "community_vote": {
+    "BD": "90%"
+  }
+}

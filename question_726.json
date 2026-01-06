@@ -1,0 +1,13 @@
+{
+  "id": 726,
+  "topic": "Topic 1",
+  "question": "A company has deployed a multiplayer game for mobile devices. The game requires live location tracking of players based on latitude and longitude. The data store for the game must support rapid updates and retrieval of locations.\n\nThe game uses an Amazon RDS for PostgreSQL DB instance with read replicas to store the location data. During peak usage periods, the database is unable to maintain the performance that is needed for reading and writing updates. The game's user base is increasing rapidly.\n\nWhat should a solutions architect do to improve the performance of the data tier?",
+  "options": {
+    "A": "Take a snapshot of the existing DB instance. Restore the snapshot with Multi-AZ enabled.",
+    "B": "Migrate from Amazon RDS to Amazon OpenSearch Service with OpenSearch Dashboards.",
+    "C": "Deploy Amazon DynamoDB Accelerator (DAX) in front of the existing DB instance. Modify the game to use DAX.",
+    "D": "Deploy an Amazon ElastiCache for Redis cluster in front of the existing DB instance. Modify the game to use Redis."
+  },
+  "correct_answer": "D",
+  "explanation": "ElastiCache for Redis provides in-memory caching with sub-millisecond latency for rapid location updates and retrieval. Redis supports geospatial data types ideal for location tracking. It offloads read traffic from RDS and handles rapid updates efficiently."
+}

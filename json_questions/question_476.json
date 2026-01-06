@@ -1,0 +1,15 @@
+{
+  "question_number": 476,
+  "topic": 1,
+  "question_text": "A company is expecting rapid growth in the near future. A solutions architect needs to configure existing users and grant permissions to new users on AWS. The solutions architect has decided to create IAM groups. The solutions architect will add the new users to IAM groups based on department.\n\nWhich additional action is the MOST secure way to grant permissions to the new users?",
+  "options": {
+    "A": "Apply service control policies (SCPs) to manage access permissions",
+    "B": "Create IAM roles that have least privilege permission. Attach the roles to the IAM groups",
+    "C": "Create an IAM policy that grants least privilege permission. Attach the policy to the IAM groups",
+    "D": "Create IAM roles. Associate the roles with a permissions boundary that defines the maximum permissions"
+  },
+  "correct_answer": "C",
+  "community_vote": {
+    "C": "95%"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": 690,
+  "topic": "Topic 1",
+  "question": "A company regularly uploads GB-sized files to Amazon S3. After the company uploads the files, the company uses a fleet of Amazon EC2 Spot Instances to transcode the file format. The company needs to scale throughput when the company uploads data from the on-premises data center to Amazon S3 and when the company downloads data from Amazon S3 to the EC2 instances.\n\nWhich solutions will meet these requirements? (Choose two.)",
+  "options": {
+    "A": "Use the S3 bucket access point instead of accessing the S3 bucket directly.",
+    "B": "Upload the files into multiple S3 buckets.",
+    "C": "Use S3 multipart uploads.",
+    "D": "Fetch multiple byte-ranges of an object in parallel.",
+    "E": "Add a random prefix to each object when uploading the files."
+  },
+  "correct_answer": ["C", "D"],
+  "explanation": "S3 multipart uploads improve upload throughput by uploading parts in parallel. Fetching multiple byte-ranges in parallel (range GETs) improves download throughput. Random prefixes were historically used for performance but are no longer necessary due to S3 improvements."
+}

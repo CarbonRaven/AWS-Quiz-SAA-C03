@@ -1,0 +1,13 @@
+{
+  "id": 246,
+  "topic": "Topic 1",
+  "question": "A company runs a web application on Amazon EC2 instances in multiple Availability Zones. The EC2 instances are in private subnets. A solutions architect implements an internet-facing Application Load Balancer (ALB) and specifies the EC2 instances as the target group. However, the internet traffic is not reaching the EC2 instances.\nHow should the solutions architect reconfigure the architecture to resolve this issue?",
+  "options": {
+    "A": "Replace the ALB with a Network Load Balancer. Configure a NAT gateway in a public subnet to allow internet traffic.",
+    "B": "Move the EC2 instances to public subnets. Add a rule to the EC2 instances' security groups to allow outbound traffic to 0.0.0.0/0.",
+    "C": "Update the route tables for the EC2 instances' subnets to send 0.0.0.0/0 traffic through the internet gateway route. Add a rule to the EC2 instances' security groups to allow outbound traffic to 0.0.0.0/0.",
+    "D": "Create public subnets in each Availability Zone. Associate the public subnets with the ALB. Update the route tables for the public subnets with a route to the private subnets."
+  },
+  "correct_answer": "D",
+  "explanation": "Internet-facing ALBs must be in public subnets with internet gateway routes. The ALB then routes traffic to targets in private subnets. EC2 instances can remain in private subnets - the ALB handles the public-facing aspect. This is the standard secure architecture pattern."
+}

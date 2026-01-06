@@ -1,0 +1,15 @@
+{
+  "question_number": 331,
+  "topic": 1,
+  "question_text": "A company must migrate 20 TB of data from a data center to the AWS Cloud within 30 days. The company\u2019s network bandwidth is limited to 15 Mbps and cannot exceed 70% utilization.\n\nWhat should a solutions architect do to meet these requirements?",
+  "options": {
+    "A": "Use AWS Snowball.",
+    "B": "Use AWS DataSync.",
+    "C": "Use a secure VPN connection.",
+    "D": "Use Amazon S3 Transfer Acceleration."
+  },
+  "correct_answer": "A",
+  "community_vote": {
+    "A": "93%"
+  }
+}

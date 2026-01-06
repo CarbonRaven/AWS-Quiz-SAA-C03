@@ -1,0 +1,14 @@
+{
+  "id": 440,
+  "topic": "Topic 1",
+  "question": "A company used an Amazon RDS for MySQL DB instance during application testing. Before terminating the DB instance at the end of the test cycle, a solutions architect created two backups. The solutions architect created the first backup by using the mysqldump utility to create a database dump. The solutions architect created the second backup by enabling the final DB snapshot option on RDS termination.\n\nThe company is now planning for a new test cycle and wants to create a new DB instance from the most recent backup. The company has chosen a MySQL-compatible edition of Amazon Aurora to host the DB instance.\n\nWhich solutions will create the new DB instance? (Choose two.)",
+  "options": {
+    "A": "Import the RDS snapshot directly into Aurora.",
+    "B": "Upload the RDS snapshot to Amazon S3. Then import the RDS snapshot into Aurora.",
+    "C": "Upload the database dump to Amazon S3. Then import the database dump into Aurora.",
+    "D": "Use AWS Database Migration Service (AWS DMS) to import the RDS snapshot into Aurora.",
+    "E": "Upload the database dump to Amazon S3. Then use AWS Database Migration Service (AWS DMS) to import the database dump into Aurora."
+  },
+  "correct_answer": ["A", "C"],
+  "explanation": "RDS MySQL snapshots can be directly migrated to Aurora MySQL (same engine family). Database dumps can be uploaded to S3 and imported into Aurora using native MySQL import functionality. RDS snapshots aren't stored in S3 accessible to users. DMS is for ongoing replication or heterogeneous migrations, not snapshot imports."
+}

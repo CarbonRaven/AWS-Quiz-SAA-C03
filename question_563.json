@@ -1,0 +1,13 @@
+{
+  "id": 563,
+  "topic": "Topic 1",
+  "question": "A company runs its applications on both Amazon Elastic Kubernetes Service (Amazon EKS) clusters and on-premises Kubernetes clusters. The company wants to view all clusters and workloads from a central location.\n\nWhich solution will meet these requirements with the LEAST operational overhead?",
+  "options": {
+    "A": "Use Amazon CloudWatch Container Insights to collect and group the cluster information.",
+    "B": "Use Amazon EKS Connector to register and connect all Kubernetes clusters.",
+    "C": "Use AWS Systems Manager to collect and view the cluster information.",
+    "D": "Use Amazon EKS Anywhere as the primary cluster to view the other clusters with native Kubernetes commands."
+  },
+  "correct_answer": "B",
+  "explanation": "Amazon EKS Connector allows you to register and connect any Kubernetes cluster (including on-premises) to AWS and view them in the Amazon EKS console. This provides a unified view with minimal operational overhead."
+}

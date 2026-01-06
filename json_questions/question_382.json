@@ -1,0 +1,15 @@
+{
+  "question_number": 382,
+  "topic": 1,
+  "question_text": "A company has a three-tier application on AWS that ingests sensor data from its users\u2019 devices. The traffic flows through a Network Load Balancer (NLB), then to Amazon EC2 instances for the web tier, and finally to EC2 instances for the application tier. The application tier makes calls to a database.\n\nWhat should a solutions architect do to improve the security of the data in transit?",
+  "options": {
+    "A": "Configure a TLS listener. Deploy the server certificate on the NL",
+    "B": "",
+    "C": "Change the load balancer to an Application Load Balancer (ALB). Enable AWS WAF on the AL",
+    "D": "Encrypt the Amazon Elastic Block Store (Amazon EBS) volume on the EC2 instances by using AWS Key Management Service (AWS KMS)."
+  },
+  "correct_answer": "A",
+  "community_vote": {
+    "A": "100%"
+  }
+}

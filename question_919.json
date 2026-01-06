@@ -1,0 +1,13 @@
+{
+  "id": 919,
+  "topic": "Topic 1",
+  "question": "A company recently performed a lift and shift migration of its on-premises Oracle database workload to run on an Amazon EC2 memory optimized Linux instance. The EC2 Linux instance uses a 1 TB Provisioned IOPS SSD (io1) EBS volume with 64,000 IOPS.\n\nThe database storage performance after the migration is slower than the performance of the on-premises database.\n\nWhich solution will improve storage performance?",
+  "options": {
+    "A": "Add more Provisioned IOPS SSD (io1) EBS volumes. Use OS commands to create a Logical Volume Management (LVM) stripe.",
+    "B": "Increase the Provisioned IOPS SSD (io1) EBS volume to more than 64,000 IOPS.",
+    "C": "Increase the size of the Provisioned IOPS SSD (io1) EBS volume to 2 TB.",
+    "D": "Change the EC2 Linux instance to a storage optimized instance type. Do not change the Provisioned IOPS SSD (io1) EBS volume."
+  },
+  "correct_answer": "A",
+  "explanation": "LVM striping across multiple EBS volumes increases aggregate IOPS and throughput beyond single volume limits. 64,000 IOPS is the maximum for a single io1 volume, so multiple volumes are needed for higher performance."
+}

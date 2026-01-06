@@ -1,0 +1,13 @@
+{
+  "id": 585,
+  "topic": "Topic 1",
+  "question": "A solutions architect is designing a disaster recovery (DR) strategy to provide Amazon EC2 capacity in a failover AWS Region. Business requirements state that the DR strategy must meet capacity in the failover Region.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Purchase On-Demand Instances in the failover Region.",
+    "B": "Purchase an EC2 Savings Plan in the failover Region.",
+    "C": "Purchase regional Reserved Instances in the failover Region.",
+    "D": "Purchase a Capacity Reservation in the failover Region."
+  },
+  "correct_answer": "D",
+  "explanation": "Capacity Reservations guarantee EC2 capacity in a specific Availability Zone for any duration. This ensures capacity is available during failover. On-Demand doesn't guarantee capacity. Reserved Instances and Savings Plans are for cost optimization, not capacity reservation."
+}

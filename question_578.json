@@ -1,0 +1,13 @@
+{
+  "id": 578,
+  "topic": "Topic 1",
+  "question": "A company deployed a serverless application that uses Amazon DynamoDB as a database layer. The application has experienced a large increase in users. The company wants to improve database response time from milliseconds to microseconds and to cache requests to the database.\n\nWhich solution will meet these requirements with the LEAST operational overhead?",
+  "options": {
+    "A": "Use DynamoDB Accelerator (DAX).",
+    "B": "Migrate the database to Amazon Redshift.",
+    "C": "Migrate the database to Amazon RDS.",
+    "D": "Use Amazon ElastiCache for Redis."
+  },
+  "correct_answer": "A",
+  "explanation": "DAX is a fully managed, in-memory cache for DynamoDB that provides microsecond response times. It requires minimal code changes and has the least operational overhead since it's purpose-built for DynamoDB. ElastiCache would require more integration work."
+}

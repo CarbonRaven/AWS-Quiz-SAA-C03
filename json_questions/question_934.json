@@ -1,0 +1,15 @@
+{
+  "question_number": 934,
+  "topic": 1,
+  "question_text": "A company has multiple Microsoft Windows SMB file servers and Linux NFS file servers for file sharing in an on-premises environment. As part of the company's AWS migration plan, the company wants to consolidate the file servers in the AWS Cloud. The company needs a managed AWS storage service that supports both NFS and SMB access. The solution must be able to share between protocols. The solution must have redundancy at the Availability Zone level. Which solution will meet these requirements?",
+  "options": {
+    "A": "Use Amazon FSx for NetApp ONTAP for storage. Configure multi-protocol access.",
+    "B": "Create two Amazon EC2 instances. Use one EC2 instance for Windows SMB file server access and one EC2 instance for Linux NFS file server access.",
+    "C": "Use Amazon FSx for NetApp ONTAP for SMB access. Use Amazon FSx for Lustre for NFS access.",
+    "D": "Use Amazon S3 storage. Access Amazon S3 through an Amazon S3 File Gateway."
+  },
+  "correct_answer": "A",
+  "community_vote": {
+    "A": "100%"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "question_number": 176,
+  "topic": 1,
+  "question_text": "An application runs on Amazon EC2 instances in private subnets. The application needs to access an Amazon DynamoDB table.\n\nWhat is the MOST secure way to access the table while ensuring that the traffic does not leave the AWS network?",
+  "options": {
+    "A": "Use a VPC endpoint for DynamoD",
+    "B": "Use a NAT gateway in a public subnet.",
+    "C": "Correct Answer: A \ud83d\uddf3\ufe0f",
+    "D": "Use the internet gateway attached to the VP"
+  },
+  "correct_answer": "A",
+  "community_vote": {
+    "A": "100%"
+  }
+}

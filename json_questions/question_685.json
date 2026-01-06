@@ -1,0 +1,15 @@
+{
+  "question_number": 685,
+  "topic": 1,
+  "question_text": "A company’s ecommerce website has unpredictable traffic and uses AWS Lambda functions to directly access a private Amazon RDS for PostgreSQL DB instance. The company wants to maintain predictable database performance and ensure that the Lambda invocations do not overload the database with too many connections. What should a solutions architect do to meet these requirements?",
+  "options": {
+    "A": "Point the client driver at an RDS custom endpoint. Deploy the Lambda functions inside a VPC.",
+    "B": "Point the client driver at an RDS proxy endpoint. Deploy the Lambda functions inside a VPC.",
+    "C": "Point the client driver at an RDS custom endpoint. Deploy the Lambda functions outside a VPC.",
+    "D": "Point the client driver at an RDS proxy endpoint. Deploy the Lambda functions outside a VPC."
+  },
+  "correct_answer": "B",
+  "community_vote": {
+    "B": "100%"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "question_number": 208,
+  "topic": 1,
+  "question_text": "A company needs to move data from an Amazon EC2 instance to an Amazon S3 bucket. The company must ensure that no API calls and no data are routed through public internet routes. Only the EC2 instance can have access to upload data to the S3 bucket.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Create an interface VPC endpoint for Amazon S3 in the subnet where the EC2 instance is located. Attach a resource policy to the S3 bucket to only allow the EC2 instance\u2019s IAM role for access.",
+    "B": "Create a gateway VPC endpoint for Amazon S3 in the Availability Zone where the EC2 instance is located. Attach appropriate security groups to the endpoint. Attach a resource policy to the S3 bucket to only allow the EC2 instance\u2019s IAM role for access.",
+    "C": "Run the nslookup tool from inside the EC2 instance to obtain the private IP address of the S3 bucket\u2019s service API endpoint. Create a route in the VPC route table to provide the EC2 instance with access to the S3 bucket. Attach a resource policy to the S3 bucket to only allow the EC2 instance\u2019s IAM role for access.",
+    "D": "Use the AWS provided, publicly available ip-ranges.json file to obtain the private IP address of the S3 bucket\u2019s service API endpoint. Create a route in the VPC route table to provide the EC2 instance with access to the S3 bucket. Attach a resource policy to the S3 bucket to only allow the EC2 instance\u2019s IAM role for access."
+  },
+  "correct_answer": "A",
+  "community_vote": {
+    "A": "56%",
+    "B": "44%"
+  }
+}

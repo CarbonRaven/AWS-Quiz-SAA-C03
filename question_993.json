@@ -1,0 +1,13 @@
+{
+  "id": 993,
+  "topic": "Topic 1",
+  "question": "A solutions architect is creating an application that will handle batch processing of large amounts of data. The input data will be held in Amazon S3 and the output data will be stored in a different S3 bucket. For processing, the application will transfer the data over the network between multiple Amazon EC2 instances.\n\nWhat should the solutions architect do to reduce the overall data transfer costs?",
+  "options": {
+    "A": "Place all the EC2 instances in an Auto Scaling group.",
+    "B": "Place all the EC2 instances in the same AWS Region.",
+    "C": "Place all the EC2 instances in the same Availability Zone.",
+    "D": "Place all the EC2 instances in private subnets in multiple Availability Zones."
+  },
+  "correct_answer": "C",
+  "explanation": "Data transfer between EC2 instances in the same Availability Zone is free when using private IP addresses. Placing all instances in the same AZ eliminates cross-AZ data transfer charges, which reduces overall data transfer costs for network-intensive batch processing."
+}

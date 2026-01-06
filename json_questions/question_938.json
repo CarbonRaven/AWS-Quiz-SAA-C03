@@ -1,0 +1,15 @@
+{
+  "question_number": 938,
+  "topic": 1,
+  "question_text": "A company is running a media store across multiple Amazon EC2 instances distributed across multiple Availability Zones in a single VPC. The company wants a high-performing solution to share data between all the EC2 instances, and prefers to keep the data within the VPC only. What should a solutions architect recommend?",
+  "options": {
+    "A": "Create an Amazon S3 bucket and call the service APIs from each instance's application",
+    "B": "Create an Amazon S3 bucket and configure all instances to access it as a mounted volume",
+    "C": "Configure an Amazon Elastic Block Store (Amazon EBS) volume and mount it across all instances",
+    "D": "Configure an Amazon Elastic File System (Amazon EFS) file system and mount it across all instances"
+  },
+  "correct_answer": "D",
+  "community_vote": {
+    "D": "100%"
+  }
+}

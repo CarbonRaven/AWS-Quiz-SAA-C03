@@ -1,0 +1,14 @@
+{
+  "id": 386,
+  "topic": "Topic 1",
+  "question": "A company recently launched Linux-based application instances on Amazon EC2 in a private subnet and launched a Linux-based bastion host on an Amazon EC2 instance in a public subnet of a VPC. A solutions architect needs to connect from the on-premises network, through the company's internet connection, to the bastion host, and to the application servers. The solutions architect must make sure that the security groups of all the EC2 instances allow this access.\n\nWhich combination of steps should the solutions architect take to meet these requirements? (Choose two.)",
+  "options": {
+    "A": "Replace the current security group of the bastion host with a security group that only allows inbound access from the application instances.",
+    "B": "Replace the current security group of the bastion host with a security group that only allows inbound access from the internal IP range for the company.",
+    "C": "Replace the current security group of the bastion host with a security group that only allows inbound access from the external IP range for the company.",
+    "D": "Replace the current security group of the application instances with a security group that allows inbound SSH access from only the private IP address of the bastion host.",
+    "E": "Replace the current security group of the application instances with a security group that allows inbound SSH access from only the public IP address of the bastion host."
+  },
+  "correct_answer": ["C", "D"],
+  "explanation": "The bastion host needs to allow inbound SSH from the company's external (public) IP range since connection comes from the internet. Application instances should allow SSH only from the bastion host's private IP (they communicate within the VPC). Internal IP range won't work for internet connections. Public IP of bastion isn't used for internal VPC communication."
+}

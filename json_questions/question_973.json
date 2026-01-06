@@ -1,0 +1,18 @@
+{
+  "question_number": 973,
+  "topic": 1,
+  "question_text": "A company is designing a web application with an internet-facing Application Load Balancer (ALB). The company needs the ALB to receive HTTPS web traffic from the public internet. The ALB must send only HTTPS traffic to the web application servers hosted on the Amazon EC2 instances on port 443. The ALB must perform a health check of the web application servers over HTTPS on port 8443. Which combination of configurations of the security group that is associated with the ALB will meet these requirements? (Choose three.)",
+  "options": {
+    "A": "Allow HTTPS inbound traffic from 0.0.0.0/0 for port 443.",
+    "B": "Allow all outbound traffic to 0.0.0.0/0 for port 443.",
+    "C": "Allow HTTPS outbound traffic to the web application instances for port 443.",
+    "D": "Allow HTTPS inbound traffic from the web application instances for port 443.",
+    "E": "Allow HTTPS outbound traffic to the web application instances for the health check on port 8443.",
+    "F": "Allow HTTPS inbound traffic from the web application instances for the health check on port 8443."
+  },
+  "correct_answer": "ACE",
+  "community_vote": {
+    "ACE": "78%",
+    "ACF": "17%"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": 529,
+  "topic": "Topic 1",
+  "question": "A company is migrating its workloads to AWS. The company has transactional and sensitive data in its databases. The company wants to use AWS Cloud solutions to increase security and reduce operational overhead for the databases.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Migrate the databases to Amazon EC2. Use an AWS Key Management Service (AWS KMS) AWS managed key for encryption.",
+    "B": "Migrate the databases to Amazon RDS. Configure encryption at rest.",
+    "C": "Migrate the data to Amazon S3. Use Amazon Macie for data security and protection.",
+    "D": "Migrate the database to Amazon RDS. Use Amazon CloudWatch Logs for data security and protection."
+  },
+  "correct_answer": "B",
+  "explanation": "Amazon RDS is a managed database service that reduces operational overhead for database administration. RDS encryption at rest protects sensitive data using KMS. EC2-based databases require more operational overhead. Macie is for data discovery in S3, not database protection. CloudWatch Logs is for monitoring, not security."
+}

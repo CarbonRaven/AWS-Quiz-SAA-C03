@@ -1,0 +1,15 @@
+{
+  "question_number": 262,
+  "topic": 1,
+  "question_text": "A company plans to use Amazon ElastiCache for its multi-tier web application. A solutions architect creates a Cache VPC for the ElastiCache cluster and an App VPC for the application\u2019s Amazon EC2 instances. Both VPCs are in the us-east-1 Region.\n\nThe solutions architect must implement a solution to provide the application\u2019s EC2 instances with access to the ElastiCache cluster.\n\nWhich solution will meet these requirements MOST cost-effectively?",
+  "options": {
+    "A": "Create a peering connection between the VPCs. Add a route table entry for the peering connection in both VPCs. Configure an inbound rule for the ElastiCache cluster\u2019s security group to allow inbound connection from the application\u2019s security group.",
+    "B": "Create a Transit VP",
+    "C": "Configure an inbound rule for the Transit VPC\u2019s security group to allow inbound connection from the application\u2019s security group.",
+    "D": "Create a Transit VP"
+  },
+  "correct_answer": "A",
+  "community_vote": {
+    "A": "100%"
+  }
+}

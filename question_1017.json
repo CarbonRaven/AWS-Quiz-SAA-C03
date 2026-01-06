@@ -1,0 +1,13 @@
+{
+  "id": 1017,
+  "topic": "Topic 1",
+  "question": "A company has an application that runs on an Amazon Elastic Kubernetes Service (Amazon EKS) cluster on Amazon EC2 instances. The application has a UI that uses Amazon DynamoDB and data services that use Amazon S3 as part of the application deployment.\n\nThe company must ensure that the EKS Pods for the UI can access only Amazon DynamoDB and that the EKS Pods for the data services can access only Amazon S3. The company uses AWS Identity and Access Management (IAM).\n\nWhich solution meets these requirements?",
+  "options": {
+    "A": "Create separate IAM policies for Amazon S3 and DynamoDB access with the required permissions. Attach both IAM policies to the EC2 instance profile. Use role-based access control (RBAC) to control access to Amazon S3 or DynamoDB for the respective EKS Pods.",
+    "B": "Create separate IAM policies for Amazon S3 and DynamoDB access with the required permissions. Attach the Amazon S3 IAM policy directly to the EKS Pods for the data services and the DynamoDB policy to the EKS Pods for the UI.",
+    "C": "Create separate Kubernetes service accounts for the UI and data services to assume an IAM role. Attach the AmazonS3FullAccess policy to the data services account and the AmazonDynamoDBFullAccess policy to the UI service account.",
+    "D": "Create separate Kubernetes service accounts for the UI and data services to assume an IAM role. Use IAM Role for Service Accounts (IRSA) to provide access to the EKS Pods for the UI to Amazon S3 and the EKS Pods for the data services to DynamoDB."
+  },
+  "correct_answer": "C",
+  "explanation": "IAM Roles for Service Accounts (IRSA) allows Kubernetes service accounts to assume IAM roles, enabling fine-grained access control for pods. Each service account is associated with an IAM role that has the appropriate permissions - DynamoDB for UI pods and S3 for data service pods."
+}

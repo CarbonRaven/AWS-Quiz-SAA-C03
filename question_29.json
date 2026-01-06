@@ -1,0 +1,13 @@
+{
+  "id": 29,
+  "topic": "Topic 1",
+  "question": "A company provides a Voice over Internet Protocol (VoIP) service that uses UDP connections. The service consists of Amazon EC2 instances that run in an Auto Scaling group. The company has deployments across multiple AWS Regions.\nThe company needs to route users to the Region with the lowest latency. The company also needs automated failover between Regions.\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Deploy a Network Load Balancer (NLB) and an associated target group. Associate the target group with the Auto Scaling group. Use the NLB as an AWS Global Accelerator endpoint in each Region.",
+    "B": "Deploy an Application Load Balancer (ALB) and an associated target group. Associate the target group with the Auto Scaling group. Use the ALB as an AWS Global Accelerator endpoint in each Region.",
+    "C": "Deploy a Network Load Balancer (NLB) and an associated target group. Associate the target group with the Auto Scaling group. Create an Amazon Route 53 latency record that points to aliases for each NLB. Create an Amazon CloudFront distribution that uses the latency record as an origin.",
+    "D": "Deploy an Application Load Balancer (ALB) and an associated target group. Associate the target group with the Auto Scaling group. Create an Amazon Route 53 weighted record that points to aliases for each ALB. Deploy an Amazon CloudFront distribution that uses the weighted record as an origin."
+  },
+  "correct_answer": "A",
+  "explanation": "VoIP uses UDP, which requires NLB (not ALB). AWS Global Accelerator provides lowest latency routing and automatic failover between regions. CloudFront doesn't support UDP traffic."
+}

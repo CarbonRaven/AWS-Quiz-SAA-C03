@@ -1,0 +1,13 @@
+{
+  "id": 870,
+  "topic": "Topic 1",
+  "question": "A company has two AWS accounts: Production and Development. The company needs to push code changes in the Development account to the Production account. In the alpha phase, only two senior developers on the development team need access to the Production account. In the beta phase, more developers will need access to perform testing.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Create two policy documents by using the AWS Management Console in each account. Assign the policy to developers who need access.",
+    "B": "Create an IAM role in the Development account. Grant the IAM role access to the Production account. Allow developers to assume the role.",
+    "C": "Create an IAM role in the Production account. Define a trust policy that specifies the Development account. Allow developers to assume the role.",
+    "D": "Create an IAM group in the Production account. Add the group as a principal in a trust policy that specifies the Production account. Add developers to the group."
+  },
+  "correct_answer": "C",
+  "explanation": "Cross-account access is achieved by creating an IAM role in the target account (Production) with a trust policy that allows principals from the source account (Development) to assume the role."
+}

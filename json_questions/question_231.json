@@ -1,0 +1,15 @@
+{
+  "question_number": 231,
+  "topic": 1,
+  "question_text": "An application runs on an Amazon EC2 instance that has an Elastic IP address in VPC A. The application requires access to a database in VPC B. Both VPCs are in the same AWS account.\n\nWhich solution will provide the required access MOST securely?",
+  "options": {
+    "A": "",
+    "B": "Proxy all requests through the new EC2 instance.",
+    "C": "Make the DB instance publicly accessible. Assign a public IP address to the DB instance.",
+    "D": "Launch an EC2 instance with an Elastic IP address into VPC"
+  },
+  "correct_answer": "B",
+  "community_vote": {
+    "B": "92%"
+  }
+}

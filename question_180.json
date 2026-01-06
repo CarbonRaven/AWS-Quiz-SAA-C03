@@ -1,0 +1,14 @@
+{
+  "id": 180,
+  "topic": "Topic 1",
+  "question": "A company is designing a cloud communications platform that is driven by APIs. The application is hosted on Amazon EC2 instances behind a Network Load Balancer (NLB). The company uses Amazon API Gateway to provide external users with access to the application through APIs. The company wants to protect the platform against web exploits like SQL injection and also wants to detect and mitigate large, sophisticated DDoS attacks.\nWhich combination of solutions provides the MOST protection? (Choose two.)",
+  "options": {
+    "A": "Use AWS WAF to protect the NLB.",
+    "B": "Use AWS Shield Advanced with the NLB.",
+    "C": "Use AWS WAF to protect Amazon API Gateway.",
+    "D": "Use Amazon GuardDuty with AWS Shield Standard.",
+    "E": "Use AWS Shield Standard with Amazon API Gateway."
+  },
+  "correct_answer": ["B", "C"],
+  "explanation": "AWS WAF protects against web exploits (SQL injection, XSS) and can be attached to API Gateway (not NLB). Shield Advanced provides enhanced DDoS protection and can protect NLBs. Shield Standard doesn't provide the advanced DDoS mitigation needed for sophisticated attacks."
+}

@@ -1,0 +1,15 @@
+{
+  "question_number": 439,
+  "topic": 1,
+  "question_text": "A solutions architect configured a VPC that has a small range of IP addresses. The number of Amazon EC2 instances that are in the VPC is increasing, and there is an insufficient number of IP addresses for future workloads.\n\nWhich solution resolves this issue with the LEAST operational overhead?",
+  "options": {
+    "A": "Add an additional IPv4 CIDR block to increase the number of IP addresses and create additional subnets in the VP",
+    "C": "Correct Answer: A \ud83d\uddf3\ufe0f",
+    "B": "Create a second VPC with additional subnets. Use a peering connection to connect the second VPC with the first VPC Update the routes and create new resources in the subnets of the second VP",
+    "D": "Create a second VP"
+  },
+  "correct_answer": "A",
+  "community_vote": {
+    "A": "100%"
+  }
+}

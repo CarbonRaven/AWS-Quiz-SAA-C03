@@ -1,0 +1,13 @@
+{
+  "id": 1008,
+  "topic": "Topic 1",
+  "question": "A company hosts a website analytics application on a single Amazon EC2 On-Demand Instance. The analytics application is highly resilient and is designed to run in stateless mode.\n\nThe company notices that the application is showing signs of performance degradation during busy times and is presenting 5xx errors. The company needs to make the application scale seamlessly.\n\nWhich solution will meet these requirements MOST cost-effectively?",
+  "options": {
+    "A": "Create an Amazon Machine Image (AMI) of the web application. Use the AMI to launch a second EC2 On-Demand Instance. Use an Application Load Balancer to distribute the load across the two EC2 instances.",
+    "B": "Create an Amazon Machine Image (AMI) of the web application. Use the AMI to launch a second EC2 On-Demand Instance. Use Amazon Route 53 weighted routing to distribute the load across the two EC2 instances.",
+    "C": "Create an AWS Lambda function to stop the EC2 instance and change the instance type. Create an Amazon CloudWatch alarm to invoke the Lambda function when CPU utilization is more than 75%.",
+    "D": "Create an Amazon Machine Image (AMI) of the web application. Apply the AMI to a launch template. Create an Auto Scaling group that includes the launch template. Configure the launch template to use a Spot Fleet. Attach an Application Load Balancer to the Auto Scaling group."
+  },
+  "correct_answer": "D",
+  "explanation": "For a stateless, resilient application, Auto Scaling with Spot Fleet provides the most cost-effective scaling solution. Spot Instances can be up to 90% cheaper than On-Demand, and since the application is resilient and stateless, it can handle Spot interruptions. The ALB distributes traffic across instances."
+}

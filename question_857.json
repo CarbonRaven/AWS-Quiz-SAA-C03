@@ -1,0 +1,13 @@
+{
+  "id": 857,
+  "topic": "Topic 1",
+  "question": "A company plans to run a high performance computing (HPC) workload on Amazon EC2 Instances. The workload requires low-latency network performance and high network throughput with tightly coupled node-to-node communication.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Configure the EC2 instances to be part of a cluster placement group.",
+    "B": "Launch the EC2 instances with Dedicated Instance tenancy.",
+    "C": "Launch the EC2 instances as Spot Instances.",
+    "D": "Configure an On-Demand Capacity Reservation when the EC2 instances are launched."
+  },
+  "correct_answer": "A",
+  "explanation": "Cluster placement groups place instances close together in a single Availability Zone, providing low-latency, high-bandwidth network connectivity ideal for HPC workloads with tightly coupled node-to-node communication."
+}

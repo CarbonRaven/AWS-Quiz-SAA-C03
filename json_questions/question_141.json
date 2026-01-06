@@ -1,0 +1,16 @@
+{
+  "question_number": 141,
+  "topic": 1,
+  "question_text": "A company runs a web-based portal that provides users with global breaking news, local alerts, and weather updates. The portal delivers each user a personalized view by using mixture of static and dynamic content. Content is served over HTTPS through an API server running on an Amazon EC2 instance behind an Application Load Balancer (ALB). The company wants the portal to provide this content to its users across the world as quickly as possible.\nHow should a solutions architect design the application to ensure the LEAST amount of latency for all users?",
+  "options": {
+    "A": "Deploy the application stack in a single AWS Region. Use Amazon CloudFront to serve all static and dynamic content by specifying the ALB as an origin.",
+    "B": "",
+    "C": "Deploy the application stack in a single AWS Region. Use Amazon CloudFront to serve the static content. Serve the dynamic content directly from the AL",
+    "D": "Deploy the application stack in two AWS Regions. Use an Amazon Route 53 geolocation routing policy to serve all content from the ALB in the closest Region."
+  },
+  "correct_answer": "A",
+  "community_vote": {
+    "A": "72%",
+    "B": "24%"
+  }
+}

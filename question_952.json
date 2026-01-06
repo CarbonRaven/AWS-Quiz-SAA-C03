@@ -1,0 +1,13 @@
+{
+  "id": 952,
+  "topic": "Topic 1",
+  "question": "A company wants to move its application to a serverless solution. The serverless solution needs to analyze existing data and new data by using SQL. The company stores the data in an Amazon S3 bucket. The data must be encrypted at rest and replicated to a different AWS Region.\n\nWhich solution will meet these requirements with the LEAST operational overhead?",
+  "options": {
+    "A": "Create a new S3 bucket that uses server-side encryption with AWS KMS multi-Region keys (SSE-KMS). Configure Cross-Region Replication (CRR). Load the data into the new S3 bucket. Use Amazon Athena to query the data.",
+    "B": "Create a new S3 bucket that uses server-side encryption with Amazon S3 managed keys (SSE-S3). Configure Cross-Region Replication (CRR). Load the data into the new S3 bucket. Use Amazon RDS to query the data.",
+    "C": "Configure Cross-Region Replication (CRR) on the existing S3 bucket. Use server-side encryption with Amazon S3 managed keys (SSE-S3). Use Amazon Athena to query the data.",
+    "D": "Configure S3 Cross-Region Replication (CRR) on the existing S3 bucket. Use server-side encryption with AWS KMS multi-Region keys (SSE-KMS). Use Amazon RDS to query the data."
+  },
+  "correct_answer": "C",
+  "explanation": "Using the existing S3 bucket with CRR and SSE-S3 provides the least operational overhead. Amazon Athena is a serverless query service that can analyze data directly in S3 using SQL, meeting the serverless requirement without needing to create new buckets or manage infrastructure."
+}

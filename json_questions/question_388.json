@@ -1,0 +1,15 @@
+{
+  "question_number": 388,
+  "topic": 1,
+  "question_text": "A company is deploying a two-tier web application in a VPC. The web tier is using an Amazon EC2 Auto Scaling group with public subnets that span multiple Availability Zones. The database tier consists of an Amazon RDS for MySQL DB instance in separate private subnets. The web tier requires access to the database to retrieve product information.\n\nThe web application is not working as intended. The web application reports that it cannot connect to the database. The database is confirmed to be up and running. All configurations for the network ACLs, security groups, and route tables are still in their default states.\n\nWhat should a solutions architect recommend to fix the application?",
+  "options": {
+    "A": "Add an explicit rule to the private subnet\u2019s network ACL to allow traffic from the web tier\u2019s EC2 instances.",
+    "B": "Add a route in the VPC route table to allow traffic between the web tier\u2019s EC2 instances and the database tier.",
+    "C": "Deploy the web tier's EC2 instances and the database tier\u2019s RDS instance into two separate VPCs, and configure VPC peering.",
+    "D": "Add an inbound rule to the security group of the database tier\u2019s RDS instance to allow traffic from the web tiers security group."
+  },
+  "correct_answer": "D",
+  "community_vote": {
+    "D": "97%"
+  }
+}

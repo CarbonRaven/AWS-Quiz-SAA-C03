@@ -1,0 +1,13 @@
+{
+  "id": 833,
+  "topic": "Topic 1",
+  "question": "A company is designing an event-driven order processing system. Each order requires multiple validation steps after the order is created. An idempotent AWS Lambda function performs each validation step. Each validation step is independent from the other validation steps. Individual validation steps need only a subset of the order event information.\n\nThe company wants to ensure that each validation step Lambda function has access to only the information from the order event that the function requires. The components of the order processing system should be loosely coupled to accommodate future business changes.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Create an Amazon Simple Queue Service (Amazon SQS) queue for each validation step. Create a new Lambda function to transform the order data to the format that each validation step requires and to publish the messages to the appropriate SQS queues. Subscribe each validation step Lambda function to its corresponding SQS queue.",
+    "B": "Create an Amazon Simple Notification Service (Amazon SNS) topic. Subscribe the validation step Lambda functions to the SNS topic. Use message body filtering to send only the required data to each subscribed Lambda function.",
+    "C": "Create an Amazon EventBridge event bus. Create an event rule for each validation step. Configure the input transformer to send only the required data to each target validation step Lambda function.",
+    "D": "Create an Amazon Simple Queue Service (Amazon SQS) queue. Create a new Lambda function to subscribe to the SQS queue and to transform the order data to the format that each validation step requires. Use the new Lambda function to perform synchronous invocations of the validation step Lambda functions in parallel on separate threads."
+  },
+  "correct_answer": "C",
+  "explanation": "EventBridge input transformers can filter and transform event data to send only required information to each target. Event rules provide loose coupling, and each Lambda function receives only the data it needs. This is the most elegant solution for the requirements."
+}

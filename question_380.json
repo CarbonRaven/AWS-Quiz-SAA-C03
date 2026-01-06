@@ -1,0 +1,14 @@
+{
+  "id": 380,
+  "topic": "Topic 1",
+  "question": "A company has a data ingestion workflow that includes the following components:\n\n- An Amazon Simple Notification Service (Amazon SNS) topic that receives notifications about new data deliveries\n- An AWS Lambda function that processes and stores the data\n\nThe ingestion workflow occasionally fails because of network connectivity issues. When a failure occurs, the Lambda function does not ingest the corresponding data unless the company manually reruns the job.\n\nWhich combination of actions should a solutions architect take to ensure that the Lambda function ingests all data in the future? (Choose two.)",
+  "options": {
+    "A": "Deploy the Lambda function in multiple Availability Zones.",
+    "B": "Create an Amazon Simple Queue Service (Amazon SQS) queue and subscribe it to the SNS topic.",
+    "C": "Increase the CPU and memory that are allocated to the Lambda function.",
+    "D": "Increase provisioned throughput for the Lambda function.",
+    "E": "Modify the Lambda function to read from an Amazon SQS queue."
+  },
+  "correct_answer": ["B", "E"],
+  "explanation": "Adding SQS between SNS and Lambda provides message persistence and automatic retries. SQS retains messages until successfully processed. Lambda can use SQS as an event source with built-in error handling. Lambda is already multi-AZ by default. CPU/memory changes don't address network connectivity failures. Lambda doesn't have provisioned throughput settings."
+}

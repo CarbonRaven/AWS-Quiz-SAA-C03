@@ -1,0 +1,13 @@
+{
+  "id": 415,
+  "topic": "Topic 1",
+  "question": "A company is storing petabytes of data in Amazon S3 Standard. The data is stored in multiple S3 buckets and is accessed with varying frequency. The company does not know access patterns for all the data. The company needs to implement a solution for each S3 bucket to optimize the cost of S3 usage.\n\nWhich solution will meet these requirements with the MOST operational efficiency?",
+  "options": {
+    "A": "Create an S3 Lifecycle configuration with a rule to transition the objects in the S3 bucket to S3 Intelligent-Tiering.",
+    "B": "Use the S3 storage class analysis tool to determine the correct tier for each object in the S3 bucket. Move each object to the identified storage tier.",
+    "C": "Create an S3 Lifecycle configuration with a rule to transition the objects in the S3 bucket to S3 Glacier Instant Retrieval.",
+    "D": "Create an S3 Lifecycle configuration with a rule to transition the objects in the S3 bucket to S3 One Zone-Infrequent Access (S3 One Zone-IA)."
+  },
+  "correct_answer": "A",
+  "explanation": "S3 Intelligent-Tiering automatically moves objects between access tiers based on changing access patterns. It's ideal when access patterns are unknown and provides cost optimization without manual intervention. Storage class analysis requires manual action. Fixed transitions to Glacier or One Zone-IA don't adapt to varying access patterns."
+}

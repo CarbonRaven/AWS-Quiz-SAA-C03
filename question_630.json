@@ -1,0 +1,13 @@
+{
+  "id": 630,
+  "topic": "Topic 1",
+  "question": "A solutions architect is creating a data processing job that runs once daily and can take up to 2 hours to complete. If the job is interrupted, it has to restart from the beginning.\n\nHow should the solutions architect address this issue in the MOST cost-effective manner?",
+  "options": {
+    "A": "Create a script that runs locally on an Amazon EC2 Reserved Instance that is triggered by a cron job.",
+    "B": "Create an AWS Lambda function triggered by an Amazon EventBridge scheduled event.",
+    "C": "Use an Amazon Elastic Container Service (Amazon ECS) Fargate task triggered by an Amazon EventBridge scheduled event.",
+    "D": "Use an Amazon Elastic Container Service (Amazon ECS) task running on Amazon EC2 triggered by an Amazon EventBridge scheduled event."
+  },
+  "correct_answer": "C",
+  "explanation": "ECS Fargate is serverless and charges only for the compute time used. For a job that runs once daily for up to 2 hours, Fargate is more cost-effective than Reserved Instances (24/7 cost). Lambda has a 15-minute timeout limit, making it unsuitable for 2-hour jobs."
+}

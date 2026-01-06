@@ -1,0 +1,15 @@
+{
+  "question_number": 383,
+  "topic": 1,
+  "question_text": "A company is planning to migrate a commercial off-the-shelf application from its on-premises data center to AWS. The software has a software licensing model using sockets and cores with predictable capacity and uptime requirements. The company wants to use its existing licenses, which were purchased earlier this year.\n\nWhich Amazon EC2 pricing option is the MOST cost-effective?",
+  "options": {
+    "A": "Dedicated Reserved Hosts",
+    "B": "Dedicated On-Demand Hosts",
+    "C": "Dedicated Reserved Instances",
+    "D": "Dedicated On-Demand Instances"
+  },
+  "correct_answer": "A",
+  "community_vote": {
+    "A": "92%"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "question_number": 379,
+  "topic": 1,
+  "question_text": "A company hosts a frontend application that uses an Amazon API Gateway API backend that is integrated with AWS Lambda. When the API receives requests, the Lambda function loads many libraries. Then the Lambda function connects to an Amazon RDS database, processes the data, and returns the data to the frontend application. The company wants to ensure that response latency is as low as possible for all its users with the fewest number of changes to the company's operations.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Establish a connection between the frontend application and the database to make queries faster by bypassing the API.",
+    "B": "Configure provisioned concurrency for the Lambda function that handles the requests.",
+    "C": "Cache the results of the queries in Amazon S3 for faster retrieval of similar datasets.",
+    "D": "Increase the size of the database to increase the number of connections Lambda can establish at one time."
+  },
+  "correct_answer": "B",
+  "community_vote": {
+    "B": "100%"
+  }
+}

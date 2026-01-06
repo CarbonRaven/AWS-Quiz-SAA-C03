@@ -1,0 +1,15 @@
+{
+  "question_number": 1003,
+  "topic": 1,
+  "question_text": "A company runs its media rendering application on premises. The company wants to reduce storage costs and has moved all data to Amazon S3. The on-premises rendering application needs low-latency access to storage. The company needs to design a storage solution for the application. The storage solution must maintain the desired application performance. Which storage solution will meet these requirements in the MOST cost-effective way?",
+  "options": {
+    "A": "Use Mountpoint for Amazon S3 to access the data in Amazon S3 for the on-premises application.",
+    "B": "Configure an Amazon S3 File Gateway to provide storage for the on-premises application.",
+    "C": "Copy the data from Amazon S3 to Amazon FSx for Windows File Server. Configure an Amazon FSx File Gateway to provide storage for the on-premises application.",
+    "D": "Configure an on-premises file server. Use the Amazon S3 API to connect to S3 storage. Configure the application to access the storage from the on-premises file server."
+  },
+  "correct_answer": "B",
+  "community_vote": {
+    "B": "100%"
+  }
+}

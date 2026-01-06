@@ -1,0 +1,14 @@
+{
+  "id": 522,
+  "topic": "Topic 1",
+  "question": "A company runs container applications by using Amazon Elastic Kubernetes Service (Amazon EKS). The company's workload is not consistent throughout the day. The company wants Amazon EKS to scale in and out according to the workload.\n\nWhich combination of steps will meet these requirements with the LEAST operational overhead? (Choose two.)",
+  "options": {
+    "A": "Use an AWS Lambda function to resize the EKS cluster.",
+    "B": "Use the Kubernetes Metrics Server to activate horizontal pod autoscaling.",
+    "C": "Use the Kubernetes Cluster Autoscaler to manage the number of nodes in the cluster.",
+    "D": "Use Amazon API Gateway and connect it to Amazon EKS.",
+    "E": "Use AWS App Mesh to observe network activity."
+  },
+  "correct_answer": ["B", "C"],
+  "explanation": "Horizontal Pod Autoscaler (HPA) with Metrics Server scales pods based on CPU/memory metrics (B). Cluster Autoscaler adjusts the number of nodes based on pending pods (C). Together they provide complete EKS autoscaling with minimal operational overhead."
+}

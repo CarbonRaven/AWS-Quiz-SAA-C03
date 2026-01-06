@@ -1,0 +1,15 @@
+{
+  "question_number": 242,
+  "topic": 1,
+  "question_text": "A company hosts its web application on AWS using seven Amazon EC2 instances. The company requires that the IP addresses of all healthy EC2 instances be returned in response to DNS queries.\n\nWhich policy should be used to meet this requirement?",
+  "options": {
+    "A": "Simple routing policy",
+    "B": "Latency routing policy",
+    "C": "Multivalue routing policy",
+    "D": "Geolocation routing policy"
+  },
+  "correct_answer": "C",
+  "community_vote": {
+    "C": "97%"
+  }
+}

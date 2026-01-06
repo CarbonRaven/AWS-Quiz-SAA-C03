@@ -1,0 +1,16 @@
+{
+  "question_number": 976,
+  "topic": 1,
+  "question_text": "A company is implementing a new application on AWS. The company will run the application on multiple Amazon EC2 instances across multiple Availability Zones within multiple AWS Regions. The application will be available through the internet. Users will access the application from around the world. The company wants to ensure that each user who accesses the application is sent to the EC2 instances that are closest to the user’s location. Which solution will meet these requirements?",
+  "options": {
+    "A": "Implement an Amazon Route 53 geolocation routing policy. Use an internet-facing Application Load Balancer to distribute the traffic across all Availability Zones within the same Region.",
+    "B": "Implement an Amazon Route 53 geoproximity routing policy. Use an internet-facing Network Load Balancer to distribute the traffic across all Availability Zones within the same Region.",
+    "C": "Implement an Amazon Route 53 multivalue answer routing policy. Use an internet-facing Application Load Balancer to distribute the traffic across all Availability Zones within the same Region.",
+    "D": "Implement an Amazon Route 53 weighted routing policy. Use an internet-facing Network Load Balancer to distribute the traffic across all Availability Zones within the same Region."
+  },
+  "correct_answer": "B",
+  "community_vote": {
+    "B": "62%",
+    "A": "38%"
+  }
+}

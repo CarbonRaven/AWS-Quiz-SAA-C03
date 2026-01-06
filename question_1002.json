@@ -1,0 +1,13 @@
+{
+  "id": 1002,
+  "topic": "Topic 1",
+  "question": "An online gaming company is transitioning user data storage to Amazon DynamoDB to support the company's growing user base. The current architecture includes DynamoDB tables that contain user profiles, achievements, and in-game transactions.\n\nThe company needs to design a robust, continuously available, and resilient DynamoDB architecture to maintain a seamless gaming experience for users.\n\nWhich solution will meet these requirements MOST cost-effectively?",
+  "options": {
+    "A": "Create DynamoDB tables in a single AWS Region. Use on-demand capacity mode. Use global tables to replicate data across multiple Regions.",
+    "B": "Use DynamoDB Accelerator (DAX) to cache frequently accessed data. Deploy tables in a single AWS Region and enable auto scaling. Configure Cross-Region Replication manually to additional Regions.",
+    "C": "Create DynamoDB tables in multiple AWS Regions. Use on-demand capacity mode. Use DynamoDB Streams for Cross-Region Replication between Regions.",
+    "D": "Use DynamoDB global tables for automatic multi-Region replication. Deploy tables in multiple AWS Regions. Use provisioned capacity mode. Enable auto scaling."
+  },
+  "correct_answer": "D",
+  "explanation": "DynamoDB global tables provide automatic multi-Region replication for high availability and resilience. Provisioned capacity mode with auto scaling is more cost-effective than on-demand mode for predictable workloads like gaming, where usage patterns are relatively consistent."
+}

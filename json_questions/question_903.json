@@ -1,0 +1,16 @@
+{
+  "question_number": 903,
+  "topic": 1,
+  "question_text": "A company manages a data lake in an Amazon S3 bucket that numerous applications access. The S3 bucket contains a unique prefix for each application. The company wants to restrict each application to its specific prefix and to have granular control of the objects under each prefix. Which solution will meet these requirements with the LEAST operational overhead?",
+  "options": {
+    "A": "Create dedicated S3 access points and access point policies for each application.",
+    "B": "Create an S3 Batch Operations job to set the ACL permissions for each object in the S3 bucket.",
+    "C": "Replicate the objects in the S3 bucket to new S3 buckets for each application. Create replication rules by prefix.",
+    "D": "Replicate the objects in the S3 bucket to new S3 buckets for each application. Create dedicated S3 access points for each application."
+  },
+  "correct_answer": "A",
+  "community_vote": {
+    "A": "85%",
+    "B": "15%"
+  }
+}

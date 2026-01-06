@@ -1,0 +1,14 @@
+{
+  "id": 157,
+  "topic": "Topic 1",
+  "question": "A company stores data in an Amazon Aurora PostgreSQL DB cluster. The company must store all the data for 5 years and must delete all the data after 5 years. The company also must indefinitely keep audit logs of actions that are performed within the database. Currently, the company has automated backups configured for Aurora.\nWhich combination of steps should a solutions architect take to meet these requirements? (Choose two.)",
+  "options": {
+    "A": "Take a manual snapshot of the DB cluster.",
+    "B": "Create a lifecycle policy for the automated backups.",
+    "C": "Configure automated backup retention for 5 years.",
+    "D": "Configure an Amazon CloudWatch Logs export for the DB cluster.",
+    "E": "Use AWS Backup to take the backups and to keep the backups for 5 years."
+  },
+  "correct_answer": ["D", "E"],
+  "explanation": "AWS Backup supports long-term retention (up to 5 years) for Aurora backups, unlike automated backups which max at 35 days. CloudWatch Logs export captures audit logs indefinitely for compliance. Manual snapshots don't auto-delete, and there's no lifecycle policy for automated backups."
+}

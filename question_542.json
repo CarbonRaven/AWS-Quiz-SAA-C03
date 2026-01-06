@@ -1,0 +1,13 @@
+{
+  "id": 542,
+  "topic": "Topic 1",
+  "question": "A media company uses an Amazon CloudFront distribution to deliver content over the internet. The company wants only premium customers to have access to the media streams and file content. The company stores all content in an Amazon S3 bucket. The company also delivers content on demand to customers for a specific purpose, such as movie rentals or music downloads.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Generate and provide S3 signed cookies to premium customers.",
+    "B": "Generate and provide CloudFront signed URLs to premium customers.",
+    "C": "Use origin access control (OAC) to limit the access of non-premium customers.",
+    "D": "Generate and activate field-level encryption to block non-premium customers."
+  },
+  "correct_answer": "B",
+  "explanation": "CloudFront signed URLs are ideal for individual content access like movie rentals or downloads. They provide time-limited, user-specific access to specific content. S3 signed cookies/URLs bypass CloudFront. OAC restricts S3 access to CloudFront, not users. Field-level encryption protects data, not access."
+}

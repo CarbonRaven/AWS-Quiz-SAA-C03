@@ -1,0 +1,13 @@
+{
+  "question_number": 22,
+  "topic": 1,
+  "question_text": "A solutions architect is using Amazon S3 to design the storage architecture of a new digital media application. The media files must be resilient to the loss of an Availability Zone. Some files are accessed frequently while other files are rarely accessed in an unpredictable pattern. The solutions architect must minimize the costs of storing and retrieving the media files.\nWhich storage option meets these requirements?",
+  "options": {
+    "A": "S3 Standard",
+    "B": "S3 Intelligent-Tiering",
+    "C": "S3 Standard-Infrequent Access (S3 Standard-IA)",
+    "D": "S3 One Zone-Infrequent Access (S3 One Zone-IA)"
+  },
+  "correct_answer": "B",
+  "community_vote": null
+}

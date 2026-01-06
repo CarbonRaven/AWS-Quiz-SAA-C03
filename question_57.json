@@ -1,0 +1,13 @@
+{
+  "id": 57,
+  "topic": "Topic 1",
+  "question": "A company is running a popular social media website. The website gives users the ability to upload images to share with other users. The company wants to make sure that the images do not contain inappropriate content. The company needs a solution that minimizes development effort.\nWhat should a solutions architect do to meet these requirements?",
+  "options": {
+    "A": "Use Amazon Comprehend to detect inappropriate content. Use human review for low-confidence predictions.",
+    "B": "Use Amazon Rekognition to detect inappropriate content. Use human review for low-confidence predictions.",
+    "C": "Use Amazon SageMaker to detect inappropriate content. Use ground truth to label low-confidence predictions.",
+    "D": "Use AWS Fargate to deploy a custom machine learning model to detect inappropriate content. Use ground truth to label low-confidence predictions."
+  },
+  "correct_answer": "B",
+  "explanation": "Amazon Rekognition has built-in content moderation capabilities for detecting inappropriate or offensive images with minimal development effort. Comprehend is for text analysis, not images."
+}

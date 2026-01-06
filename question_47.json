@@ -1,0 +1,13 @@
+{
+  "id": 47,
+  "topic": "Topic 1",
+  "question": "A company needs guaranteed Amazon EC2 capacity in three specific Availability Zones in a specific AWS Region for an upcoming event that will last 1 week.\nWhat should the company do to guarantee the EC2 capacity?",
+  "options": {
+    "A": "Purchase Reserved Instances that specify the Region needed.",
+    "B": "Create an On-Demand Capacity Reservation that specifies the Region needed.",
+    "C": "Purchase Reserved Instances that specify the Region and three Availability Zones needed.",
+    "D": "Create an On-Demand Capacity Reservation that specifies the Region and three Availability Zones needed."
+  },
+  "correct_answer": "D",
+  "explanation": "On-Demand Capacity Reservations guarantee capacity in specific Availability Zones. Reserved Instances provide billing discounts but don't guarantee capacity. For a 1-week event, Capacity Reservations are more appropriate than a 1-year RI commitment."
+}

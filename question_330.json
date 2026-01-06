@@ -1,0 +1,13 @@
+{
+  "id": 330,
+  "topic": "Topic 1",
+  "question": "A company is planning to store data on Amazon RDS DB instances. The company must encrypt the data at rest.\n\nWhat should a solutions architect do to meet this requirement?",
+  "options": {
+    "A": "Create a key in AWS Key Management Service (AWS KMS). Enable encryption for the DB instances.",
+    "B": "Create an encryption key. Store the key in AWS Secrets Manager. Use the key to encrypt the DB instances.",
+    "C": "Generate a certificate in AWS Certificate Manager (ACM). Enable SSL/TLS on the DB instances by using the certificate.",
+    "D": "Generate a certificate in AWS Identity and Access Management (IAM). Enable SSL/TLS on the DB instances by using the certificate."
+  },
+  "correct_answer": "A",
+  "explanation": "RDS encryption at rest uses AWS KMS keys. You create a KMS key and enable encryption when creating or modifying the DB instance. Secrets Manager stores secrets, not encryption keys for RDS. ACM certificates are for SSL/TLS (encryption in transit), not at rest. IAM doesn't generate certificates for database encryption."
+}

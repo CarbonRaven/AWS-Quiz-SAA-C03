@@ -1,0 +1,13 @@
+{
+  "id": 844,
+  "topic": "Topic 1",
+  "question": "A company has an on-premises business application that generates hundreds of files each day. These files are stored on an SMB file share and require a low-latency connection to the application servers. A new company policy states all application-generated files must be copied to AWS. There is already a VPN connection to AWS.\n\nThe application development team does not have time to make the necessary code modifications to move the application to AWS.\n\nWhich service should a solutions architect recommend to allow the application to copy files to AWS?",
+  "options": {
+    "A": "Amazon Elastic File System (Amazon EFS)",
+    "B": "Amazon FSx for Windows File Server",
+    "C": "AWS Snowball",
+    "D": "AWS Storage Gateway"
+  },
+  "correct_answer": "D",
+  "explanation": "AWS Storage Gateway (File Gateway) provides SMB file share access with local caching for low latency while automatically copying files to S3. No application code changes are needed as it presents as a standard SMB share."
+}

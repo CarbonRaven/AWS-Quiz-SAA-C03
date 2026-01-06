@@ -1,0 +1,13 @@
+{
+  "id": 122,
+  "topic": "Topic 1",
+  "question": "A company wants to build a scalable key management infrastructure to support developers who need to encrypt data in their applications.\nWhat should a solutions architect do to reduce the operational burden?",
+  "options": {
+    "A": "Use multi-factor authentication (MFA) to protect the encryption keys.",
+    "B": "Use AWS Key Management Service (AWS KMS) to protect the encryption keys.",
+    "C": "Use AWS Certificate Manager (ACM) to create, store, and assign the encryption keys.",
+    "D": "Use an IAM policy to limit the scope of users who have access permissions to protect the encryption keys."
+  },
+  "correct_answer": "B",
+  "explanation": "AWS KMS is a managed service designed specifically for creating and controlling encryption keys. It reduces operational burden by handling key rotation, access control, and integration with other AWS services automatically."
+}

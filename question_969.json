@@ -1,0 +1,13 @@
+{
+  "id": 969,
+  "topic": "Topic 1",
+  "question": "A company currently runs an on-premises application that uses ASP.NET on Linux machines. The application is resource-intensive and serves customers directly.\n\nThe company wants to modernize the application to .NET. The company wants to run the application on containers and to scale based on Amazon CloudWatch metrics. The company also wants to reduce the time spent on operational maintenance activities.\n\nWhich solution will meet these requirements with the LEAST operational overhead?",
+  "options": {
+    "A": "Use AWS App2Container to containerize the application. Use an AWS CloudFormation template to deploy the application to Amazon Elastic Container Service (Amazon ECS) on AWS Fargate.",
+    "B": "Use AWS App2Container to containerize the application. Use an AWS CloudFormation template to deploy the application to Amazon Elastic Container Service (Amazon ECS) on Amazon EC2 instances.",
+    "C": "Use AWS App Runner to containerize the application. Use App Runner to deploy the application to Amazon Elastic Container Service (Amazon ECS) on AWS Fargate.",
+    "D": "Use AWS App Runner to containerize the application. Use App Runner to deploy the application to Amazon Elastic Kubernetes Service (Amazon EKS) on Amazon EC2 instances."
+  },
+  "correct_answer": "A",
+  "explanation": "AWS App2Container can containerize existing ASP.NET applications. ECS on Fargate provides serverless container orchestration with minimal operational overhead. CloudFormation enables infrastructure as code deployment and Fargate eliminates the need to manage EC2 instances."
+}

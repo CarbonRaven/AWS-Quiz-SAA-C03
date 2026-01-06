@@ -1,0 +1,13 @@
+{
+  "id": 237,
+  "topic": "Topic 1",
+  "question": "An application running on an Amazon EC2 instance in VPC-A needs to access files in another EC2 instance in VPC-B. Both VPCs are in separate AWS accounts. The network administrator needs to design a solution to configure secure access to EC2 instance in VPC-B from VPC-A. The connectivity should not have a single point of failure or bandwidth concerns.\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Set up a VPC peering connection between VPC-A and VPC-B.",
+    "B": "Set up VPC gateway endpoints for the EC2 instance running in VPC-B.",
+    "C": "Attach a virtual private gateway to VPC-B and set up routing from VPC-A.",
+    "D": "Create a private virtual interface (VIF) for the EC2 instance running in VPC-B and add appropriate routes from VPC-A."
+  },
+  "correct_answer": "A",
+  "explanation": "VPC peering works across AWS accounts, provides private connectivity, and doesn't have single point of failure or bandwidth limitations. It uses AWS backbone network. Gateway endpoints are for AWS services, not EC2. VPG and VIF are for Direct Connect/VPN scenarios."
+}

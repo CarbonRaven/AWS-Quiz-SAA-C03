@@ -1,0 +1,13 @@
+{
+  "id": 657,
+  "topic": "Topic 1",
+  "question": "A company has multiple AWS accounts in an organization in AWS Organizations that different business units use. The company has multiple offices around the world. The company needs to update security group rules to allow new office CIDR ranges or to remove old CIDR ranges across the organization. The company wants to centralize the management of security group rules to minimize the administrative overhead that updating CIDR ranges requires.\n\nWhich solution will meet these requirements MOST cost-effectively?",
+  "options": {
+    "A": "Create VPC security groups in the organization's management account. Update the security groups when a CIDR range update is necessary.",
+    "B": "Create a VPC customer managed prefix list that contains the list of CIDRs. Use AWS Resource Access Manager (AWS RAM) to share the prefix list across the organization. Use the prefix list in the security groups across the organization.",
+    "C": "Create an AWS managed prefix list. Use an AWS Security Hub policy to enforce the security group update across the organization. Use an AWS Lambda function to update the prefix list automatically when the CIDR ranges change.",
+    "D": "Create security groups in a central administrative AWS account. Create an AWS Firewall Manager common security group policy for the whole organization. Select the previously created security groups as primary groups in the policy."
+  },
+  "correct_answer": "B",
+  "explanation": "Customer managed prefix lists can be shared across accounts using AWS RAM. When the prefix list is updated, all security groups referencing it are automatically updated. This is the most cost-effective and least overhead solution for managing CIDR ranges across an organization."
+}

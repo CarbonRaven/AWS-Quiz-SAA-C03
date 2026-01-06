@@ -1,0 +1,13 @@
+{
+  "id": 757,
+  "topic": "Topic 1",
+  "question": "A company is running a legacy system on an Amazon EC2 instance. The application code cannot be modified, and the system cannot run on more than one instance. A solutions architect must design a resilient solution that can improve the recovery time for the system.\n\nWhat should the solutions architect recommend to meet these requirements?",
+  "options": {
+    "A": "Enable termination protection for the EC2 instance.",
+    "B": "Configure the EC2 instance for Multi-AZ deployment.",
+    "C": "Create an Amazon CloudWatch alarm to recover the EC2 instance in case of failure.",
+    "D": "Launch the EC2 instance with two Amazon Elastic Block Store (Amazon EBS) volumes that use RAID configurations for storage redundancy."
+  },
+  "correct_answer": "C",
+  "explanation": "CloudWatch alarm actions can automatically recover an EC2 instance when a system status check fails. This is ideal for single-instance legacy applications that cannot be modified. The instance is recovered with the same instance ID, IP address, Elastic IP, EBS volume attachments, and instance metadata."
+}

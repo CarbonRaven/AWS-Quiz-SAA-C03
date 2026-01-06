@@ -1,0 +1,13 @@
+{
+  "id": 346,
+  "topic": "Topic 1",
+  "question": "A company has an aging network-attached storage (NAS) array in its data center. The NAS array presents SMB shares and NFS shares to client workstations. The company does not want to purchase a new NAS array. The company also does not want to incur the cost of renewing the NAS array's support contract. Some of the data is accessed frequently, but much of the data is inactive.\n\nA solutions architect needs to implement a solution that migrates the data to Amazon S3, uses S3 Lifecycle policies, and maintains the same look and feel for the client workstations. The solutions architect has identified AWS Storage Gateway as part of the solution.\n\nWhich type of storage gateway should the solutions architect provision to meet these requirements?",
+  "options": {
+    "A": "Volume Gateway",
+    "B": "Tape Gateway",
+    "C": "Amazon FSx File Gateway",
+    "D": "Amazon S3 File Gateway"
+  },
+  "correct_answer": "D",
+  "explanation": "S3 File Gateway provides SMB and NFS access to S3 storage, maintaining the same look and feel for client workstations. Data is stored in S3 where Lifecycle policies can be applied. Volume Gateway provides block storage. Tape Gateway is for backup. FSx File Gateway is for FSx, not S3."
+}

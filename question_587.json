@@ -1,0 +1,13 @@
+{
+  "id": 587,
+  "topic": "Topic 1",
+  "question": "A company is designing a solution to capture customer activity in different web applications to process analytics and make predictions. Customer activity in the web applications is unpredictable and can increase suddenly. The company requires a solution that integrates with other web applications. The solution must include an authorization step for security purposes.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Configure a Gateway Load Balancer (GWLB) in front of an Amazon Elastic Container Service (Amazon ECS) container instance that stores the information that the company receives in an Amazon Elastic File System (Amazon EFS) file system. Authorization is resolved at the GWLB.",
+    "B": "Configure an Amazon API Gateway endpoint in front of an Amazon Kinesis data stream that stores the information that the company receives in an Amazon S3 bucket. Use an AWS Lambda function to resolve authorization.",
+    "C": "Configure an Amazon API Gateway endpoint in front of an Amazon Kinesis Data Firehose that stores the information that the company receives in an Amazon S3 bucket. Use an API Gateway Lambda authorizer to resolve authorization.",
+    "D": "Configure a Gateway Load Balancer (GWLB) in front of an Amazon Elastic Container Service (Amazon ECS) container instance that stores the information that the company receives on an Amazon Elastic File System (Amazon EFS) file system. Use an AWS Lambda function to resolve authorization."
+  },
+  "correct_answer": "C",
+  "explanation": "API Gateway with Lambda authorizer provides authorization. Kinesis Data Firehose handles unpredictable streaming data and scales automatically. S3 provides durable storage for analytics. This serverless architecture integrates easily with web applications."
+}

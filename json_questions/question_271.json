@@ -1,0 +1,15 @@
+{
+  "question_number": 271,
+  "topic": 1,
+  "question_text": "A solutions architect observes that a nightly batch processing job is automatically scaled up for 1 hour before the desired Amazon EC2 capacity is reached. The peak capacity is the \u2018same every night and the batch jobs always start at 1 AM. The solutions architect needs to find a cost-effective solution that will allow for the desired EC2 capacity to be reached quickly and allow the Auto Scaling group to scale down after the batch jobs are complete.\n\nWhat should the solutions architect do to meet these requirements?",
+  "options": {
+    "A": "Increase the minimum capacity for the Auto Scaling group.",
+    "B": "Increase the maximum capacity for the Auto Scaling group.",
+    "C": "Configure scheduled scaling to scale up to the desired compute level.",
+    "D": "Change the scaling policy to add more EC2 instances during each scaling operation."
+  },
+  "correct_answer": "C",
+  "community_vote": {
+    "C": "100%"
+  }
+}

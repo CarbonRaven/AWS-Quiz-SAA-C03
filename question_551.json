@@ -1,0 +1,13 @@
+{
+  "id": 551,
+  "topic": "Topic 1",
+  "question": "A company has a financial application that produces reports. The reports average 50 KB in size and are stored in Amazon S3. The reports are frequently accessed during the first week after production and must be stored for several years. The reports must be retrievable within 6 hours.\n\nWhich solution meets these requirements MOST cost-effectively?",
+  "options": {
+    "A": "Use S3 Standard. Use an S3 Lifecycle rule to transition the reports to S3 Glacier after 7 days.",
+    "B": "Use S3 Standard. Use an S3 Lifecycle rule to transition the reports to S3 Standard-Infrequent Access (S3 Standard-IA) after 7 days.",
+    "C": "Use S3 Intelligent-Tiering. Configure S3 Intelligent-Tiering to transition the reports to S3 Standard-Infrequent Access (S3 Standard-IA) and S3 Glacier.",
+    "D": "Use S3 Standard. Use an S3 Lifecycle rule to transition the reports to S3 Glacier Deep Archive after 7 days."
+  },
+  "correct_answer": "A",
+  "explanation": "S3 Standard for frequent access in the first week, then transition to S3 Glacier after 7 days is most cost-effective. Glacier provides retrieval within 3-5 hours (expedited) or 3-5 hours (standard), meeting the 6-hour requirement. Deep Archive has 12-hour retrieval time which doesn't meet the requirement."
+}

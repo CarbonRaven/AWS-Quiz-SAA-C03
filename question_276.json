@@ -1,0 +1,14 @@
+{
+  "id": 276,
+  "topic": "Topic 1",
+  "question": "A company has a multi-tier application deployed on several Amazon EC2 instances in an Auto Scaling group. An Amazon RDS for Oracle instance is the application's data layer that uses Oracle-specific PL/SQL functions. Traffic to the application has been steadily increasing. This is causing the EC2 instances to become overloaded and the RDS instance to run out of storage. The Auto Scaling group does not have any scaling metrics and defines the minimum healthy instance count only. The company predicts that traffic will continue to increase at a steady but unpredictable rate before leveling off.\n\nWhat should a solutions architect do to ensure the system can automatically scale for the increased traffic? (Choose two.)",
+  "options": {
+    "A": "Configure storage Auto Scaling on the RDS for Oracle instance.",
+    "B": "Migrate the database to Amazon Aurora to use Auto Scaling storage.",
+    "C": "Configure an alarm on the RDS for Oracle instance for low free storage space.",
+    "D": "Configure the Auto Scaling group to use the average CPU as the scaling metric.",
+    "E": "Configure the Auto Scaling group to use the average free memory as the scaling metric."
+  },
+  "correct_answer": ["A", "D"],
+  "explanation": "RDS Storage Auto Scaling (A) automatically increases storage when running low, solving the storage issue. CPU-based scaling (D) is the standard metric for Auto Scaling groups and addresses the EC2 overload. Aurora doesn't support Oracle PL/SQL functions. Alarms notify but don't auto-scale storage. Memory metrics are not directly available for EC2 Auto Scaling without custom CloudWatch agents."
+}

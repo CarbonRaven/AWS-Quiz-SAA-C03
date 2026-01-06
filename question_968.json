@@ -1,0 +1,13 @@
+{
+  "id": 968,
+  "topic": "Topic 1",
+  "question": "A finance company uses an on-premises search application to collect streaming data from various producers. The application provides real-time updates to search and visualization features.\n\nThe company is planning to migrate to AWS and wants to use an AWS native solution.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Use Amazon EC2 instances to ingest and process the data streams to Amazon S3 buckets tor storage. Use Amazon Athena to search the data. Use Amazon Managed Grafana to create visualizations.",
+    "B": "Use Amazon EMR to ingest and process the data streams to Amazon Redshift for storage. Use Amazon Redshift Spectrum to search the data. Use Amazon QuickSight to create visualizations.",
+    "C": "Use Amazon Elastic Kubernetes Service (Amazon EKS) to ingest and process the data streams to Amazon DynamoDB for storage. Use Amazon CloudWatch to create graphical dashboards to search and visualize the data.",
+    "D": "Use Amazon Kinesis Data Streams to ingest and process the data streams to Amazon OpenSearch Service. Use OpenSearch Service to search the data. Use Amazon QuickSight to create visualizations."
+  },
+  "correct_answer": "D",
+  "explanation": "Kinesis Data Streams is designed for real-time streaming data ingestion. Amazon OpenSearch Service provides real-time search capabilities. Together with QuickSight for visualization, this is a fully managed AWS-native solution for real-time search and visualization."
+}

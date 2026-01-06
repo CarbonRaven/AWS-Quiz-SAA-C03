@@ -1,0 +1,13 @@
+{
+  "id": 1019,
+  "topic": "Topic 1",
+  "question": "A company is developing an application in the AWS Cloud. The application's HTTP API contains critical information that is published in Amazon API Gateway. The critical information must be accessible from only a limited set of trusted IP addresses that belong to the company's internal network.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Set up an API Gateway private integration to restrict access to a predefined set of IP addresses.",
+    "B": "Create a resource policy for the API that denies access to any IP address that is not specifically allowed.",
+    "C": "Directly deploy the API in a private subnet. Create a network ACL. Set up rules to allow the traffic from specific IP addresses.",
+    "D": "Modify the security group that is attached to API Gateway to allow inbound traffic from only the trusted IP addresses."
+  },
+  "correct_answer": "B",
+  "explanation": "API Gateway resource policies allow you to control access to APIs by specifying IP addresses or CIDR ranges that can invoke the API. This is the correct way to restrict API access to specific IP addresses. API Gateway does not have security groups, and private integrations control backend access, not client access."
+}

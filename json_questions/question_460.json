@@ -1,0 +1,15 @@
+{
+  "question_number": 460,
+  "topic": 1,
+  "question_text": "A company wants to securely exchange data between its software as a service (SaaS) application Salesforce account and Amazon S3. The company must encrypt the data at rest by using AWS Key Management Service (AWS KMS) customer managed keys (CMKs). The company must also encrypt the data in transit. The company has enabled API access for the Salesforce account.",
+  "options": {
+    "A": "Create AWS Lambda functions to transfer the data securely from Salesforce to Amazon S3.",
+    "B": "Create an AWS Step Functions workflow. Define the task to transfer the data securely from Salesforce to Amazon S3.",
+    "C": "Create Amazon AppFlow flows to transfer the data securely from Salesforce to Amazon S3.",
+    "D": "Create a custom connector for Salesforce to transfer the data securely from Salesforce to Amazon S3."
+  },
+  "correct_answer": "C",
+  "community_vote": {
+    "C": "100%"
+  }
+}

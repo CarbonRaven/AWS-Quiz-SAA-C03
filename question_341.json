@@ -1,0 +1,13 @@
+{
+  "id": 341,
+  "topic": "Topic 1",
+  "question": "A company has an Amazon S3 data lake that is governed by AWS Lake Formation. The company wants to create a visualization in Amazon QuickSight by joining the data in the data lake with operational data that is stored in an Amazon Aurora MySQL database. The company wants to enforce column-level authorization so that the company's marketing team can access only a subset of columns in the database.\n\nWhich solution will meet these requirements with the LEAST operational overhead?",
+  "options": {
+    "A": "Use Amazon EMR to ingest the data directly from the database to the QuickSight SPICE engine. Include only the required columns.",
+    "B": "Use AWS Glue Studio to ingest the data from the database to the S3 data lake. Attach an IAM policy to the QuickSight users to enforce column-level access control. Use Amazon S3 as the data source in QuickSight.",
+    "C": "Use AWS Glue Elastic Views to create a materialized view for the database in Amazon S3. Create an S3 bucket policy to enforce column-level access control for the QuickSight users. Use Amazon S3 as the data source in QuickSight.",
+    "D": "Use a Lake Formation blueprint to ingest the data from the database to the S3 data lake. Use Lake Formation to enforce column-level access control for the QuickSight users. Use Amazon Athena as the data source in QuickSight."
+  },
+  "correct_answer": "D",
+  "explanation": "Lake Formation provides fine-grained access control including column-level permissions with minimal overhead. Blueprints automate data ingestion. Athena with Lake Formation enforces these permissions. IAM policies don't provide column-level access for S3. S3 bucket policies can't enforce column-level access. EMR adds operational overhead."
+}

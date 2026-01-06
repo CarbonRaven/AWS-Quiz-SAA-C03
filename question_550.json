@@ -1,0 +1,14 @@
+{
+  "id": 550,
+  "topic": "Topic 1",
+  "question": "A company is using AWS Key Management Service (AWS KMS) keys to encrypt AWS Lambda environment variables. A solutions architect needs to ensure that the required permissions are in place to decrypt and use the environment variables.\n\nWhich steps must the solutions architect take to implement the correct permissions? (Choose two.)",
+  "options": {
+    "A": "Add AWS KMS permissions in the Lambda resource policy.",
+    "B": "Add AWS KMS permissions in the Lambda execution role.",
+    "C": "Add AWS KMS permissions in the Lambda function policy.",
+    "D": "Allow the Lambda execution role in the AWS KMS key policy.",
+    "E": "Allow the Lambda resource policy in the AWS KMS key policy."
+  },
+  "correct_answer": ["B", "D"],
+  "explanation": "The Lambda execution role needs kms:Decrypt permission to decrypt environment variables (B). The KMS key policy must allow the Lambda execution role to use the key (D). Both the IAM policy and KMS key policy must grant access for the decryption to work."
+}

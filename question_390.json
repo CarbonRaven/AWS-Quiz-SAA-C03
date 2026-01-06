@@ -1,0 +1,14 @@
+{
+  "id": 390,
+  "topic": "Topic 1",
+  "question": "A company needs to configure a real-time data ingestion architecture for its application. The company needs an API, a process that transforms data as the data is streamed, and a storage solution for the data.\n\nWhich solution will meet these requirements with the LEAST operational overhead? (Choose two.)",
+  "options": {
+    "A": "Deploy an Amazon EC2 instance to host an API that sends data to an Amazon Kinesis data stream. Create an Amazon Kinesis Data Firehose delivery stream that uses the Kinesis data stream as a data source. Use AWS Lambda functions to transform the data. Use Amazon Kinesis Data Firehose to send the data to Amazon S3.",
+    "B": "Deploy an Amazon EC2 instance to host an API that sends data to AWS Glue. Stop source/destination checking on the EC2 instance. Use AWS Glue to transform the data and to send the data to Amazon S3.",
+    "C": "Configure an Amazon API Gateway API to send data to an Amazon Kinesis data stream. Create an Amazon Kinesis Data Firehose delivery stream that uses the Kinesis data stream as a data source. Use AWS Lambda functions to transform the data. Use Amazon Kinesis Data Firehose to send the data to Amazon S3.",
+    "D": "Configure an Amazon API Gateway API to send data to AWS Glue. Use AWS Lambda functions to transform the data. Use AWS Glue to send the data to Amazon S3.",
+    "E": "Configure an Amazon API Gateway API to send data to Amazon Kinesis Data Firehose. Use AWS Lambda functions to transform the data. Use Amazon Kinesis Data Firehose to send the data to Amazon S3."
+  },
+  "correct_answer": ["A", "D"],
+  "explanation": "API Gateway provides managed API with minimal overhead. Kinesis Data Firehose with Lambda transforms data in real-time and delivers to S3 automatically. This serverless architecture minimizes operational overhead. EC2-hosted APIs require server management. AWS Glue is typically for batch ETL, not real-time streaming. Option E directly sends to Firehose without Kinesis Data Streams which is more efficient."
+}

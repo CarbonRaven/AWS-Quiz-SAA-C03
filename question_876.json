@@ -1,0 +1,14 @@
+{
+  "id": 876,
+  "topic": "Topic 1",
+  "question": "A company hosts an application on Amazon EC2 instances that run in a single Availability Zone. The application is accessible by using the transport layer of the Open Systems Interconnection (OSI) model. The company needs the application architecture to have high availability.\n\nWhich combination of steps will meet these requirements MOST cost-effectively? (Choose two.)",
+  "options": {
+    "A": "Configure new EC2 instances in a different Availability Zone. Use Amazon Route 53 to route traffic to all instances.",
+    "B": "Configure a Network Load Balancer in front of the EC2 instances.",
+    "C": "Configure a Network Load Balancer for TCP traffic to the instances. Configure an Application Load Balancer for HTTP and HTTPS traffic to the instances.",
+    "D": "Create an Auto Scaling group for the EC2 instances. Configure the Auto Scaling group to use multiple Availability Zones. Configure the Auto Scaling group to run application health checks on the instances.",
+    "E": "Create an Amazon CloudWatch alarm. Configure the alarm to restart EC2 instances that transition to a stopped state."
+  },
+  "correct_answer": ["B", "D"],
+  "explanation": "Transport layer (Layer 4) requires a Network Load Balancer for TCP/UDP traffic. Auto Scaling across multiple AZs provides high availability and automatic instance replacement based on health checks."
+}

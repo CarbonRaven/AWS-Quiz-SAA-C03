@@ -1,0 +1,13 @@
+{
+  "id": 823,
+  "topic": "Topic 1",
+  "question": "A robotics company is designing a solution for medical surgery. The robots will use advanced sensors, cameras, and AI algorithms to perceive their environment and to complete surgeries.\n\nThe company needs a public load balancer in the AWS Cloud that will ensure seamless communication with backend services. The load balancer must be capable of routing traffic based on the query strings to different target groups. The traffic must also be encrypted.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Use a Network Load Balancer with a certificate attached from AWS Certificate Manager (ACM). Use query parameter-based routing.",
+    "B": "Use a Gateway Load Balancer. Import a generated certificate in AWS Identity and Access Management (IAM). Attach the certificate to the load balancer. Use HTTP path-based routing.",
+    "C": "Use an Application Load Balancer with a certificate attached from AWS Certificate Manager (ACM). Use query parameter-based routing.",
+    "D": "Use a Network Load Balancer. Import a generated certificate in AWS Identity and Access Management (IAM). Attach the certificate to the load balancer. Use query parameter-based routing."
+  },
+  "correct_answer": "C",
+  "explanation": "Application Load Balancer supports query string-based routing and SSL/TLS termination with ACM certificates. NLB operates at Layer 4 and doesn't support query parameter routing. ALB is the correct choice for Layer 7 routing requirements."
+}

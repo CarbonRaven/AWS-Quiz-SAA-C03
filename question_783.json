@@ -1,0 +1,13 @@
+{
+  "id": 783,
+  "topic": "Topic 1",
+  "question": "A company maintains its accounting records in a custom application that runs on Amazon EC2 instances. The company needs to migrate the data to an AWS managed service for development and maintenance of the application data. The solution must require minimal operational support and provide immutable, cryptographically verifiable logs of data changes.\n\nWhich solution will meet these requirements MOST cost-effectively?",
+  "options": {
+    "A": "Copy the records from the application into an Amazon Redshift cluster.",
+    "B": "Copy the records from the application into an Amazon Neptune cluster.",
+    "C": "Copy the records from the application into an Amazon Timestream database.",
+    "D": "Copy the records from the application into an Amazon Quantum Ledger Database (Amazon QLDB) ledger."
+  },
+  "correct_answer": "D",
+  "explanation": "Amazon QLDB is a fully managed ledger database that provides a transparent, immutable, and cryptographically verifiable transaction log. It's purpose-built for applications that need to maintain a complete and verifiable history of data changes, which is ideal for accounting records."
+}

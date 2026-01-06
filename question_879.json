@@ -1,0 +1,14 @@
+{
+  "id": 879,
+  "topic": "Topic 1",
+  "question": "A company runs an ecommerce application on AWS. Amazon EC2 instances process purchases and store the purchase details in an Amazon Aurora PostgreSQL DB cluster.\n\nCustomers are experiencing application timeouts during times of peak usage. A solutions architect needs to rearchitect the application so that the application can scale to meet peak usage demands.\n\nWhich combination of actions will meet these requirements MOST cost-effectively? (Choose two.)",
+  "options": {
+    "A": "Configure an Auto Scaling group of new EC2 instances to retry the purchases until the processing is complete. Update the applications to connect to the DB cluster by using Amazon RDS Proxy.",
+    "B": "Configure the application to use an Amazon ElastiCache cluster in front of the Aurora PostgreSQL DB cluster.",
+    "C": "Update the application to send the purchase requests to an Amazon Simple Queue Service (Amazon SQS) queue. Configure an Auto Scaling group of new EC2 instances that read from the SQS queue.",
+    "D": "Configure an AWS Lambda function to retry the ticket purchases until the processing is complete.",
+    "E": "Configure an Amazon API Gateway REST API with a usage plan."
+  },
+  "correct_answer": ["B", "C"],
+  "explanation": "SQS decouples the application and handles traffic spikes by queuing requests, while Auto Scaling processes them. ElastiCache reduces database load for read operations. This combination addresses both processing capacity and database performance."
+}

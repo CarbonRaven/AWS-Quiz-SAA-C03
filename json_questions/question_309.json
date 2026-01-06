@@ -1,0 +1,15 @@
+{
+  "question_number": 309,
+  "topic": 1,
+  "question_text": "A solutions architect needs to optimize storage costs. The solutions architect must identify any Amazon S3 buckets that are no longer being accessed or are rarely accessed.\n\nWhich solution will accomplish this goal with the LEAST operational overhead?",
+  "options": {
+    "A": "Analyze bucket access patterns by using the S3 Storage Lens dashboard for advanced activity metrics.",
+    "B": "Analyze bucket access patterns by using the S3 dashboard in the AWS Management Console.",
+    "C": "Turn on the Amazon CloudWatch BucketSizeBytes metric for buckets. Analyze bucket access patterns by using the metrics data with Amazon Athena.",
+    "D": "Turn on AWS CloudTrail for S3 object monitoring. Analyze bucket access patterns by using CloudTrail logs that are integrated with Amazon CloudWatch Logs."
+  },
+  "correct_answer": "A",
+  "community_vote": {
+    "A": "94%"
+  }
+}

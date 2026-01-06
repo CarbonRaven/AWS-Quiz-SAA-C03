@@ -1,0 +1,13 @@
+{
+  "id": 948,
+  "topic": "Topic 1",
+  "question": "A company wants to replicate existing and ongoing data changes from an on-premises Oracle database to Amazon RDS for Oracle. The amount of data to replicate varies throughout each day. The company wants to use AWS Database Migration Service (AWS DMS) for data replication. The solution must allocate only the capacity that the replication instance requires.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Configure the AWS DMS replication instance with a Multi-AZ deployment to provision instances across multiple Availability Zones.",
+    "B": "Create an AWS DMS Serverless replication task to analyze and replicate the data while provisioning the required capacity.",
+    "C": "Use Amazon EC2 Auto Scaling to scale the size of the AWS DMS replication instance up or down based on the amount of data to replicate.",
+    "D": "Provision AWS DMS replication capacity by using Amazon Elastic Container Service (Amazon ECS) with an AWS Fargate launch type to analyze and replicate the data while provisioning the required capacity."
+  },
+  "correct_answer": "B",
+  "explanation": "AWS DMS Serverless automatically provisions and scales capacity based on workload. It eliminates the need to estimate and provision replication instance capacity, charging only for resources used."
+}

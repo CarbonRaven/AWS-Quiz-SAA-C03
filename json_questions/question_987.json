@@ -1,0 +1,16 @@
+{
+  "question_number": 987,
+  "topic": 1,
+  "question_text": "A company recently launched a new application for its customers. The application runs on multiple Amazon EC2 instances across two Availability Zones. End users use TCP to communicate with the application. The application must be highly available and must automatically scale as the number of users increases. Which combination of steps will meet these requirements MOST cost-effectively? (Choose two.)",
+  "options": {
+    "A": "Add a Network Load Balancer in front of the EC2 instances.",
+    "B": "Configure an Auto Scaling group for the EC2 instances.",
+    "C": "Add an Application Load Balancer in front of the EC2 instances.",
+    "D": "Manually add more EC2 instances for the application.",
+    "E": "Add a Gateway Load Balancer in front of the EC2 instances."
+  },
+  "correct_answer": "AB",
+  "community_vote": {
+    "AB": "79%"
+  }
+}

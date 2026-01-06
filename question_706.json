@@ -1,0 +1,13 @@
+{
+  "id": 706,
+  "topic": "Topic 1",
+  "question": "A company hosts a database that runs on an Amazon RDS instance that is deployed to multiple Availability Zones. The company periodically runs a script against the database to report new entries that are added to the database. The script that runs against the database negatively affects the performance of a critical application. The company needs to improve application performance with minimal costs.\n\nWhich solution will meet these requirements with the LEAST operational overhead?",
+  "options": {
+    "A": "Add functionality to the script to identify the instance that has the fewest active connections. Configure the script to read from that instance to report the total new entries.",
+    "B": "Create a read replica of the database. Configure the script to query only the read replica to report the total new entries.",
+    "C": "Instruct the development team to manually export the new entries for the day in the database at the end of each day.",
+    "D": "Use Amazon ElastiCache to cache the common queries that the script runs against the database."
+  },
+  "correct_answer": "B",
+  "explanation": "Creating a read replica offloads read traffic from the primary database, improving performance for the critical application. The script can query the read replica without affecting the primary instance. This solution has minimal operational overhead compared to other options."
+}

@@ -1,0 +1,13 @@
+{
+  "id": 306,
+  "topic": "Topic 1",
+  "question": "A company wants to run an in-memory database for a latency-sensitive application that runs on Amazon EC2 instances. The application processes more than 100,000 transactions each minute and requires high network throughput. A solutions architect needs to provide a cost-effective network design that minimizes data transfer charges.\n\nWhich solution meets these requirements?",
+  "options": {
+    "A": "Launch all EC2 instances in the same Availability Zone within the same AWS Region. Specify a placement group with cluster strategy when launching EC2 instances.",
+    "B": "Launch all EC2 instances in different Availability Zones within the same AWS Region. Specify a placement group with partition strategy when launching EC2 instances.",
+    "C": "Deploy an Auto Scaling group to launch EC2 instances in different Availability Zones based on a network utilization target.",
+    "D": "Deploy an Auto Scaling group with a step scaling policy to launch EC2 instances in different Availability Zones."
+  },
+  "correct_answer": "A",
+  "explanation": "Cluster placement groups in the same AZ provide low-latency, high-throughput networking with no data transfer charges between instances. Different AZs incur data transfer charges. Cluster strategy is ideal for HPC and in-memory databases requiring high network performance."
+}

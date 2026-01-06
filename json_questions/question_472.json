@@ -1,0 +1,15 @@
+{
+  "question_number": 472,
+  "topic": 1,
+  "question_text": "A company has a mobile chat application with a data store based in Amazon DynamoDB. Users would like new messages to be read with as little latency as possible. A solutions architect needs to design an optimal solution that requires minimal application changes.\n\nWhich method should the solutions architect select?",
+  "options": {
+    "A": "Configure Amazon DynamoDB Accelerator (DAX) for the new messages table. Update the code to use the DAX endpoint.",
+    "B": "Correct Answer: A \ud83d\uddf3\ufe0f",
+    "C": "Double the number of read capacity units for the new messages table in DynamoD",
+    "D": "Add an Amazon ElastiCache for Redis cache to the application stack. Update the application to point to the Redis cache endpoint instead of DynamoD"
+  },
+  "correct_answer": "A",
+  "community_vote": {
+    "A": "95%"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": 406,
+  "topic": "Topic 1",
+  "question": "A solutions architect is designing a two-tiered architecture that includes a public subnet and a database subnet. The web servers in the public subnet must be open to the internet on port 443. The Amazon RDS for MySQL DB instance in the database subnet must be accessible only to the web servers on port 3306.\n\nWhich combination of steps should the solutions architect take to meet these requirements? (Choose two.)",
+  "options": {
+    "A": "Create a network ACL for the public subnet. Add a rule to deny outbound traffic to 0.0.0.0/0 on port 3306.",
+    "B": "Create a security group for the DB instance. Add a rule to allow traffic from the public subnet CIDR block on port 3306.",
+    "C": "Create a security group for the web servers in the public subnet. Add a rule to allow traffic from 0.0.0.0/0 on port 443.",
+    "D": "Create a security group for the DB instance. Add a rule to allow traffic from the web servers' security group on port 3306.",
+    "E": "Create a security group for the DB instance. Add a rule to deny all traffic except traffic from the web servers' security group on port 3306."
+  },
+  "correct_answer": ["C", "D"],
+  "explanation": "Web server security group needs inbound HTTPS (443) from 0.0.0.0/0 for internet access. Database security group should allow MySQL (3306) only from the web servers' security group for least privilege. Using security group references is more secure than CIDR blocks. Security groups are stateful and deny by default, so explicit deny rules aren't needed."
+}

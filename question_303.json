@@ -1,0 +1,13 @@
+{
+  "id": 303,
+  "topic": "Topic 1",
+  "question": "A company is launching a new application deployed on an Amazon Elastic Container Service (Amazon ECS) cluster and is using the Fargate launch type for ECS tasks. The company is monitoring CPU and memory usage because it is expecting high traffic to the application upon its launch. However, the company wants to reduce costs when utilization decreases.\n\nWhat should a solutions architect recommend?",
+  "options": {
+    "A": "Use Amazon EC2 Auto Scaling to scale at certain periods based on previous traffic patterns.",
+    "B": "Use an AWS Lambda function to scale Amazon ECS based on metric breaches that trigger an Amazon CloudWatch alarm.",
+    "C": "Use Amazon EC2 Auto Scaling with simple scaling policies to scale when ECS metric breaches trigger an Amazon CloudWatch alarm.",
+    "D": "Use AWS Application Auto Scaling with target tracking policies to scale when ECS metric breaches trigger an Amazon CloudWatch alarm."
+  },
+  "correct_answer": "D",
+  "explanation": "AWS Application Auto Scaling with target tracking policies is the correct service for scaling ECS Fargate tasks. It automatically adjusts the number of tasks based on CloudWatch metrics. EC2 Auto Scaling is for EC2 instances, not Fargate. Lambda-based scaling adds unnecessary complexity."
+}

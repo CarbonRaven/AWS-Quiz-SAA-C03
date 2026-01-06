@@ -1,0 +1,15 @@
+{
+  "question_number": 321,
+  "topic": 1,
+  "question_text": "What should a solutions architect do to ensure that all objects uploaded to an Amazon S3 bucket are encrypted?",
+  "options": {
+    "A": "Update the bucket policy to deny if the PutObject does not have an s3:x-amz-acl header set.",
+    "B": "Update the bucket policy to deny if the PutObject does not have an s3:x-amz-acl header set to private.",
+    "C": "Update the bucket policy to deny if the PutObject does not have an aws:SecureTransport header set to true.",
+    "D": "Update the bucket policy to deny if the PutObject does not have an x-amz-server-side-encryption header set."
+  },
+  "correct_answer": "D",
+  "community_vote": {
+    "D": "100%"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "question_number": 996,
+  "topic": 1,
+  "question_text": "A company runs an on-premises application on a Kubernetes cluster. The company recently added millions of new customers. The company's existing on-premises infrastructure is unable to handle the large number of new customers. The company needs to migrate the on-premises application to the AWS Cloud. The company will migrate to an Amazon Elastic Kubernetes Service (Amazon EKS) cluster. The company does not want to manage the underlying compute infrastructure for the new architecture on AWS. Which solution will meet these requirements with the LEAST operational overhead?",
+  "options": {
+    "A": "Use a self-managed node to supply compute capacity. Deploy the application to the new EKS cluster.",
+    "B": "Use managed node groups to supply compute capacity. Deploy the application to the new EKS cluster.",
+    "C": "Use AWS Fargate to supply compute capacity. Create a Fargate profile. Use the Fargate profile to deploy the application.",
+    "D": "Use managed node groups with Karpenter to supply compute capacity. Deploy the application to the new EKS cluster."
+  },
+  "correct_answer": "C",
+  "community_vote": {
+    "C": "100%"
+  }
+}

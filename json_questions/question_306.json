@@ -1,0 +1,15 @@
+{
+  "question_number": 306,
+  "topic": 1,
+  "question_text": "A company wants to run an in-memory database for a latency-sensitive application that runs on Amazon EC2 instances. The application processes more than 100,000 transactions each minute and requires high network throughput. A solutions architect needs to provide a cost-effective network design that minimizes data transfer charges.\n\nWhich solution meets these requirements?",
+  "options": {
+    "A": "Launch all EC2 instances in the same Availability Zone within the same AWS Region. Specify a placement group with cluster strategy when launching EC2 instances.",
+    "B": "Launch all EC2 instances in different Availability Zones within the same AWS Region. Specify a placement group with partition strategy when launching EC2 instances.",
+    "C": "Deploy an Auto Scaling group to launch EC2 instances in different Availability Zones based on a network utilization target.",
+    "D": "Deploy an Auto Scaling group with a step scaling policy to launch EC2 instances in different Availability Zones."
+  },
+  "correct_answer": "A",
+  "community_vote": {
+    "A": "100%"
+  }
+}

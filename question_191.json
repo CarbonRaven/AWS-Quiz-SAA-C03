@@ -1,0 +1,13 @@
+{
+  "id": 191,
+  "topic": "Topic 1",
+  "question": "A company has an ordering application that stores customer information in Amazon RDS for MySQL. During regular business hours, employees run one-time queries for reporting purposes. Timeouts are occurring during order processing because the reporting queries are taking a long time to run. The company needs to eliminate the timeouts without preventing employees from performing queries.\nWhat should a solutions architect do to meet these requirements?",
+  "options": {
+    "A": "Create a read replica. Move reporting queries to the read replica.",
+    "B": "Create a read replica. Distribute the ordering application to the primary DB instance and the read replica.",
+    "C": "Migrate the ordering application to Amazon DynamoDB with on-demand capacity.",
+    "D": "Schedule the reporting queries for non-peak hours."
+  },
+  "correct_answer": "A",
+  "explanation": "A read replica offloads read traffic (reporting queries) from the primary database, preventing them from impacting order processing. The ordering application continues using the primary instance while reporting uses the replica. This eliminates timeouts without restricting employee queries."
+}

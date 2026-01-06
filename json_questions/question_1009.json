@@ -1,0 +1,16 @@
+{
+  "question_number": 1009,
+  "topic": 1,
+  "question_text": "A company runs an environment where data is stored in an Amazon S3 bucket. The objects are accessed frequently throughout the day. The company has strict da ta encryption requirements for data that is stored in the S3 bucket. The company currently uses AWS Key Management Service (AWS KMS) for encryption. The company wants to optimize costs associated with encrypting S3 objects without making additional calls to AWS KMS. Which solution will meet these requirements?",
+  "options": {
+    "A": "Use server-side encryption with Amazon S3 managed keys (SSE-S3).",
+    "B": "Use an S3 Bucket Key for server-side encryption with AWS KMS keys (SSE-KMS) on the new objects.",
+    "C": "Use client-side encryption with AWS KMS customer managed keys.",
+    "D": "Use server-side encryption with customer-provided keys (SSE-C) stored in AWS KMS."
+  },
+  "correct_answer": "B",
+  "community_vote": {
+    "B": "78%",
+    "A": "22%"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": 639,
+  "topic": "Topic 1",
+  "question": "A company is building a new furniture inventory application. The company has deployed the application on a fleet of Amazon EC2 instances across multiple Availability Zones. The EC2 instances run behind an Application Load Balancer (ALB) in their VPC.\n\nA solutions architect has observed that incoming traffic seems to favor one EC2 instance, resulting in latency for some requests.\n\nWhat should the solutions architect do to resolve this issue?",
+  "options": {
+    "A": "Disable session affinity (sticky sessions) on the ALB.",
+    "B": "Replace the ALB with a Network Load Balancer.",
+    "C": "Increase the number of EC2 instances in each Availability Zone.",
+    "D": "Adjust the frequency of the health checks on the ALB's target group."
+  },
+  "correct_answer": "A",
+  "explanation": "Sticky sessions (session affinity) cause the load balancer to route requests from the same client to the same target, which can cause uneven load distribution. Disabling sticky sessions allows the ALB to distribute traffic more evenly across all instances."
+}

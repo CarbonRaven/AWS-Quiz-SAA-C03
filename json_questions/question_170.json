@@ -1,0 +1,15 @@
+{
+  "question_number": 170,
+  "topic": 1,
+  "question_text": "A company\u2019s web application is running on Amazon EC2 instances behind an Application Load Balancer. The company recently changed its policy, which now requires the application to be accessed from one specific country only.\n\nWhich configuration will meet this requirement?",
+  "options": {
+    "A": "Configure the security group for the EC2 instances.",
+    "B": "Configure the security group on the Application Load Balancer.",
+    "C": "",
+    "D": "Configure the network ACL for the subnet that contains the EC2 instances."
+  },
+  "correct_answer": "C",
+  "community_vote": {
+    "C": "100%"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": 355,
+  "topic": "Topic 1",
+  "question": "A company is migrating an old application to AWS. The application runs a batch job every hour and is CPU intensive. The batch job takes 15 minutes on average with an on-premises server. The server has 64 virtual CPU (vCPU) and 512 GiB of memory.\n\nWhich solution will run the batch job within 15 minutes with the LEAST operational overhead?",
+  "options": {
+    "A": "Use AWS Lambda with functional scaling.",
+    "B": "Use Amazon Elastic Container Service (Amazon ECS) with AWS Fargate.",
+    "C": "Use Amazon Lightsail with AWS Auto Scaling.",
+    "D": "Use AWS Batch on Amazon EC2."
+  },
+  "correct_answer": "D",
+  "explanation": "AWS Batch manages compute resources for batch workloads with minimal operational overhead. It can provision EC2 instances matching the high vCPU and memory requirements (64 vCPU, 512 GiB). Lambda has 15-minute timeout and limited resources. Fargate has vCPU/memory limits below requirements. Lightsail lacks the compute capacity needed."
+}

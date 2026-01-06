@@ -1,0 +1,14 @@
+{
+  "id": 941,
+  "topic": "Topic 1",
+  "question": "A company is using an Amazon Elastic Kubernetes Service (Amazon EKS) cluster. The company must ensure that Kubernetes service accounts in the EKS cluster have secure and granular access to specific AWS resources by using IAM roles for service accounts (IRSA).\n\nWhich combination of solutions will meet these requirements? (Choose two.)",
+  "options": {
+    "A": "Create an IAM policy that defines the required permissions. Attach the policy directly to the IAM role of the EKS nodes.",
+    "B": "Implement network policies within the EKS cluster to prevent Kubernetes service accounts from accessing specific AWS services.",
+    "C": "Modify the EKS cluster's IAM role to include permissions for each Kubernetes service account. Ensure a one-to-one mapping between IAM roles and Kubernetes roles.",
+    "D": "Define an IAM role that includes the necessary permissions. Annotate the Kubernetes service accounts with the Amazon Resource Name (ARN) of the IAM role.",
+    "E": "Set up a trust relationship between the IAM roles for the service accounts and an OpenID Connect (OIDC) identity provider."
+  },
+  "correct_answer": ["D", "E"],
+  "explanation": "IRSA requires: an OIDC identity provider trust relationship (E) to authenticate service accounts, and annotating Kubernetes service accounts with the IAM role ARN (D) to associate permissions."
+}

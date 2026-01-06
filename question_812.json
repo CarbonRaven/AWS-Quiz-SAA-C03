@@ -1,0 +1,13 @@
+{
+  "id": 812,
+  "topic": "Topic 1",
+  "question": "A company hosts a data lake on Amazon S3. The data lake ingests data in Apache Parquet format from various data sources. The company uses multiple transformation steps to prepare the ingested data. The steps include filtering of anomalies, normalizing of data to standard date and time values, and generation of aggregates for analyses.\n\nThe company must store the transformed data in S3 buckets that data analysts access. The company needs a prebuilt solution for data transformation that does not require code. The solution must provide data lineage and data profiling. The company needs to share the data transformation steps with employees throughout the company.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Configure an AWS Glue Studio visual canvas to transform the data. Share the transformation steps with employees by using AWS Glue jobs.",
+    "B": "Configure Amazon EMR Serverless to transform the data. Share the transformation steps with employees by using EMR Serverless jobs.",
+    "C": "Configure AWS Glue DataBrew to transform the data. Share the transformation steps with employees by using DataBrew recipes.",
+    "D": "Create Amazon Athena tables for the data. Write Athena SQL queries to transform the data. Share the Athena SQL queries with employees."
+  },
+  "correct_answer": "C",
+  "explanation": "AWS Glue DataBrew is a no-code data preparation tool that provides data profiling, data lineage, and shareable recipes. It allows visual data transformation without writing code and meets all the specified requirements."
+}

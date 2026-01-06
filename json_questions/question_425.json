@@ -1,0 +1,15 @@
+{
+  "question_number": 425,
+  "topic": 1,
+  "question_text": "A company uses high block storage capacity to runs its workloads on premises. The company's daily peak input and output transactions per second are not more than 15,000 IOPS. The company wants to migrate the workloads to Amazon EC2 and to provision disk performance independent of storage capacity.\n\nWhich Amazon Elastic Block Store (Amazon EBS) volume type will meet these requirements MOST cost-effectively?",
+  "options": {
+    "A": "GP2 volume type",
+    "B": "io2 volume type",
+    "C": "GP3 volume type",
+    "D": "io1 volume type"
+  },
+  "correct_answer": "C",
+  "community_vote": {
+    "C": "96%"
+  }
+}

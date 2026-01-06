@@ -1,0 +1,15 @@
+{
+  "question_number": 314,
+  "topic": 1,
+  "question_text": "A company has an on-premises MySQL database used by the global sales team with infrequent access patterns. The sales team requires the database to have minimal downtime. A database administrator wants to migrate this database to AWS without selecting a particular instance type in anticipation of more users in the future.\n\nWhich service should a solutions architect recommend?",
+  "options": {
+    "A": "Amazon Aurora MySQL",
+    "B": "Amazon Aurora Serverless for MySQL",
+    "C": "Amazon Redshift Spectrum",
+    "D": "Amazon RDS for MySQL"
+  },
+  "correct_answer": "B",
+  "community_vote": {
+    "B": "100%"
+  }
+}

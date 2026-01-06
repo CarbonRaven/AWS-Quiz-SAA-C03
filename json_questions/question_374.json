@@ -1,0 +1,15 @@
+{
+  "question_number": 374,
+  "topic": 1,
+  "question_text": "A company is running several business applications in three separate VPCs within the us-east-1 Region. The applications must be able to communicate between VPCs. The applications also must be able to consistently send hundreds of gigabytes of data each day to a latency-sensitive application that runs in a single on-premises data center.\n\nA solutions architect needs to design a network connectivity solution that maximizes cost-effectiveness.\n\nWhich solution meets these requirements?",
+  "options": {
+    "A": "Configure three AWS Site-to-Site VPN connections from the data center to AWS. Establish connectivity by configuring one VPN connection for each VP",
+    "C": "Set up three AWS Direct Connect connections from the data center to a Direct Connect gateway in us-east-1. Establish connectivity by configuring each VPC to use one of the Direct Connect connections.",
+    "B": "Launch a third-party virtual network appliance in each VP",
+    "D": "Set up one AWS Direct Connect connection from the data center to AWS. Create a transit gateway, and attach each VPC to the transit gateway. Establish connectivity between the Direct Connect connection and the transit gateway."
+  },
+  "correct_answer": "D",
+  "community_vote": {
+    "D": "100%"
+  }
+}

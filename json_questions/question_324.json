@@ -1,0 +1,16 @@
+{
+  "question_number": 324,
+  "topic": 1,
+  "question_text": "A company wants to implement a disaster recovery plan for its primary on-premises file storage volume. The file storage volume is mounted from an Internet Small Computer Systems Interface (iSCSI) device on a local storage server. The file storage volume holds hundreds of terabytes (TB) of data.\n\nThe company wants to ensure that end users retain immediate access to all file types from the on-premises systems without experiencing latency.\n\nWhich solution will meet these requirements with the LEAST amount of change to the company's existing infrastructure?",
+  "options": {
+    "A": "Provision an Amazon S3 File Gateway as a virtual machine (VM) that is hosted on premises. Set the local cache to 10 T",
+    "B": "Mount the Volume Gateway cached volume to the existing file server by using iSCSI, and copy all files to the storage volume. Configure scheduled snapshots of the storage volume. To recover from a disaster, restore a snapshot to an Amazon Elastic Block Store (Amazon EBS) volume and attach the EBS volume to an Amazon EC2 instance.",
+    "C": "Provision an AWS Storage Gateway Volume Gateway cached volume. Set the local cache to 10 T",
+    "D": "Provision an AWS Storage Gateway Volume Gateway stored volume with the same amount of disk space as the existing file storage volume. Mount the Volume Gateway stored volume to the existing file server by using iSCSI, and copy all files to the storage volume. Configure scheduled snapshots of the storage volume. To recover from a disaster, restore a snapshot to an Amazon Elastic Block Store (Amazon EBS) volume and attach the EBS volume to an Amazon EC2 instance."
+  },
+  "correct_answer": "D",
+  "community_vote": {
+    "D": "83%",
+    "C": "17%"
+  }
+}

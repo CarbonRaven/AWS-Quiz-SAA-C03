@@ -1,0 +1,13 @@
+{
+  "id": 699,
+  "topic": "Topic 1",
+  "question": "A company has an application that uses Docker containers in its local data center. The application runs on a container host that stores persistent data in a volume on the host. The container instances use the stored persistent data.\n\nThe company wants to move the application to a fully managed service because the company does not want to manage any servers or storage infrastructure.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Use Amazon Elastic Kubernetes Service (Amazon EKS) with self-managed nodes. Create an Amazon Elastic Block Store (Amazon EBS) volume attached to an Amazon EC2 instance. Use the EBS volume as a persistent volume mounted in the containers.",
+    "B": "Use Amazon Elastic Container Service (Amazon ECS) with an AWS Fargate launch type. Create an Amazon Elastic File System (Amazon EFS) volume. Add the EFS volume as a persistent storage volume mounted in the containers.",
+    "C": "Use Amazon Elastic Container Service (Amazon ECS) with an AWS Fargate launch type. Create an Amazon S3 bucket. Map the S3 bucket as a persistent storage volume mounted in the containers.",
+    "D": "Use Amazon Elastic Container Service (Amazon ECS) with an Amazon EC2 launch type. Create an Amazon Elastic File System (Amazon EFS) volume. Add the EFS volume as a persistent storage volume mounted in the containers."
+  },
+  "correct_answer": "B",
+  "explanation": "ECS with Fargate is fully managed (no servers to manage). EFS provides persistent shared storage that can be mounted to Fargate containers. S3 cannot be directly mounted as a filesystem. EKS with self-managed nodes and ECS with EC2 launch type require managing servers."
+}

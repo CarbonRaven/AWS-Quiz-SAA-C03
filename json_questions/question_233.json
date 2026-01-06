@@ -1,0 +1,16 @@
+{
+  "question_number": 233,
+  "topic": 1,
+  "question_text": "A solutions architect has created a new AWS account and must secure AWS account root user access.\n\nWhich combination of actions will accomplish this? (Choose two.)",
+  "options": {
+    "A": "Ensure the root user uses a strong password.",
+    "B": "Enable multi-factor authentication to the root user.",
+    "C": "Store root user access keys in an encrypted Amazon S3 bucket.",
+    "D": "Add the root user to a group containing administrative permissions.",
+    "E": "Apply the required permissions to the root user with an inline policy document."
+  },
+  "correct_answer": "AB",
+  "community_vote": {
+    "AB": "86%"
+  }
+}

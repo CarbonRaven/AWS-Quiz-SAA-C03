@@ -1,0 +1,17 @@
+{
+  "question_number": 598,
+  "topic": 1,
+  "question_text": "A research company uses on-premises devices to generate data for analysis. The company wants to use the AWS Cloud to analyze the data. The devices generate .csv files and support writing the data to an SMB file share. Company analysts must be able to use SQL commands to query the data. The analysts will run queries periodically throughout the day. Which combination of steps will meet these requirements MOST cost-effectively? (Choose three.)",
+  "options": {
+    "A": "Deploy an AWS Storage Gateway on premises in Amazon S3 File Gateway mode.",
+    "B": "Deploy an AWS Storage Gateway on premises in Amazon FSx File Gateway made.",
+    "C": "Set up an AWS Glue crawler to create a table based on the data that is in Amazon S3.",
+    "D": "Set up an Amazon EMR cluster with EMR File System (EMRFS) to query the data that is in Amazon S3. Provide access to analysts.",
+    "E": "Set up an Amazon Redshift cluster to query the data that is in Amazon S3. Provide access to analysts.",
+    "F": "Setup Amazon Athena to query the data that is in Amazon S3. Provide access to analysts."
+  },
+  "correct_answer": "ACF",
+  "community_vote": {
+    "ACF": "96%"
+  }
+}

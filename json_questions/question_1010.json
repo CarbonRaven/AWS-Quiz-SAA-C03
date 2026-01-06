@@ -1,0 +1,17 @@
+{
+  "question_number": 1010,
+  "topic": 1,
+  "question_text": "A company runs multiple workloads on virtual machines (VMs) in an on-premises data center. The company is expanding rapidly. The on-premises data center is not able to scale fast enough to meet business needs. The company wants to migrate the workloads to AWS. The migration is time sensitive. The company wants to use a lift-and-shift strategy for non-critical workloads. Which combination of steps will meet these requirements? (Choose three.)",
+  "options": {
+    "A": "Use the AWS Schema Conversion Tool (AWS SCT) to collect data about the VMs.",
+    "B": "Use AWS Application Migration Service. Install the AWS Replication Agent on the VMs.",
+    "C": "Complete the initial replication of the VMs. Launch test instances to perform acceptance tests on the VMs.",
+    "D": "Stop all operations on the VMs. Launch a cutover instance.",
+    "E": "Use AWS App2Container (A2C) to collect data about the VMs.",
+    "F": "Use AWS Database Migration Service (AWS DMS) to migrate the VMs."
+  },
+  "correct_answer": "BCD",
+  "community_vote": {
+    "BCD": "100%"
+  }
+}

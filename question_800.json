@@ -1,0 +1,13 @@
+{
+  "id": 800,
+  "topic": "Topic 1",
+  "question": "A company needs to create an AWS Lambda function that will run in a VPC in the company's primary AWS account. The Lambda function needs to access files that the company stores in an Amazon Elastic File System (Amazon EFS) file system. The EFS file system is located in a secondary AWS account. As the company adds files to the file system, the solution must scale to meet the demand.\n\nWhich solution will meet these requirements MOST cost-effectively?",
+  "options": {
+    "A": "Create a new EFS file system in the primary account. Use AWS DataSync to copy the contents of the original EFS file system to the new EFS file system.",
+    "B": "Create a VPC peering connection between the VPCs that are in the primary account and the secondary account.",
+    "C": "Create a second Lambda function in the secondary account that has a mount that is configured for the file system. Use the primary account's Lambda function to invoke the secondary account's Lambda function.",
+    "D": "Move the contents of the file system to a Lambda layer. Configure the Lambda layer's permissions to allow the company's secondary account to use the Lambda layer."
+  },
+  "correct_answer": "B",
+  "explanation": "VPC peering allows the Lambda function in the primary account to directly access the EFS file system in the secondary account. This is the most cost-effective solution as it doesn't require data duplication or additional Lambda invocations. EFS supports cross-account access via VPC peering with proper mount target configuration."
+}

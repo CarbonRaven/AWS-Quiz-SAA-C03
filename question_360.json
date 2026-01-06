@@ -1,0 +1,13 @@
+{
+  "id": 360,
+  "topic": "Topic 1",
+  "question": "A company uses Amazon API Gateway to run a private gateway with two REST APIs in the same VPC. The BuyStock RESTful web service calls the CheckFunds RESTful web service to ensure that enough funds are available before a stock can be purchased. The company has noticed in the VPC flow logs that the BuyStock RESTful web service calls the CheckFunds RESTful web service over the internet instead of through the VPC. A solutions architect must implement a solution so that the APIs communicate through the VPC.\n\nWhich solution will meet these requirements with the FEWEST changes to the code?",
+  "options": {
+    "A": "Add an X-API-Key header in the HTTP header for authorization.",
+    "B": "Use an interface endpoint.",
+    "C": "Use a gateway endpoint.",
+    "D": "Add an Amazon Simple Queue Service (Amazon SQS) queue between the two REST APIs."
+  },
+  "correct_answer": "B",
+  "explanation": "Interface VPC endpoints for API Gateway allow private API communication within the VPC without going over the internet. This requires minimal code changes - just update the endpoint URL. Gateway endpoints are only for S3 and DynamoDB. API keys don't affect routing. SQS adds complexity and changes the communication pattern."
+}

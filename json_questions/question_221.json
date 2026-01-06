@@ -1,0 +1,15 @@
+{
+  "question_number": 221,
+  "topic": 1,
+  "question_text": "A company runs an application on a group of Amazon Linux EC2 instances. For compliance reasons, the company must retain all application log files for 7 years. The log files will be analyzed by a reporting tool that must be able to access all the files concurrently.\n\nWhich storage solution meets these requirements MOST cost-effectively?",
+  "options": {
+    "A": "Amazon Elastic Block Store (Amazon EBS)",
+    "B": "Amazon Elastic File System (Amazon EFS)",
+    "C": "Amazon EC2 instance store",
+    "D": "Amazon S3"
+  },
+  "correct_answer": "D",
+  "community_vote": {
+    "D": "100%"
+  }
+}

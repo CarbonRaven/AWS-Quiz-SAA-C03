@@ -1,0 +1,13 @@
+{
+  "id": 299,
+  "topic": "Topic 1",
+  "question": "A research laboratory needs to process approximately 8 TB of data. The laboratory requires sub-millisecond latencies and a minimum throughput of 6 GBps for the storage subsystem. Hundreds of Amazon EC2 instances that run Amazon Linux will distribute and process the data.\n\nWhich solution will meet the performance requirements?",
+  "options": {
+    "A": "Create an Amazon FSx for NetApp ONTAP file system. Set each volume's tiering policy to ALL. Import the raw data into the file system. Mount the file system on the EC2 instances.",
+    "B": "Create an Amazon S3 bucket to store the raw data. Create an Amazon FSx for Lustre file system that uses persistent SSD storage. Select the option to import data from and export data to Amazon S3. Mount the file system on the EC2 instances.",
+    "C": "Create an Amazon S3 bucket to store the raw data. Create an Amazon FSx for Lustre file system that uses persistent HDD storage. Select the option to import data from and export data to Amazon S3. Mount the file system on the EC2 instances.",
+    "D": "Create an Amazon FSx for NetApp ONTAP file system. Set each volume's tiering policy to NONE. Import the raw data into the file system. Mount the file system on the EC2 instances."
+  },
+  "correct_answer": "B",
+  "explanation": "FSx for Lustre with persistent SSD storage provides sub-millisecond latencies and can achieve throughput of hundreds of GBps for HPC workloads. Integration with S3 allows data import/export. HDD storage doesn't meet the sub-millisecond latency requirement. FSx for NetApp ONTAP is designed for enterprise workloads, not HPC with these extreme throughput requirements. Lustre is purpose-built for high-performance computing."
+}

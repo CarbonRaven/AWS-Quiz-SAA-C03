@@ -1,0 +1,13 @@
+{
+  "id": 765,
+  "topic": "Topic 1",
+  "question": "A development team is collaborating with another company to create an integrated product. The other company needs to access an Amazon Simple Queue Service (Amazon SQS) queue that is contained in the development team's account. The other company wants to poll the queue without giving up its own account permissions to do so.\n\nHow should a solutions architect provide access to the SQS queue?",
+  "options": {
+    "A": "Create an instance profile that provides the other company access to the SQS queue.",
+    "B": "Create an IAM policy that provides the other company access to the SQS queue.",
+    "C": "Create an SQS access policy that provides the other company access to the SQS queue.",
+    "D": "Create an Amazon Simple Notification Service (Amazon SNS) access policy that provides the other company access to the SQS queue."
+  },
+  "correct_answer": "C",
+  "explanation": "SQS supports resource-based policies (access policies) that allow you to grant cross-account access. An SQS access policy attached to the queue can specify the other company's AWS account as a principal, allowing them to poll the queue using their own credentials."
+}

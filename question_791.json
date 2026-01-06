@@ -1,0 +1,13 @@
+{
+  "id": 791,
+  "topic": "Topic 1",
+  "question": "A company has AWS Lambda functions that use environment variables. The company does not want its developers to see environment variables in plaintext.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Deploy code to Amazon EC2 instances instead of using Lambda functions.",
+    "B": "Configure SSL encryption on the Lambda functions to use AWS CloudHSM to store and encrypt the environment variables.",
+    "C": "Create a certificate in AWS Certificate Manager (ACM). Configure the Lambda functions to use the certificate to encrypt the environment variables.",
+    "D": "Create an AWS Key Management Service (AWS KMS) key. Enable encryption helpers on the Lambda functions to use the KMS key to store and encrypt the environment variables."
+  },
+  "correct_answer": "D",
+  "explanation": "Lambda supports encryption helpers that use AWS KMS to encrypt environment variables. When encryption helpers are enabled, environment variables are encrypted at rest and decrypted at runtime. This prevents developers from viewing plaintext values in the Lambda console or API."
+}

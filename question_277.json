@@ -1,0 +1,13 @@
+{
+  "id": 277,
+  "topic": "Topic 1",
+  "question": "A company provides an online service for posting video content and transcoding it for use by any mobile platform. The application architecture uses Amazon Elastic File System (Amazon EFS) Standard to collect and store the videos so that multiple Amazon EC2 Linux instances can access the video content for processing. As the popularity of the service has grown over time, the storage costs have become too expensive.\n\nWhich storage solution is MOST cost-effective?",
+  "options": {
+    "A": "Use AWS Storage Gateway for files to store and process the video content.",
+    "B": "Use AWS Storage Gateway for volumes to store and process the video content.",
+    "C": "Use Amazon EFS for storing the video content. Once processing is complete, transfer the files to Amazon Elastic Block Store (Amazon EBS).",
+    "D": "Use Amazon S3 for storing the video content. Move the files temporarily over to an Amazon Elastic Block Store (Amazon EBS) volume attached to the server for processing."
+  },
+  "correct_answer": "D",
+  "explanation": "S3 is the most cost-effective storage for large video files. Moving files temporarily to EBS for processing, then back to S3, minimizes storage costs while enabling processing. EFS Standard is expensive for large video storage. Storage Gateway adds complexity and cost. EBS alone doesn't provide shared access and transferring from EFS to EBS doesn't reduce costs."
+}

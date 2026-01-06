@@ -1,0 +1,13 @@
+{
+  "id": 518,
+  "topic": "Topic 1",
+  "question": "An application uses an Amazon RDS MySQL DB instance. The RDS database is becoming low on disk space. A solutions architect wants to increase the disk space without downtime.\n\nWhich solution meets these requirements with the LEAST amount of effort?",
+  "options": {
+    "A": "Enable storage autoscaling in RDS",
+    "B": "Increase the RDS database instance size",
+    "C": "Change the RDS database instance storage type to Provisioned IOPS",
+    "D": "Back up the RDS database, increase the storage capacity, restore the database, and stop the previous instance"
+  },
+  "correct_answer": "A",
+  "explanation": "RDS storage autoscaling automatically increases storage when the database is running low on space, without downtime and with minimal configuration effort. Manual storage increases or instance size changes require more effort and may cause brief interruptions."
+}

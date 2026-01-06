@@ -1,0 +1,15 @@
+{
+  "question_number": 234,
+  "topic": 1,
+  "question_text": "A company is building a new web-based customer relationship management application. The application will use several Amazon EC2 instances that are backed by Amazon Elastic Block Store (Amazon EBS) volumes behind an Application Load Balancer (ALB). The application will also use an Amazon Aurora database. All data for the application must be encrypted at rest and in transit.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Use AWS Key Management Service (AWS KMS) certificates on the ALB to encrypt data in transit. Use AWS Certificate Manager (ACM) to encrypt the EBS volumes and Aurora database storage at rest.",
+    "B": "Use the AWS root account to log in to the AWS Management Console. Upload the company\u2019s encryption certificates. While in the root account, select the option to turn on encryption for all data at rest and in transit for the account.",
+    "C": "Use AWS Key Management Service (AWS KMS) to encrypt the EBS volumes and Aurora database storage at rest. Attach an AWS Certificate Manager (ACM) certificate to the ALB to encrypt data in transit.",
+    "D": "Use BitLocker to encrypt all data at rest. Import the company\u2019s TLS certificate keys to AWS Key Management Service (AWS KMS) Attach the KMS keys to the ALB to encrypt data in transit."
+  },
+  "correct_answer": "C",
+  "community_vote": {
+    "C": "100%"
+  }
+}

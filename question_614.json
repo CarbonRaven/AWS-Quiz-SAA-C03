@@ -1,0 +1,13 @@
+{
+  "id": 614,
+  "topic": "Topic 1",
+  "question": "A company is designing a new multi-tier web application that consists of the following components:\n\n- Web and application servers that run on Amazon EC2 instances as part of Auto Scaling groups\n- An Amazon RDS DB instance for data storage\n\nA solutions architect needs to limit access to the application servers so that only the web servers can access them.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Deploy AWS PrivateLink in front of the application servers. Configure the network ACL to allow only the web servers to access the application servers.",
+    "B": "Deploy a VPC endpoint in front of the application servers. Configure the security group to allow only the web servers to access the application servers.",
+    "C": "Deploy a Network Load Balancer with a target group that contains the application servers' Auto Scaling group. Configure the network ACL to allow only the web servers to access the application servers.",
+    "D": "Deploy an Application Load Balancer with a target group that contains the application servers' Auto Scaling group. Configure the security group to allow only the web servers to access the application servers."
+  },
+  "correct_answer": "D",
+  "explanation": "An Application Load Balancer in front of the application servers provides load balancing and health checks. Security groups can be configured to allow traffic only from the web tier's security group, implementing proper multi-tier security."
+}

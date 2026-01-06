@@ -1,0 +1,15 @@
+{
+  "question_number": 286,
+  "topic": 1,
+  "question_text": "A company has a static website that is hosted on Amazon CloudFront in front of Amazon S3. The static website uses a database backend. The company notices that the website does not reflect updates that have been made in the website\u2019s Git repository. The company checks the continuous integration and continuous delivery (CI/CD) pipeline between the Git repository and Amazon S3. The company verifies that the webhooks are configured properly and that the CI/CD pipeline is sending messages that indicate successful deployments.\n\nA solutions architect needs to implement a solution that displays the updates on the website.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Add an Application Load Balancer.",
+    "B": "Add Amazon ElastiCache for Redis or Memcached to the database layer of the web application.",
+    "C": "Invalidate the CloudFront cache.",
+    "D": "Use AWS Certificate Manager (ACM) to validate the website\u2019s SSL certificate."
+  },
+  "correct_answer": "C",
+  "community_vote": {
+    "C": "97%"
+  }
+}

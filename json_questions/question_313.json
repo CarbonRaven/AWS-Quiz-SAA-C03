@@ -1,0 +1,15 @@
+{
+  "question_number": 313,
+  "topic": 1,
+  "question_text": "A company is building a mobile app on AWS. The company wants to expand its reach to millions of users. The company needs to build a platform so that authorized users can watch the company\u2019s content on their mobile devices.\n\nWhat should a solutions architect recommend to meet these requirements?",
+  "options": {
+    "A": "Publish content to a public Amazon S3 bucket. Use AWS Key Management Service (AWS KMS) keys to stream content.",
+    "B": "Set up IPsec VPN between the mobile app and the AWS environment to stream content.",
+    "C": "Use Amazon CloudFront. Provide signed URLs to stream content.",
+    "D": "Set up AWS Client VPN between the mobile app and the AWS environment to stream content."
+  },
+  "correct_answer": "C",
+  "community_vote": {
+    "C": "100%"
+  }
+}

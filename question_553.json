@@ -1,0 +1,13 @@
+{
+  "id": 553,
+  "topic": "Topic 1",
+  "question": "A solutions architect needs to review a company's Amazon S3 buckets to discover personally identifiable information (PII). The company stores the PII data in the us-east-1 Region and us-west-2 Region.\n\nWhich solution will meet these requirements with the LEAST operational overhead?",
+  "options": {
+    "A": "Configure Amazon Macie in each Region. Create a job to analyze the data that is in Amazon S3.",
+    "B": "Configure AWS Security Hub for all Regions. Create an AWS Config rule to analyze the data that is in Amazon S3.",
+    "C": "Configure Amazon Inspector to analyze the data that is in Amazon S3.",
+    "D": "Configure Amazon GuardDuty to analyze the data that is in Amazon S3."
+  },
+  "correct_answer": "A",
+  "explanation": "Amazon Macie is specifically designed to discover and protect sensitive data including PII in S3. It uses machine learning and pattern matching to automatically discover sensitive data. Macie needs to be configured in each Region where S3 buckets exist."
+}

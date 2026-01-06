@@ -1,0 +1,13 @@
+{
+  "id": 788,
+  "topic": "Topic 1",
+  "question": "A company has stored 10 TB of log files in Apache Parquet format in an Amazon S3 bucket. The company occasionally needs to use SQL to analyze the log files.\n\nWhich solution will meet these requirements MOST cost-effectively?",
+  "options": {
+    "A": "Create an Amazon Aurora MySQL database. Migrate the data from the S3 bucket into Aurora by using AWS Database Migration Service (AWS DMS). Issue SQL statements to the Aurora database.",
+    "B": "Create an Amazon Redshift cluster. Use Redshift Spectrum to run SQL statements directly on the data in the S3 bucket.",
+    "C": "Create an AWS Glue crawler to store and retrieve table metadata from the S3 bucket. Use Amazon Athena to run SQL statements directly on the data in the S3 bucket.",
+    "D": "Create an Amazon EMR cluster. Use Apache Spark SQL to run SQL statements directly on the data in the S3 bucket."
+  },
+  "correct_answer": "C",
+  "explanation": "Amazon Athena is serverless and charges only per query based on data scanned. For occasional SQL analysis, it's the most cost-effective solution. Parquet format is optimized for Athena (columnar, compressed). Glue crawler creates table metadata. Redshift and EMR clusters have ongoing costs even when not in use."
+}

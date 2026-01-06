@@ -1,0 +1,14 @@
+{
+  "id": 935,
+  "topic": "Topic 1",
+  "question": "A software company needs to upgrade a critical web application. The application currently runs on a single Amazon EC2 instance that the company hosts in a public subnet. The EC2 instance runs a MySQL database. The application's DNS records are published in an Amazon Route 53 zone.\n\nA solutions architect must reconfigure the application to be scalable and highly available. The solutions architect must also reduce MySQL read latency.\n\nWhich combination of solutions will meet these requirements? (Choose two.)",
+  "options": {
+    "A": "Launch a second EC2 instance in a second AWS Region. Use a Route 53 failover routing policy to redirect the traffic to the second EC2 instance.",
+    "B": "Create and configure an Auto Scaling group to launch private EC2 instances in multiple Availability Zones. Add the instances to a target group behind a new Application Load Balancer.",
+    "C": "Migrate the database to an Amazon Aurora MySQL cluster. Create the primary DB instance and reader DB instance in separate Availability Zones.",
+    "D": "Create and configure an Auto Scaling group to launch private EC2 instances in multiple AWS Regions. Add the instances to a target group behind a new Application Load Balancer.",
+    "E": "Migrate the database to an Amazon Aurora MySQL cluster with cross-Region read replicas."
+  },
+  "correct_answer": ["B", "C"],
+  "explanation": "Auto Scaling with ALB across multiple AZs provides scalability and high availability for the web tier. Aurora MySQL with reader instances in separate AZs reduces read latency and provides database HA."
+}

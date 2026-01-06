@@ -1,0 +1,15 @@
+{
+  "question_number": 368,
+  "topic": 1,
+  "question_text": "A solutions architect wants all new users to have specific complexity requirements and mandatory rotation periods for IAM user passwords.\n\nWhat should the solutions architect do to accomplish this?",
+  "options": {
+    "A": "Set an overall password policy for the entire AWS account.",
+    "B": "Set a password policy for each IAM user in the AWS account.",
+    "C": "Use third-party vendor software to set password requirements.",
+    "D": "Attach an Amazon CloudWatch rule to the Create_newuser event to set the password with the appropriate requirements."
+  },
+  "correct_answer": "A",
+  "community_vote": {
+    "A": "96%"
+  }
+}

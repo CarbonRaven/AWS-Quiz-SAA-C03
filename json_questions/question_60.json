@@ -1,0 +1,15 @@
+{
+  "question_number": 60,
+  "topic": 1,
+  "question_text": "A company has a website hosted on AWS. The website is behind an Application Load Balancer (ALB) that is configured to handle HTTP and HTTPS separately. The company wants to forward all requests to the website so that the requests will use HTTPS.\nWhat should a solutions architect do to meet this requirement?",
+  "options": {
+    "A": "Update the ALB's network ACL to accept only HTTPS traffic.",
+    "B": "Create a rule that replaces the HTTP in the URL with HTTPS.",
+    "C": "Create a listener rule on the ALB to redirect HTTP traffic to HTTPS.",
+    "D": "Replace the ALB with a Network Load Balancer configured to use Server Name Indication (SNI)."
+  },
+  "correct_answer": "C",
+  "community_vote": {
+    "C": "100%"
+  }
+}

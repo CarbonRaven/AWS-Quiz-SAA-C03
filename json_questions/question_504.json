@@ -1,0 +1,15 @@
+{
+  "question_number": 504,
+  "topic": 1,
+  "question_text": "A company needs to connect several VPCs in the us-east-1 Region that span hundreds of AWS accounts. The company's networking team has its own AWS account to manage the cloud network.\n\nWhat is the MOST operationally efficient solution to connect the VPCs?",
+  "options": {
+    "A": "Set up VPC peering connections between each VP",
+    "C": "Correct Answer: C \ud83d\uddf3\ufe0f",
+    "B": "Configure a NAT gateway and an internet gateway in each VPC to connect each VPC through the internet",
+    "D": "Deploy VPN gateways in each VP"
+  },
+  "correct_answer": "C",
+  "community_vote": {
+    "C": "100%"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": 408,
+  "topic": "Topic 1",
+  "question": "A company runs an application that receives data from thousands of geographically dispersed remote devices that use UDP. The application processes the data immediately and sends a message back to the device if necessary. No data is stored.\n\nThe company needs a solution that minimizes latency for the data transmission from the devices. The solution also must provide rapid failover to another AWS Region.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Configure an Amazon Route 53 failover routing policy. Create a Network Load Balancer (NLB) in each of the two Regions. Configure the NLB to invoke an AWS Lambda function to process the data.",
+    "B": "Use AWS Global Accelerator. Create a Network Load Balancer (NLB) in each of the two Regions as an endpoint. Create an Amazon Elastic Container Service (Amazon ECS) cluster with the Fargate launch type. Create an ECS service on the cluster. Set the ECS service as the target for the NLB. Process the data in Amazon ECS.",
+    "C": "Use AWS Global Accelerator. Create an Application Load Balancer (ALB) in each of the two Regions as an endpoint. Create an Amazon Elastic Container Service (Amazon ECS) cluster with the Fargate launch type. Create an ECS service on the cluster. Set the ECS service as the target for the ALB. Process the data in Amazon ECS.",
+    "D": "Configure an Amazon Route 53 failover routing policy. Create an Application Load Balancer (ALB) in each of the two Regions. Create an Amazon Elastic Container Service (Amazon ECS) cluster with the Fargate launch type. Create an ECS service on the cluster. Set the ECS service as the target for the ALB. Process the data in Amazon ECS."
+  },
+  "correct_answer": "B",
+  "explanation": "Global Accelerator provides static IP addresses and routes traffic via AWS global network for low latency and rapid failover. NLB supports UDP protocol (ALB doesn't). ECS Fargate provides serverless container processing. Route 53 failover is slower than Global Accelerator and doesn't provide the same performance benefits."
+}

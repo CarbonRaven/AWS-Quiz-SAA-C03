@@ -1,0 +1,15 @@
+{
+  "question_number": 437,
+  "topic": 1,
+  "question_text": "A company operates an ecommerce website on Amazon EC2 instances behind an Application Load Balancer (ALB) in an Auto Scaling group. The site is experiencing performance issues related to a high request rate from illegitimate external systems with changing IP addresses. The security team is worried about potential DDoS attacks against the website. The company must block the illegitimate incoming requests in a way that has a minimal impact on legitimate users.\n\nWhat should a solutions architect recommend?",
+  "options": {
+    "A": "Deploy Amazon Inspector and associate it with the AL",
+    "B": "Deploy AWS WAF, associate it with the ALB, and configure a rate-limiting rule.",
+    "C": "Deploy rules to the network ACLs associated with the ALB to block the incomingtraffic.",
+    "D": "Deploy Amazon GuardDuty and enable rate-limiting protection when configuring GuardDuty."
+  },
+  "correct_answer": "B",
+  "community_vote": {
+    "B": "96%"
+  }
+}

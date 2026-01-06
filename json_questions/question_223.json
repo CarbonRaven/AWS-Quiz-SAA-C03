@@ -1,0 +1,16 @@
+{
+  "question_number": 223,
+  "topic": 1,
+  "question_text": "A company has deployed a Java Spring Boot application as a pod that runs on Amazon Elastic Kubernetes Service (Amazon EKS) in private subnets. The application needs to write data to an Amazon DynamoDB table. A solutions architect must ensure that the application can interact with the DynamoDB table without exposing traffic to the internet.\n\nWhich combination of steps should the solutions architect take to accomplish this goal? (Choose two.)",
+  "options": {
+    "A": "Attach an IAM role that has sufficient privileges to the EKS pod.",
+    "B": "",
+    "C": "Allow outbound connectivity to the DynamoDB table through the private subnets\u2019 network ACLs.",
+    "D": "Create a VPC endpoint for DynamoD",
+    "E": "Embed the access keys in the Java Spring Boot code."
+  },
+  "correct_answer": "AD",
+  "community_vote": {
+    "AD": "100%"
+  }
+}

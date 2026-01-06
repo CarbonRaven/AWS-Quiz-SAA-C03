@@ -1,0 +1,13 @@
+{
+  "id": 229,
+  "topic": "Topic 1",
+  "question": "A company manages its own Amazon EC2 instances that run MySQL databases. The company is manually managing replication and scaling as demand increases or decreases. The company needs a new solution that simplifies the process of adding or removing compute capacity to or from its database tier as needed. The solution also must offer improved performance, scaling, and durability with minimal effort from operations.\nWhich solution meets these requirements?",
+  "options": {
+    "A": "Migrate the databases to Amazon Aurora Serverless for Aurora MySQL.",
+    "B": "Migrate the databases to Amazon Aurora Serverless for Aurora PostgreSQL.",
+    "C": "Combine the databases into one larger MySQL database. Run the larger database on larger EC2 instances.",
+    "D": "Create an EC2 Auto Scaling group for the database tier. Migrate the existing databases to the new environment."
+  },
+  "correct_answer": "A",
+  "explanation": "Aurora Serverless automatically scales compute capacity based on demand, eliminating manual capacity management. Aurora MySQL is compatible with existing MySQL databases. It provides improved performance, automatic scaling, and high durability with minimal operational effort."
+}

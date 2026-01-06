@@ -1,0 +1,13 @@
+{
+  "id": 676,
+  "topic": "Topic 1",
+  "question": "A company's application uses Network Load Balancers, Auto Scaling groups, Amazon EC2 instances, and databases that are deployed in an Amazon VPC. The company wants to capture information about traffic to and from the network interfaces in near real time in its Amazon VPC. The company wants to send the information to Amazon OpenSearch Service for analysis.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Create a log group in Amazon CloudWatch Logs. Configure VPC Flow Logs to send the log data to the log group. Use Amazon Kinesis Data Streams to stream the logs from the log group to OpenSearch Service.",
+    "B": "Create a log group in Amazon CloudWatch Logs. Configure VPC Flow Logs to send the log data to the log group. Use Amazon Kinesis Data Firehose to stream the logs from the log group to OpenSearch Service.",
+    "C": "Create a trail in AWS CloudTrail. Configure VPC Flow Logs to send the log data to the trail. Use Amazon Kinesis Data Streams to stream the logs from the trail to OpenSearch Service.",
+    "D": "Create a trail in AWS CloudTrail. Configure VPC Flow Logs to send the log data to the trail. Use Amazon Kinesis Data Firehose to stream the logs from the trail to OpenSearch Service."
+  },
+  "correct_answer": "B",
+  "explanation": "VPC Flow Logs can be sent to CloudWatch Logs. Kinesis Data Firehose has native integration with CloudWatch Logs and can deliver data directly to OpenSearch Service in near real-time. CloudTrail is for API calls, not network traffic. Firehose is simpler than Kinesis Data Streams for delivery."
+}

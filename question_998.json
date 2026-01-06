@@ -1,0 +1,13 @@
+{
+  "id": 998,
+  "topic": "Topic 1",
+  "question": "A company runs its legacy web application on AWS. The web application server runs on an Amazon EC2 instance in the public subnet of a VPC. The web application server collects images from customers and stores the image files in a locally attached Amazon Elastic Block Store (Amazon EBS) volume. The image files are uploaded every night to an Amazon S3 bucket for backup.\n\nA solutions architect discovers that the image files are being uploaded to Amazon S3 through the public endpoint. The solutions architect needs to ensure that traffic to Amazon S3 does not use the public endpoint.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Create a gateway VPC endpoint for the S3 bucket that has the necessary permissions for the VPC. Configure the subnet route table to use the gateway VPC endpoint.",
+    "B": "Move the S3 bucket inside the VPC. Configure the subnet route table to access the S3 bucket through private IP addresses.",
+    "C": "Create an Amazon S3 access point for the Amazon EC2 instance inside the VPC. Configure the web application to upload by using the Amazon S3 access point.",
+    "D": "Configure an AWS Direct Connect connection between the VPC that has the Amazon EC2 instance and Amazon S3 to provide a dedicated network path."
+  },
+  "correct_answer": "A",
+  "explanation": "A gateway VPC endpoint for S3 allows traffic to flow directly from the VPC to S3 without using the public internet. The route table is updated to route S3 traffic through the endpoint, ensuring private connectivity without public endpoint usage."
+}

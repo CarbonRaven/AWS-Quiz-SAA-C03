@@ -1,0 +1,13 @@
+{
+  "id": 365,
+  "topic": "Topic 1",
+  "question": "A company has an AWS account that the company uses for software development. The account has access to the company's on-premises data center through a pair of AWS Direct Connect connections. All non-VPC traffic is routed to a virtual private gateway.\n\nA development team has created an AWS Lambda function through the console. The Lambda function needs to access a database that runs in a private subnet in the company's data center.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Configure the Lambda function to run in the VPC with the appropriate security group.",
+    "B": "Set up a VPN connection from AWS to the data center, and route the traffic from the Lambda function through the VPN.",
+    "C": "Update the route tables in the VPC to allow the Lambda function to access the on-premises data center.",
+    "D": "Create an Elastic IP address, and assign the address to the Lambda function."
+  },
+  "correct_answer": "A",
+  "explanation": "Lambda functions must be configured to run inside a VPC to access resources in private subnets, including on-premises resources via Direct Connect. The VPC already has Direct Connect connectivity. VPN would add unnecessary complexity. Route tables alone won't work without VPC attachment. Lambda functions cannot have Elastic IPs assigned directly."
+}

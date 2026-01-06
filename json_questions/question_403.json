@@ -1,0 +1,15 @@
+{
+  "question_number": 403,
+  "topic": 1,
+  "question_text": "A developer has an application that uses an AWS Lambda function to upload files to Amazon S3 and needs the required permissions to perform the task. The developer already has an IAM user with valid IAM credentials required for Amazon S3.\n\nWhat should a solutions architect do to grant the permissions?",
+  "options": {
+    "A": "Add required IAM permissions in the resource policy of the Lambda function.",
+    "B": "Create a signed request using the existing IAM credentials in the Lambda function.",
+    "C": "Create a new IAM user and use the existing IAM credentials in the Lambda function.",
+    "D": "Create an IAM execution role with the required permissions and attach the IAM role to the Lambda function."
+  },
+  "correct_answer": "D",
+  "community_vote": {
+    "D": "100%"
+  }
+}

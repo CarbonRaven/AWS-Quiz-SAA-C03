@@ -1,0 +1,13 @@
+{
+  "id": 1015,
+  "topic": "Topic 1",
+  "question": "A company's image-hosting website gives users around the world the ability to upload, view, and download images from their mobile devices. The company currently hosts the static website in an Amazon S3 bucket.\n\nBecause of the website's growing popularity, the website's performance has decreased. Users have reported latency issues when they upload and download images.\n\nThe company must improve the performance of the website.\n\nWhich solution will meet these requirements with the LEAST implementation effort?",
+  "options": {
+    "A": "Configure an Amazon CloudFront distribution for the S3 bucket to improve the download performance. Enable S3 Transfer Acceleration to improve the upload performance.",
+    "B": "Configure Amazon EC2 instances of the right sizes in multiple AWS Regions. Migrate the application to the EC2 instances. Use an Application Load Balancer to distribute the website traffic equally among the EC2 instances. Configure AWS Global Accelerator to address global demand with low latency.",
+    "C": "Configure an Amazon CloudFront distribution that uses the S3 bucket as an origin to improve the download performance. Configure the application to use CloudFront to upload images to improve the upload performance. Create S3 buckets in multiple AWS Regions. Configure replication rules for the buckets to replicate users' data based on the users' location. Redirect downloads to the S3 bucket that is closest to each user's location.",
+    "D": "Configure AWS Global Accelerator for the S3 bucket to improve network performance. Create an endpoint for the application to use Global Accelerator instead of the S3 bucket."
+  },
+  "correct_answer": "A",
+  "explanation": "CloudFront improves download performance by caching content at edge locations globally. S3 Transfer Acceleration speeds up uploads by routing data through CloudFront edge locations to S3. This combination addresses both upload and download latency with minimal implementation effort compared to multi-region setups."
+}

@@ -1,0 +1,13 @@
+{
+  "id": 111,
+  "topic": "Topic 1",
+  "question": "A company recently migrated a message processing system to AWS. The system receives messages into an ActiveMQ queue running on an Amazon EC2 instance. Messages are processed by a consumer application running on Amazon EC2. The consumer application processes the messages and writes results to a MySQL database running on Amazon EC2. All the EC2 instances are in the same Availability Zone.\nThe company needs to redesign its architecture to provide the highest availability with low operational complexity.\nWhich architecture offers the HIGHEST availability?",
+  "options": {
+    "A": "Add a second ActiveMQ server to another Availability Zone. Add an additional consumer EC2 instance in another Availability Zone. Replicate the MySQL database to another Availability Zone.",
+    "B": "Use Amazon MQ with active/standby brokers configured across two Availability Zones. Add an additional consumer EC2 instance in another Availability Zone. Replicate the MySQL database to another Availability Zone.",
+    "C": "Use Amazon MQ with active/standby brokers configured across two Availability Zones. Add an additional consumer EC2 instance in another Availability Zone. Use Amazon RDS for MySQL with Multi-AZ enabled.",
+    "D": "Use Amazon MQ with active/standby brokers configured across two Availability Zones. Add an Auto Scaling group for the consumer EC2 instances across two Availability Zones. Use Amazon RDS for MySQL with Multi-AZ enabled."
+  },
+  "correct_answer": "D",
+  "explanation": "Amazon MQ with active/standby provides managed HA for ActiveMQ. Auto Scaling across AZs provides HA and elasticity for consumers. RDS Multi-AZ provides automatic database failover. This combination offers highest availability."
+}

@@ -1,0 +1,15 @@
+{
+  "question_number": 301,
+  "topic": 1,
+  "question_text": "A university research laboratory needs to migrate 30 TB of data from an on-premises Windows file server to Amazon FSx for Windows File Server. The laboratory has a 1 Gbps network link that many other departments in the university share.\n\nThe laboratory wants to implement a data migration service that will maximize the performance of the data transfer. However, the laboratory needs to be able to control the amount of bandwidth that the service uses to minimize the impact on other departments. The data migration must take place within the next 5 days.\n\nWhich AWS solution will meet these requirements?",
+  "options": {
+    "A": "AWS Snowcone",
+    "B": "Amazon FSx File Gateway",
+    "C": "AWS DataSync",
+    "D": "AWS Transfer Family"
+  },
+  "correct_answer": "C",
+  "community_vote": {
+    "C": "97%"
+  }
+}

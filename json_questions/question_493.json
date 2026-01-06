@@ -1,0 +1,17 @@
+{
+  "question_number": 493,
+  "topic": 1,
+  "question_text": "A company wants to use artificial intelligence (AI) to determine the quality of its customer service calls. The company currently manages calls in four different languages, including English. The company will offer new languages in the future. The company does not have the resources to regularly maintain machine learning (ML) models.\n\nThe company needs to create written sentiment analysis reports from the customer service call recordings. The customer service call recording text must be translated into English.\n\nWhich combination of steps will meet these requirements? (Choose three.)",
+  "options": {
+    "A": "Use Amazon Comprehend to translate the audio recordings into English.",
+    "B": "Use Amazon Lex to create the written sentiment analysis reports.",
+    "C": "Use Amazon Polly to convert the audio recordings into text.",
+    "D": "Use Amazon Transcribe to convert the audio recordings in any language into text.",
+    "E": "Use Amazon Translate to translate text in any language to English.",
+    "F": "Use Amazon Comprehend to create the sentiment analysis reports."
+  },
+  "correct_answer": "DEF",
+  "community_vote": {
+    "DEF": "100%"
+  }
+}

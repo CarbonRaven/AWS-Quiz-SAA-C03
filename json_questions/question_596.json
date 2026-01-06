@@ -1,0 +1,15 @@
+{
+  "question_number": 596,
+  "topic": 1,
+  "question_text": "An ecommerce application uses a PostgreSQL database that runs on an Amazon EC2 instance. During a monthly sales event, database usage increases and causes database connection issues for the application. The traffic is unpredictable for subsequent monthly sales events, which impacts the sales forecast. The company needs to maintain performance when there is an unpredictable increase in traffic. Which solution resolves this issue in the MOST cost-effective way?",
+  "options": {
+    "A": "Migrate the PostgreSQL database to Amazon Aurora Serverless v2.",
+    "B": "Enable auto scaling for the PostgreSQL database on the EC2 instance to accommodate increased usage.",
+    "C": "Migrate the PostgreSQL database to Amazon RDS for PostgreSQL with a larger instance type.",
+    "D": "Migrate the PostgreSQL database to Amazon Redshift to accommodate increased usage."
+  },
+  "correct_answer": "A",
+  "community_vote": {
+    "A": "95%"
+  }
+}

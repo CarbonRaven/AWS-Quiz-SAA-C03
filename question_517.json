@@ -1,0 +1,13 @@
+{
+  "id": 517,
+  "topic": "Topic 1",
+  "question": "A company wants to send all AWS Systems Manager Session Manager logs to an Amazon S3 bucket for archival purposes.\n\nWhich solution will meet this requirement with the MOST operational efficiency?",
+  "options": {
+    "A": "Enable S3 logging in the Systems Manager console. Choose an S3 bucket to send the session data to.",
+    "B": "Install the Amazon CloudWatch agent. Push all logs to a CloudWatch log group. Export the logs to an S3 bucket from the group for archival purposes.",
+    "C": "Create a Systems Manager document to upload all server logs to a central S3 bucket. Use Amazon EventBridge to run the Systems Manager document against all servers that are in the account daily.",
+    "D": "Install an Amazon CloudWatch agent. Push all logs to a CloudWatch log group. Create a CloudWatch logs subscription that pushes any incoming log events to an Amazon Kinesis Data Firehose delivery stream. Set Amazon S3 as the destination."
+  },
+  "correct_answer": "A",
+  "explanation": "Session Manager has built-in integration to send session logs directly to S3. This is the most operationally efficient solution as it requires only configuration in the Systems Manager console without additional infrastructure like CloudWatch agents or Kinesis."
+}

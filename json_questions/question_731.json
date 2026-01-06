@@ -1,0 +1,15 @@
+{
+  "question_number": 731,
+  "topic": 1,
+  "question_text": "A company has an application that uses an Amazon DynamoDB table for storage. A solutions architect discovers that many requests to the table are not returning the latest data. The company's users have not reported any other issues with database performance. Latency is in an acceptable range. Which design change should the solutions architect recommend?",
+  "options": {
+    "A": "Add read replicas to the table.",
+    "B": "Use a global secondary index (GSI).",
+    "C": "Request strongly consistent reads for the table.",
+    "D": "Request eventually consistent reads for the table."
+  },
+  "correct_answer": "C",
+  "community_vote": {
+    "C": "100%"
+  }
+}

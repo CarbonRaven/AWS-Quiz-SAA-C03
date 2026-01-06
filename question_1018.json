@@ -1,0 +1,13 @@
+{
+  "id": 1018,
+  "topic": "Topic 1",
+  "question": "A company needs to give a globally distributed development team secure access to the company's AWS resources in a way that complies with security policies.\n\nThe company currently uses an on-premises Active Directory for internal authentication. The company uses AWS Organizations to manage multiple AWS accounts that support multiple projects.\n\nThe company needs a solution to integrate with the existing infrastructure to provide centralized identity management and access control.\n\nWhich solution will meet these requirements with the LEAST operational overhead?",
+  "options": {
+    "A": "Set up AWS Directory Service to create an AWS managed Microsoft Active Directory on AWS. Establish a trust relationship with the on-premises Active Directory. Use IAM roles that are assigned to Active Directory groups to access AWS resources within the company's AWS accounts.",
+    "B": "Create an IAM user for each developer. Manually manage permissions for each IAM user based on each user's involvement with each project. Enforce multi-factor authentication (MFA) as an additional layer of security.",
+    "C": "Use AD Connector in AWS Directory Service to connect to the on-premises Active Directory. Integrate AD Connector with AWS IAM Identity Center. Configure permissions sets to give each AD group access to specific AWS accounts and resources.",
+    "D": "Use Amazon Cognito to deploy an identity federation solution. Integrate the identity federation solution with the on-premises Active Directory. Use Amazon Cognito to provide access tokens for developers to access AWS accounts and resources."
+  },
+  "correct_answer": "C",
+  "explanation": "AD Connector provides a lightweight way to connect on-premises Active Directory to AWS without deploying a full managed AD. Integrating with IAM Identity Center (formerly AWS SSO) enables centralized access management across multiple AWS accounts in Organizations with minimal operational overhead. This leverages existing AD without data synchronization."
+}

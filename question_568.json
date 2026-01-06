@@ -1,0 +1,13 @@
+{
+  "id": 568,
+  "topic": "Topic 1",
+  "question": "A solutions architect is designing the storage architecture for a new web application used for storing and viewing engineering drawings. All application components will be deployed on the AWS infrastructure.\n\nThe application design must support caching to minimize the amount of time that users wait for the engineering drawings to load. The application must be able to store petabytes of data.\n\nWhich combination of storage and caching should the solutions architect use?",
+  "options": {
+    "A": "Amazon S3 with Amazon CloudFront",
+    "B": "Amazon S3 Glacier with Amazon ElastiCache",
+    "C": "Amazon Elastic Block Store (Amazon EBS) volumes with Amazon CloudFront",
+    "D": "AWS Storage Gateway with Amazon ElastiCache"
+  },
+  "correct_answer": "A",
+  "explanation": "Amazon S3 can store petabytes of data and is ideal for static content like engineering drawings. CloudFront provides edge caching to minimize load times for users globally. S3 Glacier is for archival, not active access. EBS doesn't scale to petabytes."
+}

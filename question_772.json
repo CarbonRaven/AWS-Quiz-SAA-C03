@@ -1,0 +1,14 @@
+{
+  "id": 772,
+  "topic": "Topic 1",
+  "question": "A company built an application with Docker containers and needs to run the application in the AWS Cloud. The company wants to use a managed service to host the application.\n\nThe solution must scale in and out appropriately according to demand on the individual container services. The solution also must not result in additional operational overhead or infrastructure to manage.\n\nWhich solutions will meet these requirements? (Choose two.)",
+  "options": {
+    "A": "Use Amazon Elastic Container Service (Amazon ECS) with AWS Fargate.",
+    "B": "Use Amazon Elastic Kubernetes Service (Amazon EKS) with AWS Fargate.",
+    "C": "Provision an Amazon API Gateway API. Connect the API to AWS Lambda to run the containers.",
+    "D": "Use Amazon Elastic Container Service (Amazon ECS) with Amazon EC2 worker nodes.",
+    "E": "Use Amazon Elastic Kubernetes Service (Amazon EKS) with Amazon EC2 worker nodes."
+  },
+  "correct_answer": ["A", "B"],
+  "explanation": "Both ECS and EKS with AWS Fargate provide serverless container orchestration without managing infrastructure. Fargate automatically scales containers based on demand and eliminates operational overhead of managing EC2 worker nodes. EC2 worker nodes (options D, E) require infrastructure management."
+}

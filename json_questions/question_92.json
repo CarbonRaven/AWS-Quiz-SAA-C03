@@ -1,0 +1,16 @@
+{
+  "question_number": 92,
+  "topic": 1,
+  "question_text": "A company is storing sensitive user information in an Amazon S3 bucket. The company wants to provide secure access to this bucket from the application tier running on Amazon EC2 instances inside a VPC.\nWhich combination of steps should a solutions architect take to accomplish this? (Choose two.)",
+  "options": {
+    "A": "Configure a VPC gateway endpoint for Amazon S3 within the VP",
+    "C": "",
+    "B": "Create a bucket policy to make the objects in the S3 bucket public.",
+    "D": "Create an IAM user with an S3 access policy and copy the IAM credentials to the EC2 instance.",
+    "E": "Create a NAT instance and have the EC2 instances use the NAT instance to access the S3 bucket."
+  },
+  "correct_answer": "AC",
+  "community_vote": {
+    "AC": "89%"
+  }
+}

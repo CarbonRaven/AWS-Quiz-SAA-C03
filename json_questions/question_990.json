@@ -1,0 +1,15 @@
+{
+  "question_number": 990,
+  "topic": 1,
+  "question_text": "A company is planning to migrate a legacy application to AWS. The application currently uses NFS to communicate to an on-premises storage solution to store application data. The application cannot be modified to use any other communication protocols other than NFS for this purpose. Which storage solution should a solutions architect recommend for use after the migration?",
+  "options": {
+    "A": "AWS DataSync",
+    "B": "Amazon Elastic Block Store (Amazon EBS)",
+    "C": "Amazon Elastic File System (Amazon EFS)",
+    "D": "Amazon EMR File System (Amazon EMRFS)"
+  },
+  "correct_answer": "C",
+  "community_vote": {
+    "C": "100%"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": 499,
+  "topic": "Topic 1",
+  "question": "A company needs to minimize the cost of its 1 Gbps AWS Direct Connect connection. The company's average connection utilization is less than 10%. A solutions architect must recommend a solution that will reduce the cost without compromising security.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Set up a new 1 Gbps Direct Connect connection. Share the connection with another AWS account.",
+    "B": "Set up a new 200 Mbps Direct Connect connection in the AWS Management Console.",
+    "C": "Contact an AWS Direct Connect Partner to order a 1 Gbps connection. Share the connection with another AWS account.",
+    "D": "Contact an AWS Direct Connect Partner to order a 200 Mbps hosted connection for an existing AWS account."
+  },
+  "correct_answer": "D",
+  "explanation": "A hosted connection through a Direct Connect Partner allows for sub-1 Gbps connections (50 Mbps to 500 Mbps). With less than 10% utilization of 1 Gbps, a 200 Mbps hosted connection would be sufficient and cost-effective. You cannot order sub-1 Gbps dedicated connections directly through the console."
+}

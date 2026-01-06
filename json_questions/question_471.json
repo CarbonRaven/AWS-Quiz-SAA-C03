@@ -1,0 +1,15 @@
+{
+  "question_number": 471,
+  "topic": 1,
+  "question_text": "A company is creating an application that runs on containers in a VPC. The application stores and accesses data in an Amazon S3 bucket. During the development phase, the application will store and access 1 TB of data in Amazon S3 each day. The company wants to minimize costs and wants to prevent traffic from traversing the internet whenever possible.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Enable S3 Intelligent-Tiering for the S3 bucket",
+    "B": "Enable S3 Transfer Acceleration for the S3 bucket",
+    "C": "Associate this endpoint with all route tables in the VPC",
+    "D": "Create an interface endpoint for Amazon S3 in the VP"
+  },
+  "correct_answer": "C",
+  "community_vote": {
+    "C": "100%"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": 353,
+  "topic": "Topic 1",
+  "question": "A company hosts a three-tier web application on Amazon EC2 instances in a single Availability Zone. The web application uses a self-managed MySQL database that is hosted on an EC2 instance to store data in an Amazon Elastic Block Store (Amazon EBS) volume. The MySQL database currently uses a 1 TB Provisioned IOPS SSD (io2) EBS volume. The company expects traffic of 1,000 IOPS for both reads and writes at peak traffic.\n\nThe company wants to minimize any disruptions, stabilize performance, and reduce costs while retaining the capacity for double the IOPS. The company wants to move the database tier to a fully managed solution that is highly available and fault tolerant.\n\nWhich solution will meet these requirements MOST cost-effectively?",
+  "options": {
+    "A": "Use a Multi-AZ deployment of an Amazon RDS for MySQL DB instance with an io2 Block Express EBS volume.",
+    "B": "Use a Multi-AZ deployment of an Amazon RDS for MySQL DB instance with a General Purpose SSD (gp2) EBS volume.",
+    "C": "Use Amazon S3 Intelligent-Tiering access tiers.",
+    "D": "Use two large EC2 instances to host the database in active-passive mode."
+  },
+  "correct_answer": "B",
+  "explanation": "RDS Multi-AZ provides high availability and is fully managed. gp2 with 1 TB provides baseline 3,000 IOPS (3 IOPS/GB), sufficient for 2,000 IOPS requirement (double the current 1,000). gp2 is more cost-effective than io2 for this IOPS level. S3 isn't for databases. EC2 active-passive isn't fully managed."
+}

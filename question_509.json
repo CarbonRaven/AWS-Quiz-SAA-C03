@@ -1,0 +1,13 @@
+{
+  "id": 509,
+  "topic": "Topic 1",
+  "question": "A company operates a two-tier application for image processing. The application uses two Availability Zones, each with one public subnet and one private subnet. An Application Load Balancer (ALB) for the web tier uses the public subnets. Amazon EC2 instances for the application tier use the private subnets.\n\nUsers report that the application is running more slowly than expected. A security audit of the web server log files shows that the application is receiving millions of illegitimate requests from a small number of IP addresses. A solutions architect needs to resolve the immediate performance problem while the company investigates a more permanent solution.\n\nWhat should the solutions architect recommend to meet this requirement?",
+  "options": {
+    "A": "Modify the inbound security group for the web tier. Add a deny rule for the IP addresses that are consuming resources.",
+    "B": "Modify the network ACL for the web tier subnets. Add an inbound deny rule for the IP addresses that are consuming resources.",
+    "C": "Modify the inbound security group for the application tier. Add a deny rule for the IP addresses that are consuming resources.",
+    "D": "Modify the network ACL for the application tier subnets. Add an inbound deny rule for the IP addresses that are consuming resources."
+  },
+  "correct_answer": "B",
+  "explanation": "Network ACLs support deny rules; security groups do not. The issue is at the web tier (public subnets) where illegitimate requests enter. Adding deny rules to the web tier's network ACL blocks the malicious IPs immediately at the subnet level."
+}

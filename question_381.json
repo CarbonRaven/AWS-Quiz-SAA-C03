@@ -1,0 +1,13 @@
+{
+  "id": 381,
+  "topic": "Topic 1",
+  "question": "A company has a large Microsoft SharePoint deployment running on premises that requires Microsoft Windows shared file storage. The company wants to migrate this workload to the AWS Cloud and is considering various storage options. The storage solution must be highly available and integrated with Active Directory for access control.\n\nWhich solution will satisfy these requirements?",
+  "options": {
+    "A": "Configure Amazon EFS storage and set the Active Directory domain for authentication.",
+    "B": "Create an SMB file share on an AWS Storage Gateway file gateway in two Availability Zones.",
+    "C": "Create an Amazon S3 bucket and configure Microsoft Windows Server to mount it as a volume.",
+    "D": "Create an Amazon FSx for Windows File Server file system on AWS and set the Active Directory domain for authentication."
+  },
+  "correct_answer": "D",
+  "explanation": "Amazon FSx for Windows File Server provides fully managed Windows-native file storage with SMB protocol support and native Active Directory integration. It's designed for SharePoint and Windows workloads. EFS doesn't support Windows/SMB. Storage Gateway isn't highly available across AZs natively. S3 isn't a file system and can't be mounted as a Windows volume."
+}

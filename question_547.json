@@ -1,0 +1,13 @@
+{
+  "id": 547,
+  "topic": "Topic 1",
+  "question": "A company has data collection sensors at different locations. The data collection sensors stream a high volume of data to the company. The company wants to design a platform on AWS to ingest and process high-volume streaming data. The solution must be scalable and support data collection in near real time. The company must store the data in Amazon S3 for future reporting.\n\nWhich solution will meet these requirements with the LEAST operational overhead?",
+  "options": {
+    "A": "Use Amazon Kinesis Data Firehose to deliver streaming data to Amazon S3.",
+    "B": "Use AWS Glue to deliver streaming data to Amazon S3.",
+    "C": "Use AWS Lambda to deliver streaming data and store the data to Amazon S3.",
+    "D": "Use AWS Database Migration Service (AWS DMS) to deliver streaming data to Amazon S3."
+  },
+  "correct_answer": "A",
+  "explanation": "Kinesis Data Firehose is a fully managed service that automatically scales to handle streaming data and delivers it directly to S3 with minimal configuration. It requires the least operational overhead compared to Lambda (requires code management) or Glue (batch-oriented). DMS is for database migration."
+}

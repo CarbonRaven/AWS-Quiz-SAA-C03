@@ -1,0 +1,13 @@
+{
+  "id": 902,
+  "topic": "Topic 1",
+  "question": "A company wants to migrate an application to AWS. The company wants to increase the application's current availability. The company wants to use AWS WAF in the application's architecture.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Create an Auto Scaling group that contains multiple Amazon EC2 instances that host the application across two Availability Zones. Configure an Application Load Balancer (ALB) and set the Auto Scaling group as the target. Connect a WAF to the ALB.",
+    "B": "Create a cluster placement group that contains multiple Amazon EC2 instances that hosts the application. Configure an Application Load Balancer and set the EC2 instances as the targets. Connect a WAF to the placement group.",
+    "C": "Create two Amazon EC2 instances that host the application across two Availability Zones. Configure the EC2 instances as the targets of an Application Load Balancer (ALB). Connect a WAF to the ALB.",
+    "D": "Create an Auto Scaling group that contains multiple Amazon EC2 instances that host the application across two Availability Zones. Configure an Application Load Balancer (ALB) and set the Auto Scaling group as the target. Connect a WAF to the Auto Scaling group."
+  },
+  "correct_answer": "A",
+  "explanation": "AWS WAF integrates with ALB (not placement groups or Auto Scaling groups directly). Auto Scaling across multiple AZs provides high availability, and WAF should be attached to the ALB."
+}

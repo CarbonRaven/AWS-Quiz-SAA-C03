@@ -1,0 +1,13 @@
+{
+  "id": 872,
+  "topic": "Topic 1",
+  "question": "A development team uses multiple AWS accounts for its development, staging, and production environments. Team members have been launching large Amazon EC2 instances that are underutilized. A solutions architect must prevent large instances from being launched in all accounts.\n\nHow can the solutions architect meet this requirement with the LEAST operational overhead?",
+  "options": {
+    "A": "Update the IAM policies to deny the launch of large EC2 instances. Apply the policies to all users.",
+    "B": "Define a resource in AWS Resource Access Manager that prevents the launch of large EC2 instances.",
+    "C": "Create an IAM role in each account that denies the launch of large EC2 instances. Grant the developers IAM group access to the role.",
+    "D": "Create an organization in AWS Organizations in the management account with the default policy. Create a service control policy (SCP) that denies the launch of large EC2 instances, and apply it to the AWS accounts."
+  },
+  "correct_answer": "D",
+  "explanation": "Service Control Policies (SCPs) in AWS Organizations allow centralized control over permissions across all member accounts with minimal operational overhead. One SCP can apply to all accounts in the organization."
+}

@@ -1,0 +1,13 @@
+{
+  "id": 868,
+  "topic": "Topic 1",
+  "question": "A global company runs its workloads on AWS. The company's application uses Amazon S3 buckets across AWS Regions for sensitive data storage and analysis. The company stores millions of objects in multiple S3 buckets daily. The company wants to identify all S3 buckets that are not versioning-enabled.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Use AWS Config rules to identify all S3 buckets that are not versioning-enabled across Regions.",
+    "B": "Use Amazon S3 Storage Lens to identify all S3 buckets that are not versioning-enabled across Regions.",
+    "C": "Enable IAM Access Analyzer for S3 to identify all S3 buckets that are not versioning-enabled across Regions.",
+    "D": "Create an S3 Multi-Region Access Point to identify all S3 buckets that are not versioning-enabled across Regions."
+  },
+  "correct_answer": "B",
+  "explanation": "S3 Storage Lens provides organization-wide visibility into object storage including versioning status across all Regions. It's designed for analyzing S3 bucket configurations at scale."
+}

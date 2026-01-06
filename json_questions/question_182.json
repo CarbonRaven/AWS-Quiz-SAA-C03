@@ -1,0 +1,15 @@
+{
+  "question_number": 182,
+  "topic": 1,
+  "question_text": "A company wants to migrate its MySQL database from on premises to AWS. The company recently experienced a database outage that significantly impacted the business. To ensure this does not happen again, the company wants a reliable database solution on AWS that minimizes data loss and stores every transaction on at least two nodes.\n\nWhich solution meets these requirements?",
+  "options": {
+    "A": "Create an Amazon RDS DB instance with synchronous replication to three nodes in three Availability Zones.",
+    "B": "Create an Amazon RDS MySQL DB instance with Multi-AZ functionality enabled to synchronously replicate the data.",
+    "C": "Create an Amazon RDS MySQL DB instance and then create a read replica in a separate AWS Region that synchronously replicates the data.",
+    "D": "Create an Amazon EC2 instance with a MySQL engine installed that triggers an AWS Lambda function to synchronously replicate the data to an Amazon RDS MySQL DB instance."
+  },
+  "correct_answer": "B",
+  "community_vote": {
+    "B": "98%"
+  }
+}

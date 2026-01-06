@@ -1,0 +1,13 @@
+{
+  "question_number": 19,
+  "topic": 1,
+  "question_text": "A company has a three-tier web application that is deployed on AWS. The web servers are deployed in a public subnet in a VPC. The application servers and database servers are deployed in private subnets in the same VPC. The company has deployed a third-party virtual firewall appliance from AWS Marketplace in an inspection VPC. The appliance is configured with an IP interface that can accept IP packets.\nA solutions architect needs to integrate the web application with the appliance to inspect all traffic to the application before the traffic reaches the web server.\nWhich solution will meet these requirements with the LEAST operational overhead?",
+  "options": {
+    "A": "Create a Network Load Balancer in the public subnet of the application's VPC to route the traffic to the appliance for packet inspection.",
+    "B": "Create an Application Load Balancer in the public subnet of the application's VPC to route the traffic to the appliance for packet inspection.",
+    "C": "Create a Gateway Load Balancer endpoint to receive the incoming packets and forward the packets to the appliance.",
+    "D": "Deploy a Gateway Load Balancer in the inspection VP"
+  },
+  "correct_answer": "D",
+  "community_vote": null
+}

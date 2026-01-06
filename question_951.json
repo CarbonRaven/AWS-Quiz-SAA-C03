@@ -1,0 +1,13 @@
+{
+  "id": 951,
+  "topic": "Topic 1",
+  "question": "A company has a custom application with embedded credentials that retrieves information from a database in an Amazon RDS for MySQL DB cluster. The company needs to make the application more secure with minimal programming effort. The company has created credentials on the RDS for MySQL database for the application user.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Store the credentials in AWS Key Management Service (AWS KMS). Create keys in AWS KMS. Configure the application to load the database credentials from AWS KMS. Enable automatic key rotation",
+    "B": "Store the credentials in encrypted local storage. Configure the application to load the database credentials from the local storage. Set up a credentials rotation schedule by creating a cron job.",
+    "C": "Store the credentials in AWS Secrets Manager. Configure the application to load the database credentials from Secrets Manager. Set up a credentials rotation schedule by creating an AWS Lambda function for Secrets Manager.",
+    "D": "Store the credentials in AWS Systems Manager Parameter Store. Configure the application to load the database credentials from Parameter Store. Set up a credentials rotation schedule in the RDS for MySQL database by using Parameter Store."
+  },
+  "correct_answer": "C",
+  "explanation": "AWS Secrets Manager is designed specifically for storing and managing sensitive information like database credentials. It provides built-in integration with RDS for automatic credential rotation using Lambda functions, making it the most secure option with minimal programming effort."
+}

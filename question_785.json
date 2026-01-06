@@ -1,0 +1,13 @@
+{
+  "id": 785,
+  "topic": "Topic 1",
+  "question": "A solutions architect is designing a payment processing application that runs on AWS Lambda in private subnets across multiple Availability Zones. The application uses multiple Lambda functions and processes millions of transactions each day.\n\nThe architecture must ensure that the application does not process duplicate payments.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Use Lambda to retrieve all due payments. Publish the due payments to an Amazon S3 bucket. Configure the S3 bucket with an event notification to invoke another Lambda function to process the due payments.",
+    "B": "Use Lambda to retrieve all due payments. Publish the due payments to an Amazon Simple Queue Service (Amazon SQS) queue. Configure another Lambda function to poll the SQS queue and to process the due payments.",
+    "C": "Use Lambda to retrieve all due payments. Publish the due payments to an Amazon Simple Queue Service (Amazon SQS) FIFO queue. Configure another Lambda function to poll the FIFO queue and to process the due payments.",
+    "D": "Use Lambda to retrieve all due payments. Store the due payments in an Amazon DynamoDB table. Configure streams on the DynamoDB table to invoke another Lambda function to process the due payments."
+  },
+  "correct_answer": "C",
+  "explanation": "SQS FIFO queues provide exactly-once processing, which ensures that duplicate payments are not processed. Standard SQS queues only guarantee at-least-once delivery, which could result in duplicate processing. FIFO queues also maintain message order if that's important for payment processing."
+}

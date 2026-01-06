@@ -1,0 +1,14 @@
+{
+  "id": 362,
+  "topic": "Topic 1",
+  "question": "A company has 5 PB of archived data stored on premises that the company wants to move to Amazon S3. The company's internet bandwidth is limited to 100 Mbps. The company wants to migrate the data as quickly as possible. The company uses a highly available, 1 Gbps AWS Direct Connect connection between the company's on-premises network and AWS.\n\nWhich solution will meet these requirements? (Choose two.)",
+  "options": {
+    "A": "Deploy AWS DataSync agents on premises. Schedule DataSync tasks to replicate data to Amazon S3.",
+    "B": "Order multiple AWS Snowball Edge Storage Optimized devices. Copy the data to the devices and ship the devices to AWS.",
+    "C": "Request a Direct Connect dedicated connection.",
+    "D": "Configure Direct Connect to increase the available bandwidth by 10 times.",
+    "E": "Request additional AWS Snowmobile trucks. Copy the data to the trucks and ship the trucks back to AWS."
+  },
+  "correct_answer": ["B", "E"],
+  "explanation": "For 5 PB of data, physical transfer methods are fastest. Snowball Edge Storage Optimized devices (~80 TB each) can transfer large amounts of data quickly. Snowmobile (100 PB capacity) is suitable for extremely large datasets. DataSync over 1 Gbps would take over a year. You cannot simply increase Direct Connect bandwidth 10x without provisioning new connections."
+}

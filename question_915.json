@@ -1,0 +1,13 @@
+{
+  "id": 915,
+  "topic": "Topic 1",
+  "question": "A video game company is deploying a new gaming application to its global users. The company requires a solution that will provide near real-time reviews and rankings of the players.\n\nA solutions architect must design a solution to provide fast access to the data. The solution must also ensure the data persists on disks in the event that the company restarts the application.\n\nWhich solution will meet these requirements with the LEAST operational overhead?",
+  "options": {
+    "A": "Configure an Amazon CloudFront distribution with an Amazon S3 bucket as the origin. Store the player data in the S3 bucket.",
+    "B": "Create Amazon EC2 instances in multiple AWS Regions. Store the player data on the EC2 instances. Configure Amazon Route 53 with geolocation records to direct users to the closest EC2 instance.",
+    "C": "Deploy an Amazon ElastiCache for Redis cluster. Store the player data in the ElastiCache cluster.",
+    "D": "Deploy an Amazon ElastiCache for Memcached cluster. Store the player data in the ElastiCache cluster."
+  },
+  "correct_answer": "C",
+  "explanation": "ElastiCache for Redis provides fast in-memory access with data persistence capabilities (snapshots, AOF). Memcached does not support persistence. This solution has less operational overhead than managing EC2 instances."
+}

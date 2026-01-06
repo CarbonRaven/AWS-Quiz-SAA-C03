@@ -1,0 +1,16 @@
+{
+  "question_number": 683,
+  "topic": 1,
+  "question_text": "A company is migrating its multi-tier on-premises application to AWS. The application consists of a single-node MySQL database and a multi-node web tier. The company must minimize changes to the application during the migration. The company wants to improve application resiliency after the migration. Which combination of steps will meet these requirements? (Choose two.)",
+  "options": {
+    "A": "Migrate the web tier to Amazon EC2 instances in an Auto Scaling group behind an Application Load Balancer.",
+    "B": "Migrate the database to Amazon EC2 instances in an Auto Scaling group behind a Network Load Balancer.",
+    "C": "Migrate the database to an Amazon RDS Multi-AZ deployment.",
+    "D": "Migrate the web tier to an AWS Lambda function.",
+    "E": "Migrate the database to an Amazon DynamoDB table."
+  },
+  "correct_answer": "AC",
+  "community_vote": {
+    "AC": "100%"
+  }
+}

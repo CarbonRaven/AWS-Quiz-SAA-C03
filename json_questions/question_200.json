@@ -1,0 +1,15 @@
+{
+  "question_number": 200,
+  "topic": 1,
+  "question_text": "A company hosts its application on AWS. The company uses Amazon Cognito to manage users. When users log in to the application, the application fetches required data from Amazon DynamoDB by using a REST API that is hosted in Amazon API Gateway. The company wants an AWS managed solution that will control access to the REST API to reduce development efforts.\n\nWhich solution will meet these requirements with the LEAST operational overhead?",
+  "options": {
+    "A": "Configure an AWS Lambda function to be an authorizer in API Gateway to validate which user made the request.",
+    "B": "For each user, create and assign an API key that must be sent with each request. Validate the key by using an AWS Lambda function.",
+    "C": "Send the user\u2019s email address in the header with every request. Invoke an AWS Lambda function to validate that the user with that email address has proper access.",
+    "D": "Configure an Amazon Cognito user pool authorizer in API Gateway to allow Amazon Cognito to validate each request."
+  },
+  "correct_answer": "D",
+  "community_vote": {
+    "D": "98%"
+  }
+}

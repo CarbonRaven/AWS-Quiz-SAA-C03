@@ -1,0 +1,13 @@
+{
+  "id": 524,
+  "topic": "Topic 1",
+  "question": "A company wants to analyze and troubleshoot Access Denied errors and Unauthorized errors that are related to IAM permissions. The company has AWS CloudTrail turned on.\n\nWhich solution will meet these requirements with the LEAST effort?",
+  "options": {
+    "A": "Use AWS Glue and write custom scripts to query CloudTrail logs for the errors.",
+    "B": "Use AWS Batch and write custom scripts to query CloudTrail logs for the errors.",
+    "C": "Search CloudTrail logs with Amazon Athena queries to identify the errors.",
+    "D": "Search CloudTrail logs with Amazon QuickSight. Create a dashboard to identify the errors."
+  },
+  "correct_answer": "C",
+  "explanation": "Amazon Athena can directly query CloudTrail logs stored in S3 using standard SQL with minimal setup. CloudTrail integrates with Athena and provides predefined table structures. This requires the least effort compared to writing custom scripts or setting up QuickSight dashboards."
+}

@@ -1,0 +1,15 @@
+{
+  "question_number": 188,
+  "topic": 1,
+  "question_text": "A company uses Amazon S3 as its data lake. The company has a new partner that must use SFTP to upload data files. A solutions architect needs to implement a highly available SFTP solution that minimizes operational overhead.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Use AWS Transfer Family to configure an SFTP-enabled server with a publicly accessible endpoint. Choose the S3 data lake as the destination.",
+    "B": "Share the NLB hostname with the new partner. Run a cron job script on the EC2 instances to upload files to the S3 data lake.",
+    "C": "Place a Network Load Balancer (NLB) in front of the EC2 instances. Create an SFTP listener port for the NL",
+    "D": "Launch Amazon EC2 instances in a private subnet in a VP"
+  },
+  "correct_answer": "A",
+  "community_vote": {
+    "A": "100%"
+  }
+}

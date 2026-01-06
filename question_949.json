@@ -1,0 +1,13 @@
+{
+  "id": 949,
+  "topic": "Topic 1",
+  "question": "A company has a multi-tier web application. The application's internal service components are deployed on Amazon EC2 instances. The internal service components need to access third-party software as a service (SaaS) APIs that are hosted on AWS.\n\nThe company needs to provide secure and private connectivity from the application's internal services to the third-party SaaS application. The company needs to ensure that there is minimal public internet exposure.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Implement an AWS Site-to-Site VPN to establish a secure connection with the third-party SaaS provider.",
+    "B": "Deploy AWS Transit Gateway to manage and route traffic between the application's VPC and the third-party SaaS provider.",
+    "C": "Configure AWS PrivateLink to allow only outbound traffic from the VPC without enabling the third-party SaaS provider to establish.",
+    "D": "Use AWS PrivateLink to create a private connection between the application's VPC and the third-party SaaS provider."
+  },
+  "correct_answer": "D",
+  "explanation": "AWS PrivateLink provides private connectivity to SaaS applications without exposing traffic to the public internet. It creates a private endpoint in your VPC for accessing the SaaS service."
+}

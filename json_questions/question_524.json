@@ -1,0 +1,16 @@
+{
+  "question_number": 524,
+  "topic": 1,
+  "question_text": "A company wants to analyze and troubleshoot Access Denied errors and Unauthorized errors that are related to IAM permissions. The company has AWS CloudTrail turned on.\n\nWhich solution will meet these requirements with the LEAST effort?",
+  "options": {
+    "A": "Use AWS Glue and write custom scripts to query CloudTrail logs for the errors.",
+    "B": "Use AWS Batch and write custom scripts to query CloudTrail logs for the errors.",
+    "C": "Search CloudTrail logs with Amazon Athena queries to identify the errors.",
+    "D": "Search CloudTrail logs with Amazon QuickSight. Create a dashboard to identify the errors."
+  },
+  "correct_answer": "C",
+  "community_vote": {
+    "C": "74%",
+    "D": "26%"
+  }
+}

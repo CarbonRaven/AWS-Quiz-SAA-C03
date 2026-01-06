@@ -1,0 +1,16 @@
+{
+  "question_number": 746,
+  "topic": 1,
+  "question_text": "A company is deploying an application that processes streaming data in near-real time. The company plans to use Amazon EC2 instances for the workload. The network architecture must be configurable to provide the lowest possible latency between nodes. Which combination of network solutions will meet these requirements? (Choose two.)",
+  "options": {
+    "A": "Enable and configure enhanced networking on each EC2 instance.",
+    "B": "Group the EC2 instances in separate accounts.",
+    "C": "Run the EC2 instances in a cluster placement group.",
+    "D": "Attach multiple elastic network interfaces to each EC2 instance.",
+    "E": "Use Amazon Elastic Block Store (Amazon EBS) optimized instance types."
+  },
+  "correct_answer": "AC",
+  "community_vote": {
+    "AC": "100%"
+  }
+}

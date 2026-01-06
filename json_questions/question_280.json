@@ -1,0 +1,15 @@
+{
+  "question_number": 280,
+  "topic": 1,
+  "question_text": "A company is using Amazon CloudFront with its website. The company has enabled logging on the CloudFront distribution, and logs are saved in one of the company\u2019s Amazon S3 buckets. The company needs to perform advanced analyses on the logs and build visualizations.\n\nWhat should a solutions architect do to meet these requirements?",
+  "options": {
+    "A": "Use standard SQL queries in Amazon Athena to analyze the CloudFront logs in the S3 bucket. Visualize the results with AWS Glue.",
+    "B": "Use standard SQL queries in Amazon Athena to analyze the CloudFront logs in the S3 bucket. Visualize the results with Amazon QuickSight.",
+    "C": "Use standard SQL queries in Amazon DynamoDB to analyze the CloudFront logs in the S3 bucket. Visualize the results with AWS Glue.",
+    "D": "Use standard SQL queries in Amazon DynamoDB to analyze the CloudFront logs in the S3 bucket. Visualize the results with Amazon QuickSight."
+  },
+  "correct_answer": "B",
+  "community_vote": {
+    "B": "95%"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": 932,
+  "topic": "Topic 1",
+  "question": "A company is migrating an application from an on-premises location to Amazon Elastic Kubernetes Service (Amazon EKS). The company must use a custom subnet for pods that are in the company's VPC to comply with requirements. The company also needs to ensure that the pods can communicate securely within the pods' VPC.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Configure AWS Transit Gateway to directly manage custom subnet configurations for the pods in Amazon EKS.",
+    "B": "Create an AWS Direct Connect connection from the company's on-premises IP address ranges to the EKS pods.",
+    "C": "Use the Amazon VPC CNI plugin for Kubernetes. Define custom subnets in the VPC cluster for the pods to use.",
+    "D": "Implement a Kubernetes network policy that has pod anti-affinity rules to restrict pod placement to specific nodes that are within custom subnets."
+  },
+  "correct_answer": "C",
+  "explanation": "The Amazon VPC CNI plugin allows pods to have VPC IP addresses from custom subnets. This enables secure VPC-native networking for pods with custom subnet configurations."
+}

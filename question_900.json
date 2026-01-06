@@ -1,0 +1,14 @@
+{
+  "id": 900,
+  "topic": "Topic 1",
+  "question": "A company wants to use Amazon Elastic Container Service (Amazon ECS) to run its on-premises application in a hybrid environment. The application currently runs on containers on premises.\n\nThe company needs a single container solution that can scale in an on-premises, hybrid, or cloud environment. The company must run new application containers in the AWS Cloud and must use a load balancer for HTTP traffic.\n\nWhich combination of actions will meet these requirements? (Choose two.)",
+  "options": {
+    "A": "Set up an ECS cluster that uses the AWS Fargate launch type for the cloud application containers. Use an Amazon ECS Anywhere external launch type for the on-premises application containers.",
+    "B": "Set up an Application Load Balancer for cloud ECS services.",
+    "C": "Set up a Network Load Balancer for cloud ECS services.",
+    "D": "Set up an ECS cluster that uses the AWS Fargate launch type. Use Fargate for the cloud application containers and the on-premises application containers.",
+    "E": "Set up an ECS cluster that uses the Amazon EC2 launch type for the cloud application containers. Use Amazon ECS Anywhere with an AWS Fargate launch type for the on-premises application containers."
+  },
+  "correct_answer": ["A", "B"],
+  "explanation": "ECS Anywhere with external launch type enables running containers on-premises while Fargate runs cloud containers. Application Load Balancer is appropriate for HTTP traffic. Fargate cannot run on-premises (only ECS Anywhere can)."
+}

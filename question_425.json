@@ -1,0 +1,13 @@
+{
+  "id": 425,
+  "topic": "Topic 1",
+  "question": "A company uses high block storage capacity to run its workloads on premises. The company's daily peak input and output transactions per second are not more than 15,000 IOPS. The company wants to migrate the workloads to Amazon EC2 and to provision disk performance independent of storage capacity.\n\nWhich Amazon Elastic Block Store (Amazon EBS) volume type will meet these requirements MOST cost-effectively?",
+  "options": {
+    "A": "GP2 volume type",
+    "B": "io2 volume type",
+    "C": "GP3 volume type",
+    "D": "io1 volume type"
+  },
+  "correct_answer": "C",
+  "explanation": "GP3 allows provisioning IOPS independently from storage capacity up to 16,000 IOPS, meeting the 15,000 IOPS requirement. GP3 is more cost-effective than io1/io2 for this IOPS level. GP2 IOPS scales with volume size (3 IOPS/GB), requiring large volumes for 15,000 IOPS. io1/io2 are more expensive and designed for higher IOPS requirements."
+}

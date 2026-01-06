@@ -1,0 +1,13 @@
+{
+  "id": 984,
+  "topic": "Topic 1",
+  "question": "A company hosts its main public web application in one AWS Region across multiple Availability Zones. The application uses an Amazon EC2 Auto Scaling group and an Application Load Balancer (ALB).\n\nA web development team needs a cost-optimized compute solution to improve the company's ability to serve dynamic content globally to millions of customers.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Create an Amazon CloudFront distribution. Configure the existing ALB as the origin.",
+    "B": "Use Amazon Route 53 to serve traffic to the ALB and EC2 instances based on the geographic location of each customer.",
+    "C": "Create an Amazon S3 bucket with public read access enabled. Migrate the web application to the S3 bucket. Configure the S3 bucket for website hosting.",
+    "D": "Use AWS Direct Connect to directly serve content from the web application to the location of each customer."
+  },
+  "correct_answer": "A",
+  "explanation": "CloudFront is a CDN that caches content at edge locations globally, reducing latency for users worldwide. Using the ALB as origin allows CloudFront to serve dynamic content from the existing infrastructure while caching cacheable content at edge locations."
+}

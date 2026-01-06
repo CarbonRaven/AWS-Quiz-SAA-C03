@@ -1,0 +1,15 @@
+{
+  "question_number": 199,
+  "topic": 1,
+  "question_text": "A telemarketing company is designing its customer call center functionality on AWS. The company needs a solution that provides multiple speaker recognition and generates transcript files. The company wants to query the transcript files to analyze the business patterns. The transcript files must be stored for 7 years for auditing purposes.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Use Amazon Rekognition for multiple speaker recognition. Store the transcript files in Amazon S3. Use machine learning models for transcript file analysis.",
+    "B": "Use Amazon Transcribe for multiple speaker recognition. Use Amazon Athena for transcript file analysis.",
+    "C": "Use Amazon Translate for multiple speaker recognition. Store the transcript files in Amazon Redshift. Use SQL queries for transcript file analysis.",
+    "D": "Use Amazon Rekognition for multiple speaker recognition. Store the transcript files in Amazon S3. Use Amazon Textract for transcript file analysis."
+  },
+  "correct_answer": "B",
+  "community_vote": {
+    "B": "93%"
+  }
+}

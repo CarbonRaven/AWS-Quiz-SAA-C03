@@ -1,0 +1,13 @@
+{
+  "id": 367,
+  "topic": "Topic 1",
+  "question": "A company is building an ecommerce web application on AWS. The application sends information about new orders to an Amazon API Gateway REST API to process. The company wants to ensure that orders are processed in the order that they are received.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Use an API Gateway integration to publish a message to an Amazon Simple Notification Service (Amazon SNS) topic when the application receives an order. Subscribe an AWS Lambda function to the topic to perform processing.",
+    "B": "Use an API Gateway integration to send a message to an Amazon Simple Queue Service (Amazon SQS) FIFO queue when the application receives an order. Configure the SQS FIFO queue to invoke an AWS Lambda function for processing.",
+    "C": "Use an API Gateway authorizer to block any requests while the application processes an order.",
+    "D": "Use an API Gateway integration to send a message to an Amazon Simple Queue Service (Amazon SQS) standard queue when the application receives an order. Configure the SQS standard queue to invoke an AWS Lambda function for processing."
+  },
+  "correct_answer": "B",
+  "explanation": "SQS FIFO queues guarantee message ordering (first-in-first-out), ensuring orders are processed in the sequence received. Standard SQS queues don't guarantee ordering. SNS doesn't maintain message order. API Gateway authorizers are for authentication/authorization, not ordering."
+}

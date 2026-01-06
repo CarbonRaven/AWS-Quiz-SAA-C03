@@ -1,0 +1,14 @@
+{
+  "id": 496,
+  "topic": "Topic 1",
+  "question": "A company uses on-premises servers to host its applications. The company is running out of storage capacity. The applications use both block storage and NFS storage. The company needs a high-performing solution that supports local caching without re-architecting its existing applications.\n\nWhich combination of actions should a solutions architect take to meet these requirements? (Choose two.)",
+  "options": {
+    "A": "Mount Amazon S3 as a file system to the on-premises servers.",
+    "B": "Deploy an AWS Storage Gateway file gateway to replace NFS storage.",
+    "C": "Deploy AWS Snowball Edge to provision NFS mounts to on-premises servers.",
+    "D": "Deploy an AWS Storage Gateway volume gateway to replace the block storage.",
+    "E": "Deploy Amazon Elastic File System (Amazon EFS) volumes and mount them to on-premises servers."
+  },
+  "correct_answer": ["B", "D"],
+  "explanation": "Storage Gateway file gateway provides NFS interfaces with local caching backed by S3 (B). Storage Gateway volume gateway provides iSCSI block storage with local caching backed by S3/EBS snapshots (D). Both support local caching without application changes. S3 can't be directly mounted as a file system. Snowball is for data migration."
+}

@@ -1,0 +1,16 @@
+{
+  "question_number": 291,
+  "topic": 1,
+  "question_text": "A media company uses Amazon CloudFront for its publicly available streaming video content. The company wants to secure the video content that is hosted in Amazon S3 by controlling who has access. Some of the company\u2019s users are using a custom HTTP client that does not support cookies. Some of the company\u2019s users are unable to change the hardcoded URLs that they are using for access.\n\nWhich services or methods will meet these requirements with the LEAST impact to the users? (Choose two.)",
+  "options": {
+    "A": "Signed cookies",
+    "B": "Signed URLs",
+    "C": "AWS AppSync",
+    "D": "JSON Web Token (JWT)",
+    "E": "AWS Secrets Manager"
+  },
+  "correct_answer": "AB",
+  "community_vote": {
+    "AB": "89%"
+  }
+}

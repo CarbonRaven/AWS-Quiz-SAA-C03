@@ -1,0 +1,13 @@
+{
+  "id": 375,
+  "topic": "Topic 1",
+  "question": "A company needs to review its AWS Cloud deployment to ensure that its Amazon S3 buckets do not have unauthorized configuration changes.\n\nWhat should a solutions architect do to accomplish this goal?",
+  "options": {
+    "A": "Turn on AWS Config with the appropriate rules.",
+    "B": "Turn on AWS Trusted Advisor with the appropriate checks.",
+    "C": "Turn on Amazon Inspector with the appropriate assessment templates.",
+    "D": "Turn on Amazon S3 server access logging. Configure Amazon EventBridge (Amazon CloudWatch Events)."
+  },
+  "correct_answer": "A",
+  "explanation": "AWS Config tracks resource configurations and changes over time. It has managed rules specifically for S3 bucket compliance (like s3-bucket-public-read-prohibited). Trusted Advisor provides high-level recommendations, not detailed configuration tracking. Inspector is for vulnerability scanning. S3 access logging tracks object access, not configuration changes."
+}

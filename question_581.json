@@ -1,0 +1,13 @@
+{
+  "id": 581,
+  "topic": "Topic 1",
+  "question": "A company runs a stateful production application on Amazon EC2 instances. The application requires at least two EC2 instances to always be running.\n\nA solutions architect needs to design a highly available and fault-tolerant architecture for the application. The solutions architect creates an Auto Scaling group of EC2 instances.\n\nWhich set of additional steps should the solutions architect take to meet these requirements?",
+  "options": {
+    "A": "Set the Auto Scaling group's minimum capacity to two. Deploy one On-Demand Instance in one Availability Zone and one On-Demand Instance in a second Availability Zone.",
+    "B": "Set the Auto Scaling group's minimum capacity to four. Deploy two On-Demand Instances in one Availability Zone and two On-Demand Instances in a second Availability Zone.",
+    "C": "Set the Auto Scaling group's minimum capacity to two. Deploy four Spot Instances in one Availability Zone.",
+    "D": "Set the Auto Scaling group's minimum capacity to four. Deploy two On-Demand Instances in one Availability Zone and two Spot Instances in a second Availability Zone."
+  },
+  "correct_answer": "B",
+  "explanation": "For fault tolerance with at least 2 instances always running, you need 4 instances (2 per AZ) so that if one AZ fails, you still have 2 running instances. On-Demand Instances provide reliability for production workloads. Spot Instances can be interrupted."
+}

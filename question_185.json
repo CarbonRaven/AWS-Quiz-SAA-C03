@@ -1,0 +1,13 @@
+{
+  "id": 185,
+  "topic": "Topic 1",
+  "question": "A company runs an application using Amazon ECS. The application creates resized versions of an original image and then makes Amazon S3 API calls to store the resized images in Amazon S3.\nHow can a solutions architect ensure that the application has permission to access Amazon S3?",
+  "options": {
+    "A": "Update the S3 role in AWS IAM to allow read/write access from Amazon ECS, and then relaunch the container.",
+    "B": "Create an IAM role with S3 permissions, and then specify that role as the taskRoleArn in the task definition.",
+    "C": "Create a security group that allows access from Amazon ECS to Amazon S3, and update the launch configuration used by the ECS cluster.",
+    "D": "Create an IAM user with S3 permissions, and then relaunch the Amazon EC2 instances for the ECS cluster while logged in as this account."
+  },
+  "correct_answer": "B",
+  "explanation": "ECS tasks use task IAM roles (taskRoleArn) to grant containers permissions to AWS services. This is the proper way to provide S3 access to containerized applications. Security groups are for network access, not API permissions. IAM users are not appropriate for application authentication."
+}

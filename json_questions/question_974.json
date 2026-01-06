@@ -1,0 +1,17 @@
+{
+  "question_number": 974,
+  "topic": 1,
+  "question_text": "A company hosts an application on AWS. The application gives users the ability to upload photos and store the photos in an Amazon S3 bucket. The company wants to use Amazon CloudFront and a custom domain name to upload the photo files to the S3 bucket in the eu-west-1 Region. Which solution will meet these requirements? (Choose two.)",
+  "options": {
+    "A": "Use AWS Certificate Manager (ACM) to create a public certificate in the us-east-1 Region. Use the certificate in CloudFront.",
+    "B": "Use AWS Certificate Manager (ACM) to create a public certificate in eu-west-1. Use the certificate in CloudFront.",
+    "C": "Configure Amazon S3 to allow uploads from CloudFront. Configure S3 Transfer Acceleration.",
+    "D": "Configure Amazon S3 to allow uploads from CloudFront origin access control (OAC).",
+    "E": "Configure Amazon S3 to allow uploads from CloudFront. Configure an Amazon S3 website endpoint."
+  },
+  "correct_answer": "AD",
+  "community_vote": {
+    "AD": "79%",
+    "BD": "17%"
+  }
+}

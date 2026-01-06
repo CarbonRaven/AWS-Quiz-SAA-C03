@@ -1,0 +1,16 @@
+{
+  "question_number": 340,
+  "topic": 1,
+  "question_text": "A media company hosts its website on AWS. The website application\u2019s architecture includes a fleet of Amazon EC2 instances behind an Application Load Balancer (ALB) and a database that is hosted on Amazon Aurora. The company\u2019s cybersecurity team reports that the application is vulnerable to SQL injection.\n\nHow should the company resolve this issue?",
+  "options": {
+    "A": "Use AWS WAF in front of the AL",
+    "B": "Create an ALB listener rule to reply to SQL injections with a fixed response.",
+    "F": "",
+    "C": "Subscribe to AWS Shield Advanced to block all SQL injection attempts automatically.",
+    "D": "Set up Amazon Inspector to block all SQL injection attempts automatically."
+  },
+  "correct_answer": "A",
+  "community_vote": {
+    "A": "100%"
+  }
+}

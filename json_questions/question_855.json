@@ -1,0 +1,15 @@
+{
+  "question_number": 855,
+  "topic": 1,
+  "question_text": "A company wants to configure its Amazon CloudFront distribution to use SSL/TLS certificates. The company does not want to use the default domain name for the distribution. Instead, the company wants to use a different domain name for the distribution. Which solution will deploy the certificate without incurring any additional costs?",
+  "options": {
+    "A": "Request an Amazon issued private certificate from AWS Certificate Manager (ACM) in the us-east-1 Region.",
+    "B": "Request an Amazon issued private certificate from AWS Certificate Manager (ACM) in the us-west-1 Region.",
+    "C": "Request an Amazon issued public certificate from AWS Certificate Manager (ACM) in the us-east-1 Region.",
+    "D": "Request an Amazon issued public certificate from AWS Certificate Manager (ACM) in the us-west-1 Region."
+  },
+  "correct_answer": "C",
+  "community_vote": {
+    "C": "100%"
+  }
+}

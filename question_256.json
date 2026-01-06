@@ -1,0 +1,14 @@
+{
+  "id": 256,
+  "topic": "Topic 1",
+  "question": "A solutions architect is implementing a document review application using an Amazon S3 bucket for storage. The solution must prevent accidental deletion of the documents and ensure that all versions of the documents are available. Users must be able to download, modify, and upload documents.\n\nWhich combination of actions should be taken to meet these requirements? (Choose two.)",
+  "options": {
+    "A": "Enable a read-only bucket ACL.",
+    "B": "Enable versioning on the bucket.",
+    "C": "Attach an IAM policy to the bucket.",
+    "D": "Enable MFA Delete on the bucket.",
+    "E": "Encrypt the bucket using AWS KMS."
+  },
+  "correct_answer": ["B", "D"],
+  "explanation": "S3 versioning (B) maintains all versions of documents, allowing recovery of previous versions. MFA Delete (D) requires MFA authentication to permanently delete object versions, preventing accidental deletion. Read-only ACL would prevent uploads/modifications. IAM policies don't inherently prevent deletion. Encryption protects data but doesn't prevent deletion."
+}

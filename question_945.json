@@ -1,0 +1,13 @@
+{
+  "id": 945,
+  "topic": "Topic 1",
+  "question": "An ecommerce company runs several internal applications in multiple AWS accounts. The company uses AWS Organizations to manage its AWS accounts.\n\nA security appliance in the company's networking account must inspect interactions between applications across AWS accounts.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Deploy a Network Load Balancer (NLB) in the networking account to send traffic to the security appliance. Configure the application accounts to send traffic to the NLB by using an interface VPC endpoint in the application accounts.",
+    "B": "Deploy an Application Load Balancer (ALB) in the application accounts to send traffic directly to the security appliance.",
+    "C": "Deploy a Gateway Load Balancer (GWLB) in the networking account to send traffic to the security appliance. Configure the application accounts to send traffic to the GWLB by using an interface GWLB endpoint in the application accounts.",
+    "D": "Deploy an interface VPC endpoint in the application accounts to send traffic directly to the security appliance."
+  },
+  "correct_answer": "C",
+  "explanation": "Gateway Load Balancer is designed for deploying, scaling, and managing third-party security appliances. GWLB endpoints enable cross-account traffic inspection in a centralized security architecture."
+}

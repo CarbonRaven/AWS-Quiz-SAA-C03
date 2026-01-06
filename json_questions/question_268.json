@@ -1,0 +1,16 @@
+{
+  "question_number": 268,
+  "topic": 1,
+  "question_text": "A gaming company has a web application that displays scores. The application runs on Amazon EC2 instances behind an Application Load Balancer. The application stores data in an Amazon RDS for MySQL database. Users are starting to experience long delays and interruptions that are caused by database read performance. The company wants to improve the user experience while minimizing changes to the application\u2019s architecture.\n\nWhat should a solutions architect do to meet these requirements?",
+  "options": {
+    "A": "Use Amazon ElastiCache in front of the database.",
+    "B": "Correct Answer: A \ud83d\uddf3\ufe0f",
+    "C": "Migrate the application from EC2 instances to AWS Lambda.",
+    "D": "Migrate the database from Amazon RDS for MySQL to Amazon DynamoD"
+  },
+  "correct_answer": "A",
+  "community_vote": {
+    "A": "60%",
+    "B": "40%"
+  }
+}

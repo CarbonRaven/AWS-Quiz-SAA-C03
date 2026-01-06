@@ -1,0 +1,13 @@
+{
+  "id": 391,
+  "topic": "Topic 1",
+  "question": "A company needs to keep user transaction data in an Amazon DynamoDB table. The company must retain the data for 7 years.\n\nWhat is the MOST operationally efficient solution that meets these requirements?",
+  "options": {
+    "A": "Use DynamoDB point-in-time recovery to back up the table continuously.",
+    "B": "Use AWS Backup to create backup schedules and retention policies for the table.",
+    "C": "Create an on-demand backup of the table by using the DynamoDB console. Store the backup in an Amazon S3 bucket. Set an S3 Lifecycle configuration for the S3 bucket.",
+    "D": "Create an Amazon EventBridge (Amazon CloudWatch Events) rule to invoke an AWS Lambda function. Configure the Lambda function to back up the table and to store the backup in an Amazon S3 bucket. Set an S3 Lifecycle configuration for the S3 bucket."
+  },
+  "correct_answer": "B",
+  "explanation": "AWS Backup provides centralized backup management with automated scheduling and retention policies for DynamoDB. It's the most operationally efficient for long-term retention requirements. Point-in-time recovery only retains 35 days of data. Manual on-demand backups require ongoing operational effort. EventBridge with Lambda adds complexity compared to AWS Backup."
+}

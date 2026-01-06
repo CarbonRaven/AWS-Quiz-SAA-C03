@@ -1,0 +1,13 @@
+{
+  "id": 252,
+  "topic": "Topic 1",
+  "question": "A solutions architect needs to design a system to store client case files. The files are core company assets and are important. The number of files will grow over time.\n\nThe files must be simultaneously accessible from multiple application servers that run on Amazon EC2 instances. The solution must have built-in redundancy.\n\nWhich solution meets these requirements?",
+  "options": {
+    "A": "Amazon Elastic File System (Amazon EFS)",
+    "B": "Amazon Elastic Block Store (Amazon EBS)",
+    "C": "Amazon S3 Glacier Deep Archive",
+    "D": "AWS Backup"
+  },
+  "correct_answer": "A",
+  "explanation": "Amazon EFS provides shared file storage that can be simultaneously accessed by multiple EC2 instances. EFS has built-in redundancy by storing data across multiple AZs. EBS volumes can only be attached to one instance at a time (except io1/io2 Multi-Attach). S3 Glacier Deep Archive is for archival, not active access. AWS Backup is a backup service, not a storage solution."
+}

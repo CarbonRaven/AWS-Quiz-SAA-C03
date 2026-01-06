@@ -1,0 +1,13 @@
+{
+  "id": 396,
+  "topic": "Topic 1",
+  "question": "A company's dynamic website is hosted using on-premises servers in the United States. The company is launching its product in Europe. The company wants to optimize site loading times for new European users. The site's backend must remain in the United States. The product is being launched in a few days, and an immediate solution is needed.\n\nWhat should the solutions architect recommend?",
+  "options": {
+    "A": "Launch an Amazon EC2 instance in us-east-1 and migrate the site to it.",
+    "B": "Move the website to Amazon S3. Use cross-Region replication between Regions.",
+    "C": "Use Amazon CloudFront with a custom origin pointing to the on-premises servers.",
+    "D": "Use an Amazon Route 53 geoproximity routing policy pointing to on-premises servers."
+  },
+  "correct_answer": "C",
+  "explanation": "CloudFront with custom origin can immediately cache content at European edge locations, reducing latency for European users while keeping the backend on-premises in the US. It requires no migration and can be deployed quickly. EC2 migration takes time. S3 is for static content, not dynamic. Route 53 routing doesn't cache or accelerate content delivery."
+}

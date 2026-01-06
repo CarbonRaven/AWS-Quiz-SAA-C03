@@ -1,0 +1,13 @@
+{
+  "id": 643,
+  "topic": "Topic 1",
+  "question": "A company runs several websites on AWS for its different brands. Each website generates tens of gigabytes of web traffic logs each day. A solutions architect needs to design a scalable solution to give the company's developers the ability to analyze traffic patterns across all the company's websites. This analysis by the developers will occur on demand once a week over the course of several months. The solution must support queries with standard SQL.\n\nWhich solution will meet these requirements MOST cost-effectively?",
+  "options": {
+    "A": "Store the logs in Amazon S3. Use Amazon Athena for analysis.",
+    "B": "Store the logs in Amazon RDS. Use a database client for analysis.",
+    "C": "Store the logs in Amazon OpenSearch Service. Use OpenSearch Service for analysis.",
+    "D": "Store the logs in an Amazon EMR cluster. Use a supported open-source framework for SQL-based analysis."
+  },
+  "correct_answer": "A",
+  "explanation": "S3 provides cost-effective storage for large volumes of logs. Athena is a serverless query service that supports standard SQL and charges only for queries run, making it ideal for on-demand weekly analysis without maintaining infrastructure."
+}

@@ -1,0 +1,15 @@
+{
+  "question_number": 272,
+  "topic": 1,
+  "question_text": "A company serves a dynamic website from a fleet of Amazon EC2 instances behind an Application Load Balancer (ALB). The website needs to support multiple languages to serve customers around the world. The website\u2019s architecture is running in the us-west-1 Region and is exhibiting high request latency for users that are located in other parts of the world.\n\nThe website needs to serve requests quickly and efficiently regardless of a user\u2019s location. However, the company does not want to recreate the existing architecture across multiple Regions.\n\nWhat should a solutions architect do to meet these requirements?",
+  "options": {
+    "A": "Replace the existing architecture with a website that is served from an Amazon S3 bucket. Configure an Amazon CloudFront distribution with the S3 bucket as the origin. Set the cache behavior settings to cache based on the Accept-Language request header.",
+    "B": "Configure the API to use the HTTP integration type. Set up an API Gateway stage to enable the API cache based on the Accept-Language request header.",
+    "C": "Create an Amazon API Gateway API that is integrated with the AL",
+    "D": "Launch an EC2 instance in each additional Region and configure NGINX to act as a cache server for that Region. Put all the EC2 instances and the ALB behind an Amazon Route 53 record set with a geolocation routing policy."
+  },
+  "correct_answer": "B",
+  "community_vote": {
+    "B": "100%"
+  }
+}

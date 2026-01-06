@@ -1,0 +1,13 @@
+{
+  "id": 631,
+  "topic": "Topic 1",
+  "question": "A social media company wants to store its database of user profiles, relationships, and interactions in the AWS Cloud. The company needs an application to monitor any changes in the database. The application needs to analyze the relationships between the data entities and to provide recommendations to users.\n\nWhich solution will meet these requirements with the LEAST operational overhead?",
+  "options": {
+    "A": "Use Amazon Neptune to store the information. Use Amazon Kinesis Data Streams to process changes in the database.",
+    "B": "Use Amazon Neptune to store the information. Use Neptune Streams to process changes in the database.",
+    "C": "Use Amazon Quantum Ledger Database (Amazon QLDB) to store the information. Use Amazon Kinesis Data Streams to process changes in the database.",
+    "D": "Use Amazon Quantum Ledger Database (Amazon QLDB) to store the information. Use Neptune Streams to process changes in the database."
+  },
+  "correct_answer": "B",
+  "explanation": "Amazon Neptune is a graph database designed for storing and querying highly connected data like social networks. Neptune Streams is a native feature that captures changes in the graph database with minimal operational overhead, ideal for relationship analysis."
+}

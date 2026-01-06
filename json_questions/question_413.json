@@ -1,0 +1,15 @@
+{
+  "question_number": 413,
+  "topic": 1,
+  "question_text": "An ecommerce company is experiencing an increase in user traffic. The company\u2019s store is deployed on Amazon EC2 instances as a two-tier web application consisting of a web tier and a separate database tier. As traffic increases, the company notices that the architecture is causing significant delays in sending timely marketing and order confirmation email to users. The company wants to reduce the time it spends resolving complex email delivery issues and minimize operational overhead.\n\nWhat should a solutions architect do to meet these requirements?",
+  "options": {
+    "A": "Create a separate application tier using EC2 instances dedicated to email processing.",
+    "B": "Configure the web instance to send email through Amazon Simple Email Service (Amazon SES).",
+    "C": "Configure the web instance to send email through Amazon Simple Notification Service (Amazon SNS).",
+    "D": "Create a separate application tier using EC2 instances dedicated to email processing. Place the instances in an Auto Scaling group."
+  },
+  "correct_answer": "B",
+  "community_vote": {
+    "B": "100%"
+  }
+}

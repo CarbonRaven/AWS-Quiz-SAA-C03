@@ -1,0 +1,13 @@
+{
+  "id": 801,
+  "topic": "Topic 1",
+  "question": "A financial company needs to handle highly sensitive data. The company will store the data in an Amazon S3 bucket. The company needs to ensure that the data is encrypted in transit and at rest. The company must manage the encryption keys outside the AWS Cloud.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Encrypt the data in the S3 bucket with server-side encryption (SSE) that uses an AWS Key Management Service (AWS KMS) customer managed key.",
+    "B": "Encrypt the data in the S3 bucket with server-side encryption (SSE) that uses an AWS Key Management Service (AWS KMS) AWS managed key.",
+    "C": "Encrypt the data in the S3 bucket with the default server-side encryption (SSE).",
+    "D": "Encrypt the data at the company's data center before storing the data in the S3 bucket."
+  },
+  "correct_answer": "D",
+  "explanation": "Client-side encryption before uploading to S3 allows the company to manage encryption keys outside AWS Cloud while ensuring data is encrypted both in transit and at rest."
+}

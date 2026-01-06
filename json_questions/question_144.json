@@ -1,0 +1,15 @@
+{
+  "question_number": 144,
+  "topic": 1,
+  "question_text": "A company recently started using Amazon Aurora as the data store for its global ecommerce application. When large reports are run, developers report that the ecommerce application is performing poorly. After reviewing metrics in Amazon CloudWatch, a solutions architect finds that the ReadIOPS and CPUUtilizalion metrics are spiking when monthly reports run.\nWhat is the MOST cost-effective solution?",
+  "options": {
+    "A": "Migrate the monthly reporting to Amazon Redshift.",
+    "B": "Migrate the monthly reporting to an Aurora Replica.",
+    "C": "Migrate the Aurora database to a larger instance class.",
+    "D": "Increase the Provisioned IOPS on the Aurora instance."
+  },
+  "correct_answer": "B",
+  "community_vote": {
+    "B": "98%"
+  }
+}

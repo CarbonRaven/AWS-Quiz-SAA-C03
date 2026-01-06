@@ -1,0 +1,13 @@
+{
+  "id": 525,
+  "topic": "Topic 1",
+  "question": "A company wants to add its existing AWS usage cost to its operation cost dashboard. A solutions architect needs to recommend a solution that will give the company access to its usage cost programmatically. The company must be able to access cost data for the current year and forecast costs for the next 12 months.\n\nWhich solution will meet these requirements with the LEAST operational overhead?",
+  "options": {
+    "A": "Access usage cost-related data by using the AWS Cost Explorer API with pagination.",
+    "B": "Access usage cost-related data by using downloadable AWS Cost Explorer report .csv files.",
+    "C": "Configure AWS Budgets actions to send usage cost data to the company through FTP.",
+    "D": "Create AWS Budgets reports for usage cost data. Send the data to the company through SMTP."
+  },
+  "correct_answer": "A",
+  "explanation": "The Cost Explorer API provides programmatic access to cost and usage data, including historical data and 12-month forecasts. It integrates easily with dashboards and applications with the least operational overhead. Manual CSV downloads or email-based solutions require more manual intervention."
+}

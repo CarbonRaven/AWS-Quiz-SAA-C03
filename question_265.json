@@ -1,0 +1,13 @@
+{
+  "id": 265,
+  "topic": "Topic 1",
+  "question": "A solutions architect needs to design a highly available application consisting of web, application, and database tiers. HTTPS content delivery should be as close to the edge as possible, with the least delivery time.\n\nWhich solution meets these requirements and is MOST secure?",
+  "options": {
+    "A": "Configure a public Application Load Balancer (ALB) with multiple redundant Amazon EC2 instances in public subnets. Configure Amazon CloudFront to deliver HTTPS content using the public ALB as the origin.",
+    "B": "Configure a public Application Load Balancer with multiple redundant Amazon EC2 instances in private subnets. Configure Amazon CloudFront to deliver HTTPS content using the EC2 instances as the origin.",
+    "C": "Configure a public Application Load Balancer (ALB) with multiple redundant Amazon EC2 instances in private subnets. Configure Amazon CloudFront to deliver HTTPS content using the public ALB as the origin.",
+    "D": "Configure a public Application Load Balancer with multiple redundant Amazon EC2 instances in public subnets. Configure Amazon CloudFront to deliver HTTPS content using the EC2 instances as the origin."
+  },
+  "correct_answer": "C",
+  "explanation": "EC2 instances in private subnets (C) is most secure - they're not directly accessible from the internet. The public ALB handles incoming traffic and routes to private instances. CloudFront provides edge caching for HTTPS content with the ALB as origin. Public subnets for EC2 instances expose them unnecessarily. CloudFront should use ALB as origin, not individual EC2 instances."
+}

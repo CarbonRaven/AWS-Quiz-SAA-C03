@@ -1,0 +1,16 @@
+{
+  "question_number": 167,
+  "topic": 1,
+  "question_text": "A company runs a production application on a fleet of Amazon EC2 instances. The application reads the data from an Amazon SQS queue and processes the messages in parallel. The message volume is unpredictable and often has intermittent traffic. This application should continually process messages without any downtime.\n\nWhich solution meets these requirements MOST cost-effectively?",
+  "options": {
+    "A": "Use Spot Instances exclusively to handle the maximum capacity required.",
+    "B": "Use Reserved Instances exclusively to handle the maximum capacity required.",
+    "C": "Use Reserved Instances for the baseline capacity and use Spot Instances to handle additional capacity.",
+    "D": "Use Reserved Instances for the baseline capacity and use On-Demand Instances to handle additional capacity."
+  },
+  "correct_answer": "D",
+  "community_vote": {
+    "D": "54%",
+    "C": "45%"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "question_number": 213,
+  "topic": 1,
+  "question_text": "A company is developing a new mobile app. The company must implement proper traffic filtering to protect its Application Load Balancer (ALB) against common application-level attacks, such as cross-site scripting or SQL injection. The company has minimal infrastructure and operational staff. The company needs to reduce its share of the responsibility in managing, updating, and securing servers for its AWS environment.\n\nWhat should a solutions architect recommend to meet these requirements?",
+  "options": {
+    "A": "Configure AWS WAF rules and associate them with the AL",
+    "B": "Correct Answer: A \ud83d\uddf3\ufe0f",
+    "C": "Deploy AWS Shield Advanced and add the ALB as a protected resource.",
+    "D": "Create a new ALB that directs traffic to an Amazon EC2 instance running a third-party firewall, which then passes the traffic to the current AL"
+  },
+  "correct_answer": "A",
+  "community_vote": {
+    "A": "78%",
+    "C": "22%"
+  }
+}

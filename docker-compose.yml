@@ -1,0 +1,14 @@
+services:
+  aws-quiz:
+    build:
+      context: .
+      dockerfile: aws-quiz/Dockerfile
+    ports:
+      - "5050:5050"
+    volumes:
+      # Persist quiz progress data
+      - quiz-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  quiz-data:

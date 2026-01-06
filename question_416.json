@@ -1,0 +1,14 @@
+{
+  "id": 416,
+  "topic": "Topic 1",
+  "question": "A rapidly growing global ecommerce company is hosting its web application on AWS. The web application includes static content and dynamic content. The website stores online transaction processing (OLTP) data in an Amazon RDS database. The website's users are experiencing slow page loads.\n\nWhich combination of actions should a solutions architect take to resolve this issue? (Choose two.)",
+  "options": {
+    "A": "Configure an Amazon Redshift cluster.",
+    "B": "Set up an Amazon CloudFront distribution.",
+    "C": "Host the dynamic web content in Amazon S3.",
+    "D": "Create a read replica for the RDS DB instance.",
+    "E": "Configure a Multi-AZ deployment for the RDS DB instance."
+  },
+  "correct_answer": ["B", "D"],
+  "explanation": "CloudFront caches static content at edge locations, reducing latency for global users. Read replicas offload read queries from the primary database, improving database performance. Redshift is for analytics, not OLTP. S3 hosts static content, not dynamic. Multi-AZ provides high availability, not performance improvement."
+}

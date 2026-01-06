@@ -1,0 +1,16 @@
+{
+  "question_number": 363,
+  "topic": 1,
+  "question_text": "A company is building a game system that needs to send unique events to separate leaderboard, matchmaking, and authentication services concurrently. The company needs an AWS event-driven system that guarantees the order of the events.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Amazon EventBridge event bus",
+    "B": "Amazon Simple Notification Service (Amazon SNS) FIFO topics",
+    "C": "Amazon Simple Notification Service (Amazon SNS) standard topics",
+    "D": "Amazon Simple Queue Service (Amazon SQS) FIFO queues"
+  },
+  "correct_answer": "B",
+  "community_vote": {
+    "B": "79%",
+    "D": "16%"
+  }
+}

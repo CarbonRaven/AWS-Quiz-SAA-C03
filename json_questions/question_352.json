@@ -1,0 +1,15 @@
+{
+  "question_number": 352,
+  "topic": 1,
+  "question_text": "A company is designing the network for an online multi-player game. The game uses the UDP networking protocol and will be deployed in eight AWS Regions. The network architecture needs to minimize latency and packet loss to give end users a high-quality gaming experience.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Setup a transit gateway in each Region. Create inter-Region peering attachments between each transit gateway.",
+    "B": "Set up AWS Global Accelerator with UDP listeners and endpoint groups in each Region.",
+    "C": "Correct Answer: B \ud83d\uddf3\ufe0f",
+    "D": "Set up a VPC peering mesh between each Region. Turn on UDP for each VP"
+  },
+  "correct_answer": "B",
+  "community_vote": {
+    "B": "100%"
+  }
+}

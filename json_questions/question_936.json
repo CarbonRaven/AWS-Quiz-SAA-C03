@@ -1,0 +1,16 @@
+{
+  "question_number": 936,
+  "topic": 1,
+  "question_text": "A company runs thousands of AWS Lambda functions. The company needs a solution to securely store sensitive information that all the Lambda functions use. The solution must also manage the automatic rotation of the sensitive information. Which combination of steps will meet these requirements with the LEAST operational overhead? (Choose two.)",
+  "options": {
+    "A": "Create HTTP security headers by using Lambda@Edge to retrieve and create sensitive information",
+    "B": "Create a Lambda layer that retrieves sensitive information",
+    "C": "Store sensitive information in AWS Secrets Manager",
+    "D": "Store sensitive information in AWS Systems Manager Parameter Store",
+    "E": "Create a Lambda consumer with dedicated throughput to retrieve sensitive information and create environmental variables"
+  },
+  "correct_answer": "BC",
+  "community_vote": {
+    "BC": "90%"
+  }
+}

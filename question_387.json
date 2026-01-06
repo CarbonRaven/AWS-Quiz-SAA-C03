@@ -1,0 +1,14 @@
+{
+  "id": 387,
+  "topic": "Topic 1",
+  "question": "A solutions architect is designing a two-tier web application. The application consists of a public-facing web tier hosted on Amazon EC2 in public subnets. The database tier consists of Microsoft SQL Server running on Amazon EC2 in a private subnet. Security is a high priority for the company.\n\nHow should security groups be configured in this situation? (Choose two.)",
+  "options": {
+    "A": "Configure the security group for the web tier to allow inbound traffic on port 443 from 0.0.0.0/0.",
+    "B": "Configure the security group for the web tier to allow outbound traffic on port 443 from 0.0.0.0/0.",
+    "C": "Configure the security group for the database tier to allow inbound traffic on port 1433 from the security group of the web tier.",
+    "D": "Configure the security group for the database tier to allow outbound traffic on ports 443 and 1433 to the security group of the web tier.",
+    "E": "Configure the security group for the database tier to allow inbound traffic on ports 443 and 1433 from the security group of the web tier."
+  },
+  "correct_answer": ["A", "C"],
+  "explanation": "Web tier needs inbound HTTPS (443) from anywhere (0.0.0.0/0) for public access. Database tier needs inbound SQL Server (1433) only from the web tier's security group. Database shouldn't accept port 443 - that's for web traffic. Outbound rules are typically open by default and security groups are stateful, so responses are automatically allowed."
+}

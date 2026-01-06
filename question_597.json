@@ -1,0 +1,13 @@
+{
+  "id": 597,
+  "topic": "Topic 1",
+  "question": "A company hosts an internal serverless application on AWS by using Amazon API Gateway and AWS Lambda. The company's employees report issues with high latency when they begin using the application each day. The company wants to reduce latency.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Increase the API Gateway throttling limit.",
+    "B": "Set up a scheduled scaling to increase Lambda provisioned concurrency before employees begin to use the application each day.",
+    "C": "Create an Amazon CloudWatch alarm to initiate a Lambda function as a target for the alarm at the beginning of each day.",
+    "D": "Increase the Lambda function memory."
+  },
+  "correct_answer": "B",
+  "explanation": "The latency at the beginning of each day indicates cold start issues. Provisioned concurrency keeps Lambda functions initialized and ready to respond immediately. Scheduled scaling ensures capacity is ready before employees start using the application."
+}

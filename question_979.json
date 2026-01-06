@@ -1,0 +1,13 @@
+{
+  "id": 979,
+  "topic": "Topic 1",
+  "question": "A company is developing a new application that uses a relational database to store user data and application configurations. The company expects the application to have steady user growth. The company expects the database usage to be variable and read-heavy, with occasional writes.\n\nThe company wants to cost-optimize the database solution. The company wants to use an AWS managed database solution that will provide the necessary performance.\n\nWhich solution will meet these requirements MOST cost-effectively?",
+  "options": {
+    "A": "Deploy the database on Amazon RDS. Use Provisioned IOPS SSD storage to ensure consistent performance for read and write operations.",
+    "B": "Deploy the database on Amazon Aurora Serverless to automatically scale the database capacity based on actual usage to accommodate the workload.",
+    "C": "Deploy the database on Amazon DynamoDB. Use on-demand capacity mode to automatically scale throughput to accommodate the workload.",
+    "D": "Deploy the database on Amazon RDS. Use magnetic storage and use read replicas to accommodate the workload."
+  },
+  "correct_answer": "B",
+  "explanation": "Aurora Serverless automatically scales capacity based on actual usage, which is ideal for variable workloads. It provides cost optimization by scaling down during low usage periods and scaling up during high demand, perfect for variable, read-heavy workloads with steady growth."
+}

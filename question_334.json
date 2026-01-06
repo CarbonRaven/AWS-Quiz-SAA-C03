@@ -1,0 +1,13 @@
+{
+  "id": 334,
+  "topic": "Topic 1",
+  "question": "A company wants to give a customer the ability to use on-premises Microsoft Active Directory to download files that are stored in Amazon S3. The customer's application uses an SFTP client to download the files.\n\nWhich solution will meet these requirements with the LEAST operational overhead and no changes to the customer's application?",
+  "options": {
+    "A": "Set up AWS Transfer Family with SFTP for Amazon S3. Configure integrated Active Directory authentication.",
+    "B": "Set up AWS Database Migration Service (AWS DMS) to synchronize the on-premises client with Amazon S3. Configure integrated Active Directory authentication.",
+    "C": "Set up AWS DataSync to synchronize between the on-premises location and the S3 location by using AWS IAM Identity Center (AWS Single Sign-On).",
+    "D": "Set up a Windows Amazon EC2 instance with SFTP to connect the on-premises client with Amazon S3. Integrate AWS Identity and Access Management (IAM)."
+  },
+  "correct_answer": "A",
+  "explanation": "AWS Transfer Family provides fully managed SFTP access to S3 with AD authentication. No application changes needed - customers continue using SFTP clients. DMS is for database migration. DataSync is for data transfer, not SFTP access. EC2 with SFTP requires operational overhead."
+}

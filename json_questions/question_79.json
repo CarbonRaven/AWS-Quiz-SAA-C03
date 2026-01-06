@@ -1,0 +1,16 @@
+{
+  "question_number": 79,
+  "topic": 1,
+  "question_text": "A company is planning to use an Amazon DynamoDB table for data storage. The company is concerned about cost optimization. The table will not be used on most mornings. In the evenings, the read and write traffic will often be unpredictable. When traffic spikes occur, they will happen very quickly.\nWhat should a solutions architect recommend?",
+  "options": {
+    "A": "Create a DynamoDB table in on-demand capacity mode.",
+    "B": "Create a DynamoDB table with a global secondary index.",
+    "C": "Create a DynamoDB table with provisioned capacity and auto scaling.",
+    "D": "Create a DynamoDB table in provisioned capacity mode, and configure it as a global table."
+  },
+  "correct_answer": "A",
+  "community_vote": {
+    "A": "78%",
+    "C": "22%"
+  }
+}

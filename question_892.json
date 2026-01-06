@@ -1,0 +1,13 @@
+{
+  "id": 892,
+  "topic": "Topic 1",
+  "question": "A company is migrating a data center from its on-premises location to AWS. The company has several legacy applications that are hosted on individual virtual servers. Changes to the application designs cannot be made.\n\nEach individual virtual server currently runs as its own EC2 instance. A solutions architect needs to ensure that the applications are reliable and fault tolerant after migration to AWS. The applications will run on Amazon EC2 instances.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Create an Auto Scaling group that has a minimum of one and a maximum of one. Create an Amazon Machine Image (AMI) of each application instance. Use the AMI to create EC2 instances in the Auto Scaling group. Configure an Application Load Balancer in front of the Auto Scaling group.",
+    "B": "Use AWS Backup to create an hourly backup of the EC2 instance that hosts each application. Store the backup in Amazon S3 in a separate Availability Zone. Configure a disaster recovery process to restore the EC2 instance for each application from its most recent backup.",
+    "C": "Create an Amazon Machine Image (AMI) of each application instance. Launch two new EC2 instances from the AMI. Place each EC2 instance in a separate Availability Zone. Configure a Network Load Balancer that has the EC2 instances as targets.",
+    "D": "Use AWS Migration Hub Refactor Spaces to migrate each application off the EC2 instance. Break down functionality from each application into individual components. Host each application on Amazon Elastic Container Service (Amazon ECS) with an AWS Fargate launch type."
+  },
+  "correct_answer": "A",
+  "explanation": "Auto Scaling with min/max of 1 provides automatic instance recovery if the instance fails. Since application changes cannot be made, this approach maintains the single-instance design while adding fault tolerance through automatic replacement."
+}

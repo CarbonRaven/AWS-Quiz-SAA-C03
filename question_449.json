@@ -1,0 +1,13 @@
+{
+  "id": 449,
+  "topic": "Topic 1",
+  "question": "A company runs its application on an Oracle database. The company plans to quickly migrate to AWS because of limited resources for the database, backup administration, and data center maintenance. The application uses third-party database features that require privileged access.\n\nWhich solution will help the company migrate the database to AWS MOST cost-effectively?",
+  "options": {
+    "A": "Migrate the database to Amazon RDS for Oracle. Replace third-party features with cloud services.",
+    "B": "Migrate the database to Amazon RDS Custom for Oracle. Customize the database settings to support third-party features.",
+    "C": "Migrate the database to an Amazon EC2 Amazon Machine Image (AMI) for Oracle. Customize the database settings to support third-party features.",
+    "D": "Migrate the database to Amazon RDS for PostgreSQL by rewriting the application code to remove dependency on Oracle APEX."
+  },
+  "correct_answer": "B",
+  "explanation": "RDS Custom for Oracle provides managed database benefits while allowing privileged access for third-party features. It reduces operational overhead compared to EC2 while maintaining customization capability. Standard RDS for Oracle doesn't allow privileged access. EC2 requires full database administration (defeats the purpose of reducing admin work). PostgreSQL migration requires significant code changes."
+}

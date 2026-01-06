@@ -1,0 +1,16 @@
+{
+  "question_number": 674,
+  "topic": 1,
+  "question_text": "A company runs a web application on Amazon EC2 instances in an Auto Scaling group. The application uses a database that runs on an Amazon RDS for PostgreSQL DB instance. The application performs slowly when traffic increases. The database experiences a heavy read load during periods of high traffic. Which actions should a solutions architect take to resolve these performance issues? (Choose two.)",
+  "options": {
+    "A": "Turn on auto scaling for the DB instance.",
+    "B": "Create a read replica for the DB instance. Configure the application to send read traffic to the read replica.",
+    "C": "Convert the DB instance to a Multi-AZ DB instance deployment. Configure the application to send read traffic to the standby DB instance.",
+    "D": "Create an Amazon ElastiCache cluster. Configure the application to cache query results in the ElastiCache cluster.",
+    "E": "Configure the Auto Scaling group subnets to ensure that the EC2 instances are provisioned in the same Availability Zone as the DB instance."
+  },
+  "correct_answer": "BD",
+  "community_vote": {
+    "BD": "90%"
+  }
+}

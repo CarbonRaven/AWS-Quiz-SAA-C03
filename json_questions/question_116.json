@@ -1,0 +1,16 @@
+{
+  "question_number": 116,
+  "topic": 1,
+  "question_text": "A company uses a popular content management system (CMS) for its corporate website. However, the required patching and maintenance are burdensome. The company is redesigning its website and wants anew solution. The website will be updated four times a year and does not need to have any dynamic content available. The solution must provide high scalability and enhanced security.\nWhich combination of changes will meet these requirements with the LEAST operational overhead? (Choose two.)",
+  "options": {
+    "A": "Configure Amazon CloudFront in front of the website to use HTTPS functionality.",
+    "B": "Deploy an AWS WAF web ACL in front of the website to provide HTTPS functionality.",
+    "C": "Create and deploy an AWS Lambda function to manage and serve the website content.",
+    "D": "Create the new website and an Amazon S3 bucket. Deploy the website on the S3 bucket with static website hosting enabled.",
+    "E": "Create the new website. Deploy the website by using an Auto Scaling group of Amazon EC2 instances behind an Application Load Balancer."
+  },
+  "correct_answer": "AD",
+  "community_vote": {
+    "AD": "89%"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": 151,
+  "topic": "Topic 1",
+  "question": "A company wants to migrate its on-premises data center to AWS. According to the company's compliance requirements, the company can use only the ap-northeast-3 Region. Company administrators are not permitted to connect VPCs to the internet.\nWhich solutions will meet these requirements? (Choose two.)",
+  "options": {
+    "A": "Use AWS Control Tower to implement data residency guardrails to deny internet access and deny access to all AWS Regions except ap-northeast-3.",
+    "B": "Use rules in AWS WAF to prevent internet access. Deny access to all AWS Regions except ap-northeast-3 in the AWS account settings.",
+    "C": "Use AWS Organizations to configure service control policies (SCPs) that prevent VPCs from gaining internet access. Deny access to all AWS Regions except ap-northeast-3.",
+    "D": "Create an outbound rule for the network ACL in each VPC to deny all traffic from 0.0.0.0/0. Create an IAM policy for each user to prevent the use of any AWS Region other than ap-northeast-3.",
+    "E": "Use AWS Config to activate managed rules to detect and alert for internet gateways and to detect and alert for new resources deployed outside of ap-northeast-3."
+  },
+  "correct_answer": ["A", "C"],
+  "explanation": "AWS Control Tower provides guardrails for data residency and internet access restrictions. SCPs in AWS Organizations can deny creation of internet gateways and restrict regions at the organization level. These are preventive controls rather than just detective (Config) or reactive approaches."
+}

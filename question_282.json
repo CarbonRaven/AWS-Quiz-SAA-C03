@@ -1,0 +1,13 @@
+{
+  "id": 282,
+  "topic": "Topic 1",
+  "question": "A company runs a web application that is deployed on Amazon EC2 instances in the private subnet of a VPC. An Application Load Balancer (ALB) that extends across the public subnets directs web traffic to the EC2 instances. The company wants to implement new security measures to restrict inbound traffic from the ALB to the EC2 instances while preventing access from any other source inside or outside the private subnet of the EC2 instances.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Configure a route in a route table to direct traffic from the internet to the private IP addresses of the EC2 instances.",
+    "B": "Configure the security group for the EC2 instances to only allow traffic that comes from the security group for the ALB.",
+    "C": "Move the EC2 instances into the public subnet. Give the EC2 instances a set of Elastic IP addresses.",
+    "D": "Configure the security group for the ALB to allow any TCP traffic on any port."
+  },
+  "correct_answer": "B",
+  "explanation": "Security groups can reference other security groups as sources. Configuring the EC2 security group to only allow traffic from the ALB's security group ensures only the ALB can reach the instances. This blocks all other traffic from inside or outside the private subnet. Route tables don't restrict traffic sources. Moving to public subnet reduces security. ALB security group changes don't restrict EC2 inbound traffic."
+}

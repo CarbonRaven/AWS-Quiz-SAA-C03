@@ -1,0 +1,13 @@
+{
+  "id": 492,
+  "topic": "Topic 1",
+  "question": "A company has multiple AWS accounts for development work. Some staff consistently use oversized Amazon EC2 instances, which causes the company to exceed the yearly budget for the development accounts. The company wants to centrally restrict the creation of AWS resources in these accounts.\n\nWhich solution will meet these requirements with the LEAST development effort?",
+  "options": {
+    "A": "Develop AWS Systems Manager templates that use an approved EC2 creation process. Use the approved Systems Manager templates to provision EC2 instances.",
+    "B": "Use AWS Organizations to organize the accounts into organizational units (OUs). Define and attach a service control policy (SCP) to control the usage of EC2 instance types.",
+    "C": "Configure an Amazon EventBridge rule that invokes an AWS Lambda function when an EC2 instance is created. Stop disallowed EC2 instance types.",
+    "D": "Set up AWS Service Catalog products for the staff to create the allowed EC2 instance types. Ensure that staff can deploy EC2 instances only by using the Service Catalog products."
+  },
+  "correct_answer": "B",
+  "explanation": "SCPs attached to OUs in AWS Organizations provide centralized, preventive controls across multiple accounts with minimal effort. SCPs can restrict which EC2 instance types can be launched. Lambda/EventBridge are reactive, not preventive. Service Catalog requires more setup and user training."
+}

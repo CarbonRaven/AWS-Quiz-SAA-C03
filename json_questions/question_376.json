@@ -1,0 +1,15 @@
+{
+  "question_number": 376,
+  "topic": 1,
+  "question_text": "A company has launched an Amazon RDS for MySQL DB instance. Most of the connections to the database come from serverless applications. Application traffic to the database changes significantly at random intervals. At times of high demand, users report that their applications experience database connection rejection errors.\n\nWhich solution will resolve this issue with the LEAST operational overhead?",
+  "options": {
+    "A": "Create a proxy in RDS Proxy. Configure the users\u2019 applications to use the DB instance through RDS Proxy.",
+    "B": "Deploy Amazon ElastiCache for Memcached between the users\u2019 applications and the DB instance.",
+    "C": "Migrate the DB instance to a different instance class that has higher I/O capacity. Configure the users\u2019 applications to use the new DB instance.",
+    "D": "Configure Multi-AZ for the DB instance. Configure the users\u2019 applications to switch between the DB instances."
+  },
+  "correct_answer": "A",
+  "community_vote": {
+    "A": "100%"
+  }
+}

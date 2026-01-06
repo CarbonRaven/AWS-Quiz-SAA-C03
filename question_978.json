@@ -1,0 +1,13 @@
+{
+  "id": 978,
+  "topic": "Topic 1",
+  "question": "A company is migrating its on-premises Oracle database to an Amazon RDS for Oracle database. The company needs to retain data for 90 days to meet regulatory requirements. The company must also be able to restore the database to a specific point in time for up to 14 days.\n\nWhich solution will meet these requirements with the LEAST operational overhead?",
+  "options": {
+    "A": "Create Amazon RDS automated backups. Set the retention period to 90 days.",
+    "B": "Create an Amazon RDS manual snapshot every day. Delete manual snapshots that are older than 90 days.",
+    "C": "Use the Amazon Aurora Clone feature for Oracle to create a point-in-time restore. Delete clones that are older than 90 days.",
+    "D": "Create a backup plan that has a retention period of 90 days by using AWS Backup for Amazon RDS."
+  },
+  "correct_answer": "D",
+  "explanation": "AWS Backup provides centralized backup management with configurable retention periods up to 90 days for RDS. It supports point-in-time recovery and automates backup lifecycle management, providing the least operational overhead. RDS automated backups only support up to 35 days retention."
+}

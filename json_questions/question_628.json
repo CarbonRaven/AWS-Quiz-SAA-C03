@@ -1,0 +1,15 @@
+{
+  "question_number": 628,
+  "topic": 1,
+  "question_text": "A global company runs its applications in multiple AWS accounts in AWS Organizations. The company's applications use multipart uploads to upload data to multiple Amazon S3 buckets across AWS Regions. The company wants to report on incomplete multipart uploads for cost compliance purposes. Which solution will meet these requirements with the LEAST operational overhead?",
+  "options": {
+    "A": "Configure AWS Config with a rule to report the incomplete multipart upload object count.",
+    "B": "Create a service control policy (SCP) to report the incomplete multipart upload object count.",
+    "C": "Configure S3 Storage Lens to report the incomplete multipart upload object count.",
+    "D": "Create an S3 Multi-Region Access Point to report the incomplete multipart upload object count."
+  },
+  "correct_answer": "C",
+  "community_vote": {
+    "C": "100%"
+  }
+}

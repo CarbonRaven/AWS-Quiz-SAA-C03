@@ -1,0 +1,13 @@
+{
+  "id": 820,
+  "topic": "Topic 1",
+  "question": "A company is migrating a legacy application from an on-premises data center to AWS. The application relies on hundreds of cron jobs that run between 1 and 20 minutes on different recurring schedules throughout the day.\n\nThe company wants a solution to schedule and run the cron jobs on AWS with minimal refactoring. The solution must support running the cron jobs in response to an event in the future.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Create a container image for the cron jobs. Use Amazon EventBridge Scheduler to create a recurring schedule. Run the cron job tasks as AWS Lambda functions.",
+    "B": "Create a container image for the cron jobs. Use AWS Batch on Amazon Elastic Container Service (Amazon ECS) with a scheduling policy to run the cron jobs.",
+    "C": "Create a container image for the cron jobs. Use Amazon EventBridge Scheduler to create a recurring schedule. Run the cron job tasks on AWS Fargate.",
+    "D": "Create a container image for the cron jobs. Create a workflow in AWS Step Functions that uses a Wait state to run the cron jobs at a specified time. Use the RunTask action to run the cron job tasks on AWS Fargate."
+  },
+  "correct_answer": "C",
+  "explanation": "EventBridge Scheduler supports cron expressions and one-time schedules for future events. Running container images on Fargate requires minimal refactoring and handles jobs running up to 20 minutes. This solution is serverless and supports event-based triggers."
+}

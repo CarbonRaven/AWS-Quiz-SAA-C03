@@ -1,0 +1,13 @@
+{
+  "id": 193,
+  "topic": "Topic 1",
+  "question": "A company is running a batch application on Amazon EC2 instances. The application consists of a backend with multiple Amazon RDS databases. The application is causing a high number of reads on the databases. A solutions architect must reduce the number of database reads while ensuring high availability.\nWhat should the solutions architect do to meet this requirement?",
+  "options": {
+    "A": "Add Amazon RDS read replicas.",
+    "B": "Use Amazon ElastiCache for Redis.",
+    "C": "Use Amazon Route 53 DNS caching.",
+    "D": "Use Amazon ElastiCache for Memcached."
+  },
+  "correct_answer": "A",
+  "explanation": "RDS read replicas distribute read traffic across multiple database instances, reducing load on the primary. Read replicas provide high availability for reads and can be promoted if the primary fails. ElastiCache caches application data but doesn't directly reduce database reads for batch processing."
+}

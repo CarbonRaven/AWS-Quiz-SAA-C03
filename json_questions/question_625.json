@@ -1,0 +1,16 @@
+{
+  "question_number": 625,
+  "topic": 1,
+  "question_text": "A company is hosting a website behind multiple Application Load Balancers. The company has different distribution rights for its content around the world. A solutions architect needs to ensure that users are served the correct content without violating distribution rights. Which configuration should the solutions architect choose to meet these requirements?",
+  "options": {
+    "A": "Configure Amazon CloudFront with AWS WAF.",
+    "B": "Configure Application Load Balancers with AWS WAF",
+    "C": "Configure Amazon Route 53 with a geolocation policy",
+    "D": "Configure Amazon Route 53 with a geoproximity routing policy"
+  },
+  "correct_answer": "C",
+  "community_vote": {
+    "C": "77%",
+    "A": "23%"
+  }
+}

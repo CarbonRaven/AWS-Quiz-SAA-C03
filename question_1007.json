@@ -1,0 +1,13 @@
+{
+  "id": 1007,
+  "topic": "Topic 1",
+  "question": "A medical company wants to perform transformations on a large amount of clinical trial data that comes from several customers. The company must extract the data from a relational database that contains the customer data. Then the company will transform the data by using a series of complex rules. The company will load the data to Amazon S3 when the transformations are complete.\n\nAll data must be encrypted where it is processed before the company stores the data in Amazon S3. All data must be encrypted by using customer-specific keys.\n\nWhich solution will meet these requirements with the LEAST amount of operational effort?",
+  "options": {
+    "A": "Create one AWS Glue job for each customer. Attach a security configuration to each job that uses server-side encryption with Amazon S3 managed keys (SSE-S3) to encrypt the data.",
+    "B": "Create one Amazon EMR cluster for each customer. Attach a security configuration to each cluster that uses client-side encryption with a custom client-side root key (CSE-Custom) to encrypt the data.",
+    "C": "Create one AWS Glue job for each customer. Attach a security configuration to each job that uses client-side encryption with AWS KMS managed keys (CSE-KMS) to encrypt the data.",
+    "D": "Create one Amazon EMR cluster for each customer. Attach a security configuration to each cluster that uses server-side encryption with AWS KMS keys (SSE-KMS) to encrypt the data."
+  },
+  "correct_answer": "C",
+  "explanation": "AWS Glue is a serverless ETL service requiring less operational effort than EMR clusters. Client-side encryption with AWS KMS (CSE-KMS) encrypts data during processing and allows customer-specific keys. SSE-S3 does not support customer-specific keys."
+}

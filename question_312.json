@@ -1,0 +1,13 @@
+{
+  "id": 312,
+  "topic": "Topic 1",
+  "question": "A company has an application that runs on several Amazon EC2 instances. Each EC2 instance has multiple Amazon Elastic Block Store (Amazon EBS) data volumes attached to it. The application's EC2 instance configuration and data need to be backed up nightly. The application also needs to be recoverable in a different AWS Region.\n\nWhich solution will meet these requirements in the MOST operationally efficient way?",
+  "options": {
+    "A": "Write an AWS Lambda function that schedules nightly snapshots of the application's EBS volumes and copies the snapshots to a different Region.",
+    "B": "Create a backup plan by using AWS Backup to perform nightly backups. Copy the backups to another Region. Add the application's EC2 instances as resources.",
+    "C": "Create a backup plan by using AWS Backup to perform nightly backups. Copy the backups to another Region. Add the application's EBS volumes as resources.",
+    "D": "Write an AWS Lambda function that schedules nightly snapshots of the application's EBS volumes and copies the snapshots to a different Availability Zone."
+  },
+  "correct_answer": "B",
+  "explanation": "AWS Backup with EC2 instances as resources backs up both the instance configuration and attached EBS volumes. Cross-region copy provides DR capability. Adding only EBS volumes (C) misses instance configuration. Lambda requires custom code and maintenance. AZ copy doesn't provide regional DR."
+}

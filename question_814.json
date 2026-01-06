@@ -1,0 +1,13 @@
+{
+  "id": 814,
+  "topic": "Topic 1",
+  "question": "A company runs a container application on a Kubernetes cluster in the company's data center. The application uses Advanced Message Queuing Protocol (AMQP) to communicate with a message queue. The data center cannot scale fast enough to meet the company's expanding business needs. The company wants to migrate the workloads to AWS.\n\nWhich solution will meet these requirements with the LEAST operational overhead?",
+  "options": {
+    "A": "Migrate the container application to Amazon Elastic Container Service (Amazon ECS). Use Amazon Simple Queue Service (Amazon SQS) to retrieve the messages.",
+    "B": "Migrate the container application to Amazon Elastic Kubernetes Service (Amazon EKS). Use Amazon MQ to retrieve the messages.",
+    "C": "Use highly available Amazon EC2 instances to run the application. Use Amazon MQ to retrieve the messages.",
+    "D": "Use AWS Lambda functions to run the application. Use Amazon Simple Queue Service (Amazon SQS) to retrieve the messages."
+  },
+  "correct_answer": "B",
+  "explanation": "Amazon EKS provides managed Kubernetes compatible with the existing application. Amazon MQ supports AMQP, enabling migration without application changes. This combination provides least operational overhead while maintaining protocol compatibility."
+}

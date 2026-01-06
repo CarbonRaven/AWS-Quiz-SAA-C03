@@ -1,0 +1,15 @@
+{
+  "question_number": 480,
+  "topic": 1,
+  "question_text": "A business application is hosted on Amazon EC2 and uses Amazon S3 for encrypted object storage. The chief information security officer has directed that no application traffic between the two services should traverse the public internet.\n\nWhich capability should the solutions architect use to meet the compliance requirements?",
+  "options": {
+    "A": "AWS Key Management Service (AWS KMS)",
+    "B": "VPC endpoint",
+    "C": "Private subnet",
+    "D": "Virtual private gateway"
+  },
+  "correct_answer": "B",
+  "community_vote": {
+    "B": "100%"
+  }
+}

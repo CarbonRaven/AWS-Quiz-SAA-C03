@@ -1,0 +1,15 @@
+{
+  "question_number": 411,
+  "topic": 1,
+  "question_text": "A company has a web application with sporadic usage patterns. There is heavy usage at the beginning of each month, moderate usage at the start of each week, and unpredictable usage during the week. The application consists of a web server and a MySQL database server running inside the data center. The company would like to move the application to the AWS Cloud, and needs to select a cost-effective database platform that will not require database modifications.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Amazon DynamoDB",
+    "B": "Amazon RDS for MySQL",
+    "C": "MySQL-compatible Amazon Aurora Serverless",
+    "D": "MySQL deployed on Amazon EC2 in an Auto Scaling group"
+  },
+  "correct_answer": "C",
+  "community_vote": {
+    "C": "91%"
+  }
+}

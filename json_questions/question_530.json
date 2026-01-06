@@ -1,0 +1,15 @@
+{
+  "question_number": 530,
+  "topic": 1,
+  "question_text": "A company has an online gaming application that has TCP and UDP multiplayer gaming capabilities. The company uses Amazon Route 53 to point the application traffic to multiple Network Load Balancers (NLBs) in different AWS Regions. The company needs to improve application performance and decrease latency for the online game in preparation for user growth.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Add an Amazon CloudFront distribution in front of the NLBs. Increase the Cache-Control max-age parameter.",
+    "B": "Replace the NLBs with Application Load Balancers (ALBs). Configure Route 53 to use latency-based routing.",
+    "C": "Add AWS Global Accelerator in front of the NLBs. Configure a Global Accelerator endpoint to use the correct listener ports.",
+    "D": "Add an Amazon API Gateway endpoint behind the NLBs. Enable API caching. Override method caching for the different stages."
+  },
+  "correct_answer": "C",
+  "community_vote": {
+    "C": "100%"
+  }
+}

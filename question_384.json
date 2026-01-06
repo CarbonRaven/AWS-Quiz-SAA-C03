@@ -1,0 +1,13 @@
+{
+  "id": 384,
+  "topic": "Topic 1",
+  "question": "A company is preparing to launch a public-facing web application in the AWS Cloud. The architecture consists of Amazon EC2 instances within a VPC behind an Elastic Load Balancer (ELB). A third-party service is used for DNS. The company's solutions architect must recommend a solution to detect and protect against large-scale DDoS attacks.\n\nWhich solution meets these requirements?",
+  "options": {
+    "A": "Enable Amazon GuardDuty on the account.",
+    "B": "Enable Amazon Inspector on the EC2 instances.",
+    "C": "Enable AWS Shield and assign Amazon Route 53 to it.",
+    "D": "Enable AWS Shield Advanced and assign the ELB to it."
+  },
+  "correct_answer": "D",
+  "explanation": "AWS Shield Advanced provides enhanced DDoS protection for ELB, CloudFront, Route 53, and Global Accelerator. It includes 24/7 DDoS Response Team access and cost protection. Shield Standard is automatic but limited. GuardDuty detects threats but doesn't protect against DDoS. Inspector scans for vulnerabilities, not DDoS. Route 53 isn't mentioned as being used (third-party DNS)."
+}

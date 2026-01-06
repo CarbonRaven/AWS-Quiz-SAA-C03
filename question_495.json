@@ -1,0 +1,13 @@
+{
+  "id": 495,
+  "topic": "Topic 1",
+  "question": "A company is conducting an internal audit. The company wants to ensure that the data in an Amazon S3 bucket that is associated with the company's AWS Lake Formation data lake does not contain sensitive customer or employee data. The company wants to discover personally identifiable information (PII) or financial information, including passport numbers and credit card numbers.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Configure AWS Audit Manager on the account. Select the Payment Card Industry Data Security Standards (PCI DSS) for auditing.",
+    "B": "Configure Amazon S3 Inventory on the S3 bucket. Configure Amazon Athena to query the inventory.",
+    "C": "Configure Amazon Macie to run a data discovery job that uses managed identifiers for the required data types.",
+    "D": "Use Amazon S3 Select to run a report across the S3 bucket."
+  },
+  "correct_answer": "C",
+  "explanation": "Amazon Macie uses machine learning to automatically discover, classify, and protect sensitive data such as PII and financial information. Macie's managed data identifiers detect passport numbers, credit card numbers, and other sensitive data types. S3 Inventory just lists objects. Audit Manager is for compliance frameworks."
+}

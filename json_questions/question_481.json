@@ -1,0 +1,15 @@
+{
+  "question_number": 481,
+  "topic": 1,
+  "question_text": "A company hosts a three-tier web application in the AWS Cloud. A Multi-AZAmazon RDS for MySQL server forms the database layer Amazon ElastiCache forms the cache layer. The company wants a caching strategy that adds or updates data in the cache when a customer adds an item to the database. The data in the cache must always match the data in the database.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Implement the lazy loading caching strategy",
+    "B": "Implement the write-through caching strategy",
+    "C": "Implement the adding TTL caching strategy",
+    "D": "Implement the AWS AppConfig caching strategy"
+  },
+  "correct_answer": "B",
+  "community_vote": {
+    "B": "100%"
+  }
+}

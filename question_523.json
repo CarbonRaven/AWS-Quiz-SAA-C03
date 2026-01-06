@@ -1,0 +1,13 @@
+{
+  "id": 523,
+  "topic": "Topic 1",
+  "question": "A company runs a microservice-based serverless web application. The application must be able to retrieve data from multiple Amazon DynamoDB tables. A solutions architect needs to give the application the ability to retrieve the data with no impact on the baseline performance of the application.\n\nWhich solution will meet these requirements in the MOST operationally efficient way?",
+  "options": {
+    "A": "AWS AppSync pipeline resolvers",
+    "B": "Amazon CloudFront with Lambda@Edge functions",
+    "C": "Edge-optimized Amazon API Gateway with AWS Lambda functions",
+    "D": "Amazon Athena Federated Query with a DynamoDB connector"
+  },
+  "correct_answer": "A",
+  "explanation": "AWS AppSync pipeline resolvers allow executing multiple operations in sequence or parallel, efficiently retrieving data from multiple DynamoDB tables in a single GraphQL request. This provides the most operationally efficient solution for aggregating data from multiple sources."
+}

@@ -1,0 +1,16 @@
+{
+  "question_number": 320,
+  "topic": 1,
+  "question_text": "A company is using a fleet of Amazon EC2 instances to ingest data from on-premises data sources. The data is in JSON format and ingestion rates can be as high as 1 MB/s. When an EC2 instance is rebooted, the data in-flight is lost. The company\u2019s data science team wants to query ingested data in near-real time.\n\nWhich solution provides near-real-time data querying that is scalable with minimal data loss?",
+  "options": {
+    "A": "Publish data to Amazon Kinesis Data Streams, Use Kinesis Data Analytics to query the data.",
+    "B": "Publish data to Amazon Kinesis Data Firehose with Amazon Redshift as the destination. Use Amazon Redshift to query the data.",
+    "C": "Store ingested data in an EC2 instance store. Publish data to Amazon Kinesis Data Firehose with Amazon S3 as the destination. Use Amazon Athena to query the data.",
+    "D": "Store ingested data in an Amazon Elastic Block Store (Amazon EBS) volume. Publish data to Amazon ElastiCache for Redis. Subscribe to the Redis channel to query the data."
+  },
+  "correct_answer": "A",
+  "community_vote": {
+    "A": "73%",
+    "B": "27%"
+  }
+}

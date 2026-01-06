@@ -1,0 +1,13 @@
+{
+  "id": 719,
+  "topic": "Topic 1",
+  "question": "A company is migrating a large amount of data from on-premises storage to AWS. Windows, Mac, and Linux based Amazon EC2 instances in the same AWS Region will access the data by using SMB and NFS storage protocols. The company will access a portion of the data routinely. The company will access the remaining data infrequently.\n\nThe company needs to design a solution to host the data.\n\nWhich solution will meet these requirements with the LEAST operational overhead?",
+  "options": {
+    "A": "Create an Amazon Elastic File System (Amazon EFS) volume that uses EFS Intelligent-Tiering. Use AWS DataSync to migrate the data to the EFS volume.",
+    "B": "Create an Amazon FSx for ONTAP instance. Create an FSx for ONTAP file system with a root volume that uses the auto tiering policy. Migrate the data to the FSx for ONTAP volume.",
+    "C": "Create an Amazon S3 bucket that uses S3 Intelligent-Tiering. Migrate the data to the S3 bucket by using an AWS Storage Gateway Amazon S3 File Gateway.",
+    "D": "Create an Amazon FSx for OpenZFS file system. Migrate the data to the new volume."
+  },
+  "correct_answer": "B",
+  "explanation": "Amazon FSx for ONTAP supports both SMB and NFS protocols (required for Windows, Mac, and Linux), and offers automatic tiering between SSD and capacity pool storage based on access patterns. This meets all requirements with minimal operational overhead."
+}

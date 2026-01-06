@@ -1,0 +1,13 @@
+{
+  "id": 433,
+  "topic": "Topic 1",
+  "question": "A company is running its production and nonproduction environment workloads in multiple AWS accounts. The accounts are in an organization in AWS Organizations. The company needs to design a solution that will prevent the modification of cost usage tags.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Create a custom AWS Config rule to prevent tag modification except by authorized principals.",
+    "B": "Create a custom trail in AWS CloudTrail to prevent tag modification.",
+    "C": "Create a service control policy (SCP) to prevent tag modification except by authorized principals.",
+    "D": "Create custom Amazon CloudWatch logs to prevent tag modification."
+  },
+  "correct_answer": "C",
+  "explanation": "Service Control Policies (SCPs) in AWS Organizations can restrict actions across all accounts, including preventing tag modifications except by authorized principals. SCPs provide preventive guardrails. AWS Config detects non-compliance but doesn't prevent actions. CloudTrail logs events but doesn't prevent them. CloudWatch logs monitor but don't enforce policies."
+}

@@ -1,0 +1,13 @@
+{
+  "id": 642,
+  "topic": "Topic 1",
+  "question": "A company wants to run a gaming application on Amazon EC2 instances that are part of an Auto Scaling group in the AWS Cloud. The application will transmit data by using UDP packets. The company wants to ensure that the application can scale out and in as traffic increases and decreases.\n\nWhat should a solutions architect do to meet these requirements?",
+  "options": {
+    "A": "Attach a Network Load Balancer to the Auto Scaling group.",
+    "B": "Attach an Application Load Balancer to the Auto Scaling group.",
+    "C": "Deploy an Amazon Route 53 record set with a weighted policy to route traffic appropriately.",
+    "D": "Deploy a NAT instance that is configured with port forwarding to the EC2 instances in the Auto Scaling group."
+  },
+  "correct_answer": "A",
+  "explanation": "Network Load Balancer supports UDP traffic (Layer 4), which is required for the gaming application. Application Load Balancer only supports HTTP/HTTPS (Layer 7) and does not support UDP. NLB also provides high performance for gaming workloads."
+}

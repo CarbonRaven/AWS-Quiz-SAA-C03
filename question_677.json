@@ -1,0 +1,13 @@
+{
+  "id": 677,
+  "topic": "Topic 1",
+  "question": "A company is developing a new application on AWS. The application will run on a production Amazon Elastic Kubernetes Service (Amazon EKS) cluster. The EKS cluster has managed node groups that are provisioned with On-Demand Instances.\n\nThe company needs a dedicated EKS cluster for development work. The company will use the development cluster infrequently to test the resiliency of the application. The EKS cluster must manage all the nodes.\n\nWhich solution will meet these requirements MOST cost-effectively?",
+  "options": {
+    "A": "Create a managed node group that contains only Spot Instances.",
+    "B": "Create two managed node groups. Provision one node group with On-Demand Instances. Provision the second node group with Spot Instances.",
+    "C": "Create an Auto Scaling group that has a launch configuration that uses Spot Instances. Configure the user data to add the nodes to the EKS cluster.",
+    "D": "Create a managed node group that contains only On-Demand Instances."
+  },
+  "correct_answer": "B",
+  "explanation": "For resiliency testing in a development environment, having both On-Demand and Spot instances allows testing application behavior during Spot interruptions. This is more cost-effective than all On-Demand while providing controlled testing. Managed node groups meet the requirement for EKS to manage all nodes."
+}

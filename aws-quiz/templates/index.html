@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS SAA-C03 Quiz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        [x-cloak] { display: none !important; }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen">
+    <div x-data="quizApp()" x-init="init()" x-cloak class="container mx-auto px-4 py-8 max-w-4xl">
+
+        <!-- Header -->
+        <div class="flex justify-between items-center mb-8">
+            <h1 class="text-3xl font-bold text-orange-400">AWS SAA-C03 Quiz</h1>
+            <a href="/dashboard" class="bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-lg transition">
+                Dashboard
+            </a>
+        </div>
+
+        <!-- Setup Screen -->
+        <div x-show="screen === 'setup'" class="bg-gray-800 rounded-xl p-8">
+            <h2 class="text-2xl font-semibold mb-6">Start a Quiz Session</h2>
+
+            <!-- Question Count -->
+            <div class="mb-6">
+                <label class="block text-sm font-medium mb-2">Questions per session</label>
+                <div class="flex gap-3">
+                    <template x-for="n in [10, 20, 30, 50]">
+                        <button
+                            @click="questionCount = n"
+                            :class="questionCount === n ? 'bg-orange-500' : 'bg-gray-700 hover:bg-gray-600'"
+                            class="px-4 py-2 rounded-lg transition"
+                            x-text="n">
+                        </button>
+                    </template>
+                    <input type="number" x-model.number="questionCount" min="1" max="100"
+                           class="bg-gray-700 px-3 py-2 rounded-lg w-20 text-center">
+                </div>
+            </div>
+
+            <!-- Filter Mode -->
+            <div class="mb-6">
+                <label class="block text-sm font-medium mb-2">Question filter</label>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                    <button @click="filterMode = 'all'"
+                            :class="filterMode === 'all' ? 'bg-orange-500 ring-2 ring-orange-400' : 'bg-gray-700 hover:bg-gray-600'"
+                            class="p-4 rounded-lg transition text-left">
+                        <div class="font-semibold">All</div>
+                        <div class="text-sm text-gray-400"><span x-text="counts.all"></span> questions</div>
+                    </button>
+                    <button @click="filterMode = 'new'"
+                            :class="filterMode === 'new' ? 'bg-blue-500 ring-2 ring-blue-400' : 'bg-gray-700 hover:bg-gray-600'"
+                            class="p-4 rounded-lg transition text-left">
+                        <div class="font-semibold">New</div>
+                        <div class="text-sm text-gray-400"><span x-text="counts.new"></span> unseen</div>
+                    </button>
+                    <button @click="filterMode = 'wrong'"
+                            :class="filterMode === 'wrong' ? 'bg-red-500 ring-2 ring-red-400' : 'bg-gray-700 hover:bg-gray-600'"
+                            class="p-4 rounded-lg transition text-left">
+                        <div class="font-semibold">Wrong</div>
+                        <div class="text-sm text-gray-400"><span x-text="counts.wrong"></span> to review</div>
+                    </button>
+                    <button @click="filterMode = 'due'"
+                            :class="filterMode === 'due' ? 'bg-purple-500 ring-2 ring-purple-400' : 'bg-gray-700 hover:bg-gray-600'"
+                            class="p-4 rounded-lg transition text-left">
+                        <div class="font-semibold">Due</div>
+                        <div class="text-sm text-gray-400"><span x-text="counts.due"></span> for review</div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- AWS Service Tags Filter -->
+            <div class="mb-8">
+                <label class="block text-sm font-medium mb-2">
+                    Filter by AWS Service
+                    <span x-show="selectedTags.length > 0" class="text-orange-400">
+                        (<span x-text="selectedTags.length"></span> selected)
+                    </span>
+                </label>
+                <div class="flex flex-wrap gap-2 max-h-40 overflow-y-auto p-3 bg-gray-700/50 rounded-lg">
+                    <template x-for="tagInfo in availableTags" :key="tagInfo.tag">
+                        <button @click="toggleTag(tagInfo.tag)"
+                                :class="selectedTags.includes(tagInfo.tag)
+                                    ? 'bg-orange-500 text-white'
+                                    : 'bg-gray-700 hover:bg-gray-600 text-gray-300'"
+                                class="px-3 py-1 rounded-full text-sm transition flex items-center gap-1">
+                            <span x-text="tagInfo.tag"></span>
+                            <span class="text-xs opacity-70" x-text="'(' + tagInfo.count + ')'"></span>
+                        </button>
+                    </template>
+                </div>
+                <button x-show="selectedTags.length > 0"
+                        @click="clearTags()"
+                        class="mt-2 text-sm text-gray-400 hover:text-white">
+                    Clear all tags
+                </button>
+            </div>
+
+            <!-- Start Button -->
+            <button @click="startSession()"
+                    :disabled="loading"
+                    class="w-full bg-orange-500 hover:bg-orange-600 disabled:bg-gray-600 py-4 rounded-lg font-semibold text-lg transition">
+                <span x-show="!loading">Start Quiz</span>
+                <span x-show="loading">Loading...</span>
+            </button>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div x-show="screen === 'quiz'" class="space-y-6">
+            <!-- Progress Bar -->
+            <div class="bg-gray-800 rounded-xl p-4">
+                <div class="flex justify-between text-sm mb-2">
+                    <span>Question <span x-text="currentQuestion.index"></span> of <span x-text="currentQuestion.total"></span></span>
+                    <span>Score: <span x-text="score" class="text-green-400 font-semibold"></span></span>
+                </div>
+                <div class="bg-gray-700 rounded-full h-2">
+                    <div class="bg-orange-500 h-2 rounded-full transition-all duration-300"
+                         :style="'width: ' + (currentQuestion.index / currentQuestion.total * 100) + '%'"></div>
+                </div>
+            </div>
+
+            <!-- Question Card -->
+            <div class="bg-gray-800 rounded-xl p-6">
+                <!-- Tags -->
+                <div x-show="currentQuestion.tags && currentQuestion.tags.length > 0" class="mb-4 flex flex-wrap gap-2">
+                    <template x-for="tag in currentQuestion.tags" :key="tag">
+                        <span class="bg-gray-700 text-orange-400 px-2 py-1 rounded text-xs" x-text="tag"></span>
+                    </template>
+                </div>
+
+                <!-- Question Number -->
+                <div class="text-gray-500 text-sm mb-2">Question #<span x-text="currentQuestion.question_number"></span></div>
+
+                <!-- Question Text -->
+                <p class="text-lg mb-6 leading-relaxed" x-text="currentQuestion.question_text"></p>
+
+                <!-- Options -->
+                <div class="space-y-3">
+                    <template x-for="(text, key) in currentQuestion.options" :key="key">
+                        <button
+                            @click="!answered && selectAnswer(key)"
+                            :disabled="answered"
+                            :class="{
+                                'bg-gray-700 hover:bg-gray-600': !answered && selectedAnswer !== key,
+                                'bg-blue-600 ring-2 ring-blue-400': !answered && selectedAnswer === key,
+                                'bg-green-600': answered && key === correctAnswer,
+                                'bg-red-600': answered && selectedAnswer === key && key !== correctAnswer,
+                                'bg-gray-700 opacity-50': answered && key !== correctAnswer && key !== selectedAnswer
+                            }"
+                            class="w-full p-4 rounded-lg text-left transition flex items-start gap-3">
+                            <span class="bg-gray-600 px-2 py-1 rounded text-sm font-mono" x-text="key"></span>
+                            <span x-text="text"></span>
+                        </button>
+                    </template>
+                </div>
+
+                <!-- Submit / Next Buttons -->
+                <div class="mt-6 flex gap-4">
+                    <button x-show="!answered && selectedAnswer"
+                            @click="submitAnswer()"
+                            :disabled="loading"
+                            class="flex-1 bg-orange-500 hover:bg-orange-600 py-3 rounded-lg font-semibold transition">
+                        Submit Answer
+                    </button>
+                    <button x-show="answered && hasNext"
+                            @click="nextQuestion()"
+                            class="flex-1 bg-orange-500 hover:bg-orange-600 py-3 rounded-lg font-semibold transition">
+                        Next Question
+                    </button>
+                    <button x-show="answered && !hasNext"
+                            @click="showResults()"
+                            class="flex-1 bg-green-500 hover:bg-green-600 py-3 rounded-lg font-semibold transition">
+                        View Results
+                    </button>
+                </div>
+
+                <!-- Answer Feedback -->
+                <div x-show="answered" class="mt-4 p-4 rounded-lg"
+                     :class="isCorrect ? 'bg-green-900/50 border border-green-700' : 'bg-red-900/50 border border-red-700'">
+                    <div class="font-semibold" x-text="isCorrect ? 'Correct!' : 'Incorrect'"></div>
+                    <div x-show="!isCorrect" class="text-sm mt-1">
+                        The correct answer is <span class="font-semibold" x-text="correctAnswer"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div x-show="screen === 'results'" class="bg-gray-800 rounded-xl p-8">
+            <h2 class="text-2xl font-semibold mb-6 text-center">Session Complete!</h2>
+
+            <!-- Score Circle -->
+            <div class="flex justify-center mb-8">
+                <div class="w-40 h-40 rounded-full border-8 flex items-center justify-center"
+                     :class="(score / totalQuestions) >= 0.7 ? 'border-green-500' : 'border-orange-500'">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold" x-text="score"></div>
+                        <div class="text-gray-400">of <span x-text="totalQuestions"></span></div>
+                        <div class="text-lg font-semibold"
+                             :class="(score / totalQuestions) >= 0.7 ? 'text-green-400' : 'text-orange-400'"
+                             x-text="Math.round(score / totalQuestions * 100) + '%'"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Answer Summary -->
+            <div class="mb-8">
+                <h3 class="font-semibold mb-3">Answer Summary</h3>
+                <div class="space-y-2 max-h-64 overflow-y-auto">
+                    <template x-for="(answer, idx) in sessionAnswers" :key="idx">
+                        <div class="flex items-center gap-3 p-2 rounded"
+                             :class="answer.is_correct ? 'bg-green-900/30' : 'bg-red-900/30'">
+                            <span class="text-gray-500">#<span x-text="answer.question_number"></span></span>
+                            <span :class="answer.is_correct ? 'text-green-400' : 'text-red-400'"
+                                  x-text="answer.is_correct ? 'Correct' : 'Wrong'"></span>
+                            <span x-show="!answer.is_correct" class="text-gray-500 text-sm">
+                                (You: <span x-text="answer.given"></span>, Correct: <span x-text="answer.correct"></span>)
+                            </span>
+                        </div>
+                    </template>
+                </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="flex gap-4">
+                <button @click="resetQuiz()"
+                        class="flex-1 bg-orange-500 hover:bg-orange-600 py-3 rounded-lg font-semibold transition">
+                    New Session
+                </button>
+                <a href="/dashboard"
+                   class="flex-1 bg-gray-700 hover:bg-gray-600 py-3 rounded-lg font-semibold transition text-center">
+                    View Dashboard
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function quizApp() {
+            return {
+                screen: 'setup',
+                questionCount: 10,
+                filterMode: 'all',
+                loading: false,
+
+                // Tag filtering
+                availableTags: [],
+                selectedTags: [],
+                counts: { all: 0, new: 0, wrong: 0, due: 0 },
+
+                currentQuestion: {},
+                selectedAnswer: null,
+                answered: false,
+                isCorrect: false,
+                correctAnswer: null,
+                hasNext: false,
+                score: 0,
+                totalQuestions: 0,
+                sessionAnswers: [],
+
+                async init() {
+                    // Load available tags
+                    const tagsRes = await fetch('/api/tags');
+                    this.availableTags = await tagsRes.json();
+
+                    // Load initial counts
+                    await this.updateCounts();
+                },
+
+                async updateCounts() {
+                    let url = '/api/filter-counts';
+                    if (this.selectedTags.length > 0) {
+                        const params = this.selectedTags.map(t => `tags=${encodeURIComponent(t)}`).join('&');
+                        url += '?' + params;
+                    }
+                    const res = await fetch(url);
+                    this.counts = await res.json();
+                },
+
+                toggleTag(tag) {
+                    const idx = this.selectedTags.indexOf(tag);
+                    if (idx === -1) {
+                        this.selectedTags.push(tag);
+                    } else {
+                        this.selectedTags.splice(idx, 1);
+                    }
+                    this.updateCounts();
+                },
+
+                clearTags() {
+                    this.selectedTags = [];
+                    this.updateCounts();
+                },
+
+                async startSession() {
+                    this.loading = true;
+                    try {
+                        const body = {
+                            count: this.questionCount,
+                            filter: this.filterMode
+                        };
+                        if (this.selectedTags.length > 0) {
+                            body.tags = this.selectedTags;
+                        }
+
+                        const res = await fetch('/api/start-session', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(body)
+                        });
+                        const data = await res.json();
+
+                        if (data.error) {
+                            alert(data.error);
+                            return;
+                        }
+
+                        this.totalQuestions = data.total;
+                        this.score = 0;
+                        this.screen = 'quiz';
+                        await this.loadQuestion();
+                    } finally {
+                        this.loading = false;
+                    }
+                },
+
+                async loadQuestion() {
+                    const res = await fetch('/api/question');
+                    const data = await res.json();
+
+                    if (data.complete) {
+                        this.showResults();
+                        return;
+                    }
+
+                    this.currentQuestion = data;
+                    this.selectedAnswer = null;
+                    this.answered = false;
+                    this.isCorrect = false;
+                    this.correctAnswer = null;
+                },
+
+                selectAnswer(key) {
+                    this.selectedAnswer = key;
+                },
+
+                async submitAnswer() {
+                    if (!this.selectedAnswer) return;
+
+                    this.loading = true;
+                    try {
+                        const res = await fetch('/api/answer', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ answer: this.selectedAnswer })
+                        });
+                        const data = await res.json();
+
+                        this.answered = true;
+                        this.isCorrect = data.is_correct;
+                        this.correctAnswer = data.correct_answer;
+                        this.hasNext = data.has_next;
+                        this.score = data.score;
+                    } finally {
+                        this.loading = false;
+                    }
+                },
+
+                async nextQuestion() {
+                    await this.loadQuestion();
+                },
+
+                async showResults() {
+                    const res = await fetch('/api/session-results');
+                    const data = await res.json();
+                    this.sessionAnswers = data.answers;
+                    this.screen = 'results';
+                },
+
+                resetQuiz() {
+                    this.screen = 'setup';
+                    this.score = 0;
+                    this.sessionAnswers = [];
+                    // Refresh filter counts
+                    this.updateCounts();
+                }
+            }
+        }
+    </script>
+</body>
+</html>

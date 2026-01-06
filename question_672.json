@@ -1,0 +1,13 @@
+{
+  "id": 672,
+  "topic": "Topic 1",
+  "question": "A marketing company receives a large amount of new clickstream data in Amazon S3 from a marketing campaign. The company needs to analyze the clickstream data in Amazon S3 quickly. Then the company needs to determine whether to process the data further in the data pipeline.\n\nWhich solution will meet these requirements with the LEAST operational overhead?",
+  "options": {
+    "A": "Create external tables in a Spark catalog. Configure jobs in AWS Glue to query the data.",
+    "B": "Configure an AWS Glue crawler to crawl the data. Configure Amazon Athena to query the data.",
+    "C": "Create external tables in a Hive metastore. Configure Spark jobs in Amazon EMR to query the data.",
+    "D": "Configure an AWS Glue crawler to crawl the data. Configure Amazon Kinesis Data Analytics to use SQL to query the data."
+  },
+  "correct_answer": "B",
+  "explanation": "AWS Glue crawler automatically discovers schema and creates a Data Catalog. Amazon Athena is serverless and can query S3 data directly without infrastructure management, providing the least operational overhead for ad-hoc analysis of S3 data."
+}

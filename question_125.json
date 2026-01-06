@@ -1,0 +1,13 @@
+{
+  "id": 125,
+  "topic": "Topic 1",
+  "question": "A company runs its two-tier ecommerce website on AWS. The web tier consists of a load balancer that sends traffic to Amazon EC2 instances. The database tier uses an Amazon RDS DB instance. The EC2 instances and the RDS DB instance should not be exposed to the public internet. The EC2 instances require internet access to complete payment processing of orders through a third-party web service. The application must be highly available.\nWhich combination of configuration options will meet these requirements? (Choose two.)",
+  "options": {
+    "A": "Use an Auto Scaling group to launch the EC2 instances in private subnets. Deploy an RDS Multi-AZ DB instance in private subnets.",
+    "B": "Configure a VPC with two private subnets and two NAT gateways across two Availability Zones. Deploy an Application Load Balancer in the private subnets.",
+    "C": "Use an Auto Scaling group to launch the EC2 instances in public subnets across two Availability Zones. Deploy an RDS Multi-AZ DB instance in private subnets.",
+    "D": "Configure a VPC with two public subnets, two private subnets, and two NAT gateways across two Availability Zones. Deploy an Application Load Balancer in the public subnets."
+  },
+  "correct_answer": ["A", "D"],
+  "explanation": "EC2 instances and RDS should be in private subnets for security (A). NAT gateways in public subnets allow private instances to access the internet for payment processing. ALB in public subnets accepts user traffic and forwards to private EC2 instances. Multi-AZ provides high availability (D)."
+}

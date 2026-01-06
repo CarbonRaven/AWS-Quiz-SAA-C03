@@ -1,0 +1,13 @@
+{
+  "id": 586,
+  "topic": "Topic 1",
+  "question": "A company has five organizational units (OUs) as part of its organization in AWS Organizations. Each OU correlates to the five businesses that the company owns. The company's research and development (R&D) business is separating from the company and will need its own organization. A solutions architect creates a separate new management account for this purpose.\n\nWhat should the solutions architect do next in the new management account?",
+  "options": {
+    "A": "Have the R&D AWS account be part of both organizations during the transition.",
+    "B": "Invite the R&D AWS account to be part of the new organization after the R&D AWS account has left the prior organization.",
+    "C": "Create a new R&D AWS account in the new organization. Migrate resources from the prior R&D AWS account to the new R&D AWS account.",
+    "D": "Have the R&D AWS account join the new organization. Make the new management account a member of the prior organization."
+  },
+  "correct_answer": "B",
+  "explanation": "An AWS account can only belong to one organization at a time. The R&D account must first leave the existing organization, then be invited to join the new organization. Accounts cannot be members of two organizations simultaneously."
+}

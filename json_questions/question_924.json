@@ -1,0 +1,15 @@
+{
+  "question_number": 924,
+  "topic": 1,
+  "question_text": "A company runs all its business applications in the AWS Cloud. The company uses AWS Organizations to manage multiple AWS accounts. A solutions architect needs to review all permissions that are granted to IAM users to determine which IAM users have more permissions than required. Which solution will meet these requirements with the LEAST administrative overhead?",
+  "options": {
+    "A": "Use Network Access Analyzer to review all access permissions in the company's AWS accounts.",
+    "B": "Create an AWS CloudWatch alarm that activates when an IAM user creates or modifies resources in an AWS account.",
+    "C": "Use AWS Identity and Access Management (IAM) Access Analyzer to review all the company’s resources and accounts.",
+    "D": "Use Amazon Inspector to find vulnerabilities in existing IAM policies."
+  },
+  "correct_answer": "C",
+  "community_vote": {
+    "C": "100%"
+  }
+}

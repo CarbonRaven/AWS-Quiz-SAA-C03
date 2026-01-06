@@ -1,0 +1,14 @@
+{
+  "id": 865,
+  "topic": "Topic 1",
+  "question": "A company's near-real-time streaming application is running on AWS. As the data is ingested, a job runs on the data and takes 30 minutes to complete. The workload frequently experiences high latency due to large amounts of incoming data. A solutions architect needs to design a scalable and serverless solution to enhance performance.\n\nWhich combination of steps should the solutions architect take? (Choose two.)",
+  "options": {
+    "A": "Use Amazon Kinesis Data Firehose to ingest the data.",
+    "B": "Use AWS Lambda with AWS Step Functions to process the data.",
+    "C": "Use AWS Database Migration Service (AWS DMS) to ingest the data.",
+    "D": "Use Amazon EC2 instances in an Auto Scaling group to process the data.",
+    "E": "Use AWS Fargate with Amazon Elastic Container Service (Amazon ECS) to process the data."
+  },
+  "correct_answer": ["A", "E"],
+  "explanation": "Kinesis Data Firehose provides serverless data ingestion. For 30-minute processing jobs, Fargate with ECS is appropriate as Lambda has a 15-minute timeout limit. Both solutions are serverless and scalable."
+}

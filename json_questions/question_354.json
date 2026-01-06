@@ -1,0 +1,15 @@
+{
+  "question_number": 354,
+  "topic": 1,
+  "question_text": "A company hosts a serverless application on AWS. The application uses Amazon API Gateway, AWS Lambda, and an Amazon RDS for PostgreSQL database. The company notices an increase in application errors that result from database connection timeouts during times of peak traffic or unpredictable traffic. The company needs a solution that reduces the application failures with the least amount of change to the code.\n\nWhat should a solutions architect do to meet these requirements?",
+  "options": {
+    "A": "Reduce the Lambda concurrency rate.",
+    "B": "Enable RDS Proxy on the RDS DB instance.",
+    "C": "Resize the RDS DB instance class to accept more connections.",
+    "D": "Migrate the database to Amazon DynamoDB with on-demand scaling."
+  },
+  "correct_answer": "B",
+  "community_vote": {
+    "B": "100%"
+  }
+}

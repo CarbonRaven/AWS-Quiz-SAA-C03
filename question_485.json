@@ -1,0 +1,13 @@
+{
+  "id": 485,
+  "topic": "Topic 1",
+  "question": "A company is looking for a solution that can store video archives in AWS from old news footage. The company needs to minimize costs and will rarely need to restore these files. When the files are needed, they must be available in a maximum of five minutes.\n\nWhat is the MOST cost-effective solution?",
+  "options": {
+    "A": "Store the video archives in Amazon S3 Glacier and use Expedited retrievals.",
+    "B": "Store the video archives in Amazon S3 Glacier and use Standard retrievals.",
+    "C": "Store the video archives in Amazon S3 Standard-Infrequent Access (S3 Standard-IA).",
+    "D": "Store the video archives in Amazon S3 One Zone-Infrequent Access (S3 One Zone-IA)."
+  },
+  "correct_answer": "A",
+  "explanation": "S3 Glacier Flexible Retrieval with Expedited retrievals provides data within 1-5 minutes at lower storage cost than S3 Standard-IA. Standard Glacier retrieval takes 3-5 hours. Since files are rarely accessed, the lower storage cost of Glacier outweighs the higher retrieval cost."
+}

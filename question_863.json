@@ -1,0 +1,13 @@
+{
+  "id": 863,
+  "topic": "Topic 1",
+  "question": "A company uses Amazon RDS with default backup settings for its database tier. The company needs to make a daily backup of the database to meet regulatory requirements. The company must retain the backups for 30 days.\n\nWhich solution will meet these requirements with the LEAST operational overhead?",
+  "options": {
+    "A": "Write an AWS Lambda function to create an RDS snapshot every day.",
+    "B": "Modify the RDS database to have a retention period of 30 days for automated backups.",
+    "C": "Use AWS Systems Manager Maintenance Windows to modify the RDS backup retention period.",
+    "D": "Create a manual snapshot every day by using the AWS CLI. Modify the RDS backup retention period."
+  },
+  "correct_answer": "B",
+  "explanation": "Simply modifying the automated backup retention period to 30 days meets the requirement with minimal operational overhead. RDS handles daily automated backups automatically."
+}

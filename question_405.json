@@ -1,0 +1,14 @@
+{
+  "id": 405,
+  "topic": "Topic 1",
+  "question": "A solutions architect is designing the architecture for a software demonstration environment. The environment will run on Amazon EC2 instances in an Auto Scaling group behind an Application Load Balancer (ALB). The system will experience significant increases in traffic during working hours but is not required to operate on weekends.\n\nWhich combination of actions should the solutions architect take to ensure that the system can scale to meet demand? (Choose two.)",
+  "options": {
+    "A": "Use AWS Auto Scaling to adjust the ALB capacity based on request rate.",
+    "B": "Use AWS Auto Scaling to scale the capacity of the VPC internet gateway.",
+    "C": "Launch the EC2 instances in multiple AWS Regions to distribute the load across Regions.",
+    "D": "Use a target tracking scaling policy to scale the Auto Scaling group based on instance CPU utilization.",
+    "E": "Use scheduled scaling to change the Auto Scaling group minimum, maximum, and desired capacity to zero for weekends. Revert to the default values at the start of the week."
+  },
+  "correct_answer": ["D", "E"],
+  "explanation": "Target tracking scaling automatically adjusts capacity based on CPU utilization to handle demand. Scheduled scaling to zero on weekends saves costs when the system isn't needed. ALB scales automatically and doesn't need manual adjustment. Internet gateways don't have capacity settings. Multi-Region adds complexity without addressing the scaling requirement."
+}

@@ -1,0 +1,13 @@
+{
+  "id": 813,
+  "topic": "Topic 1",
+  "question": "A solutions architect runs a web application on multiple Amazon EC2 instances that are in individual target groups behind an Application Load Balancer (ALB). Users can reach the application through a public website.\n\nThe solutions architect wants to allow engineers to use a development version of the website to access one specific development EC2 instance to test new features for the application. The solutions architect wants to use an Amazon Route 53 hosted zone to give the engineers access to the development instance. The solution must automatically route to the development instance even if the development instance is replaced.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Create an A Record for the development website that has the value set to the ALB. Create a listener rule on the ALB that forwards requests for the development website to the target group that contains the development instance.",
+    "B": "Recreate the development instance with a public IP address. Create an A Record for the development website that has the value set to the public IP address of the development instance.",
+    "C": "Create an A Record for the development website that has the value set to the ALB. Create a listener rule on the ALB to redirect requests for the development website to the public IP address of the development instance.",
+    "D": "Place all the instances in the same target group. Create an A Record for the development website. Set the value to the ALB. Create a listener rule on the ALB that forwards requests for the development website to the target group."
+  },
+  "correct_answer": "A",
+  "explanation": "Using an A Record pointing to the ALB with a listener rule to forward traffic to the development instance's target group ensures automatic routing even when the instance is replaced. The target group handles instance registration."
+}

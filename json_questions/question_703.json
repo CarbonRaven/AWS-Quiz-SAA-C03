@@ -1,0 +1,15 @@
+{
+  "question_number": 703,
+  "topic": 1,
+  "question_text": "A company has NFS servers in an on-premises data center that need to periodically back up small amounts of data to Amazon S3. Which solution meets these requirements and is MOST cost-effective?",
+  "options": {
+    "A": "Set up AWS Glue to copy the data from the on-premises servers to Amazon S3.",
+    "B": "Set up an AWS DataSync agent on the on-premises servers, and sync the data to Amazon S3.",
+    "C": "Set up an SFTP sync using AWS Transfer for SFTP to sync data from on premises to Amazon S3.",
+    "D": "Set up an AWS Direct Connect connection between the on-premises data center and a VPC, and copy the data to Amazon S3."
+  },
+  "correct_answer": "B",
+  "community_vote": {
+    "B": "100%"
+  }
+}

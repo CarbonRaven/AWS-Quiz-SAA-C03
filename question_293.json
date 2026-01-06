@@ -1,0 +1,13 @@
+{
+  "id": 293,
+  "topic": "Topic 1",
+  "question": "A company has an on-premises volume backup solution that has reached its end of life. The company wants to use AWS as part of a new backup solution and wants to maintain local access to all the data while it is backed up on AWS. The company wants to ensure that the data backed up on AWS is automatically and securely transferred.\n\nWhich solution meets these requirements?",
+  "options": {
+    "A": "Use AWS Snowball to migrate data out of the on-premises solution to Amazon S3. Configure on-premises systems to mount the Snowball S3 endpoint to provide local access to the data.",
+    "B": "Use AWS Snowball Edge to migrate data out of the on-premises solution to Amazon S3. Use the Snowball Edge file interface to provide on-premises systems with local access to the data.",
+    "C": "Use AWS Storage Gateway and configure a cached volume gateway. Run the Storage Gateway software appliance on premises and configure a percentage of data to cache locally. Mount the gateway storage volumes to provide local access to the data.",
+    "D": "Use AWS Storage Gateway and configure a stored volume gateway. Run the Storage Gateway software appliance on premises and map the gateway storage volumes to on-premises storage. Mount the gateway storage volumes to provide local access to the data."
+  },
+  "correct_answer": "D",
+  "explanation": "Stored volume gateway keeps ALL data locally while asynchronously backing up to AWS S3. This provides local access to all data (not just cached). Cached volume gateway only caches frequently accessed data locally. Snowball is for migration, not ongoing backup with local access. Stored volumes meet the requirement for local access to ALL data while backing up to AWS."
+}

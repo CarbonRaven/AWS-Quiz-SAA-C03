@@ -1,0 +1,13 @@
+{
+  "id": 901,
+  "topic": "Topic 1",
+  "question": "A company is migrating its workloads to AWS. The company has sensitive and critical data in on-premises relational databases that run on SQL Server instances.\n\nThe company wants to use the AWS Cloud to increase security and reduce operational overhead for the databases.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Migrate the databases to Amazon EC2 instances. Use an AWS Key Management Service (AWS KMS) AWS managed key for encryption.",
+    "B": "Migrate the databases to a Multi-AZ Amazon RDS for SQL Server DB instance. Use an AWS Key Management Service (AWS KMS) AWS managed key for encryption.",
+    "C": "Migrate the data to an Amazon S3 bucket. Use Amazon Macie to ensure data security.",
+    "D": "Migrate the databases to an Amazon DynamoDB table. Use Amazon CloudWatch Logs to ensure data security."
+  },
+  "correct_answer": "B",
+  "explanation": "Multi-AZ RDS for SQL Server provides high availability and reduces operational overhead compared to self-managed EC2 instances. KMS managed keys provide encryption at rest with minimal management."
+}

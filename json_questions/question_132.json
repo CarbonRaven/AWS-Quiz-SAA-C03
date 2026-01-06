@@ -1,0 +1,15 @@
+{
+  "question_number": 132,
+  "topic": 1,
+  "question_text": "A company\u2019s website provides users with downloadable historical performance reports. The website needs a solution that will scale to meet the company\u2019s website demands globally. The solution should be cost-effective, limit the provisioning of infrastructure resources, and provide the fastest possible response time.\nWhich combination should a solutions architect recommend to meet these requirements?",
+  "options": {
+    "A": "Amazon CloudFront and Amazon S3",
+    "B": "AWS Lambda and Amazon DynamoDB",
+    "C": "Application Load Balancer with Amazon EC2 Auto Scaling",
+    "D": "Amazon Route 53 with internal Application Load Balancers"
+  },
+  "correct_answer": "A",
+  "community_vote": {
+    "A": "96%"
+  }
+}

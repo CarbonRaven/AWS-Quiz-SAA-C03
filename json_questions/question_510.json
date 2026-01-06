@@ -1,0 +1,15 @@
+{
+  "question_number": 510,
+  "topic": 1,
+  "question_text": "A global marketing company has applications that run in the ap-southeast-2 Region and the eu-west-1 Region. Applications that run in a VPC in eu-west-1 need to communicate securely with databases that run in a VPC in ap-southeast-2.\n\nWhich network design will meet these requirements?",
+  "options": {
+    "A": "Create a VPC peering connection between the eu-west-1 VPC and the ap-southeast-2 VP",
+    "C": "After the transit gateways are properly peered and routing is configured, create an inbound rule in the database security group that references the security group ID of the application servers in eu-west-1.",
+    "B": "Configure a VPC peering connection between the ap-southeast-2 VPC and the eu-west-1 VP",
+    "D": "Create a transit gateway with a peering attachment between the eu-west-1 VPC and the ap-southeast-2 VP"
+  },
+  "correct_answer": "C",
+  "community_vote": {
+    "C": "90%"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": 420,
+  "topic": "Topic 1",
+  "question": "A company wants to use an Amazon RDS for PostgreSQL DB cluster to simplify time-consuming database administrative tasks for production database workloads. The company wants to ensure that its database is highly available and will provide automatic failover support in most scenarios in less than 40 seconds. The company wants to offload reads off of the primary instance and keep costs as low as possible.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Use an Amazon RDS Multi-AZ DB instance deployment. Create one read replica and point the read workload to the read replica.",
+    "B": "Use an Amazon RDS Multi-AZ DB cluster deployment. Create two read replicas and point the read workload to the read replicas.",
+    "C": "Use an Amazon RDS Multi-AZ DB instance deployment. Point the read workload to the secondary instances in the Multi-AZ pair.",
+    "D": "Use an Amazon RDS Multi-AZ DB cluster deployment. Point the read workload to the reader endpoint."
+  },
+  "correct_answer": "D",
+  "explanation": "RDS Multi-AZ DB cluster deployment provides automatic failover in under 35 seconds and includes two readable standby instances. The reader endpoint automatically routes read traffic to the standby instances. Standard Multi-AZ instance deployment has 60-120 second failover. Multi-AZ standby instances aren't readable in instance deployment mode. Creating additional read replicas adds cost."
+}

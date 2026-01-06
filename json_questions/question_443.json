@@ -1,0 +1,16 @@
+{
+  "question_number": 443,
+  "topic": 1,
+  "question_text": "A company wants to host a scalable web application on AWS. The application will be accessed by users from different geographic regions of the world. Application users will be able to download and upload unique data up to gigabytes in size. The development team wants a cost-effective solution to minimize upload and download latency and maximize performance.\n\nWhat should a solutions architect do to accomplish this?",
+  "options": {
+    "A": "Use Amazon S3 with Transfer Acceleration to host the application.",
+    "B": "Use Amazon S3 with CacheControl headers to host the application.",
+    "C": "Use Amazon EC2 with Auto Scaling and Amazon CloudFront to host the application.",
+    "D": "Use Amazon EC2 with Auto Scaling and Amazon ElastiCache to host the application."
+  },
+  "correct_answer": "A",
+  "community_vote": {
+    "A": "73%",
+    "C": "27%"
+  }
+}

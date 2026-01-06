@@ -1,0 +1,13 @@
+{
+  "id": 323,
+  "topic": "Topic 1",
+  "question": "A company's facility has badge readers at every entrance throughout the building. When badges are scanned, the readers send a message over HTTPS to indicate who attempted to access that particular entrance.\n\nA solutions architect must design a system to process these messages from the sensors. The solution must be highly available, and the results must be made available for the company's security team to analyze.\n\nWhich system architecture should the solutions architect recommend?",
+  "options": {
+    "A": "Launch an Amazon EC2 instance to serve as the HTTPS endpoint and to process the messages. Configure the EC2 instance to save the results to an Amazon S3 bucket.",
+    "B": "Create an HTTPS endpoint in Amazon API Gateway. Configure the API Gateway endpoint to invoke an AWS Lambda function to process the messages and save the results to an Amazon DynamoDB table.",
+    "C": "Use Amazon Route 53 to direct incoming sensor messages to an AWS Lambda function. Configure the Lambda function to process the messages and save the results to an Amazon DynamoDB table.",
+    "D": "Create a gateway VPC endpoint for Amazon S3. Configure a Site-to-Site VPN connection from the facility network to the VPC so that sensor data can be written directly to an S3 bucket by way of the VPC endpoint."
+  },
+  "correct_answer": "B",
+  "explanation": "API Gateway provides a highly available HTTPS endpoint. Lambda processes messages serverlessly. DynamoDB provides highly available storage for security team analysis. Single EC2 isn't highly available. Route 53 routes DNS, not HTTPS requests. VPC endpoints don't provide HTTPS endpoints for external devices."
+}

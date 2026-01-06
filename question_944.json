@@ -1,0 +1,13 @@
+{
+  "id": 944,
+  "topic": "Topic 1",
+  "question": "An ecommerce company is preparing to deploy a web application on AWS to ensure continuous service for customers. The architecture includes a web application that the company hosts on Amazon EC2 instances, a relational database in Amazon RDS, and static assets that the company stores in Amazon S3.\n\nThe company wants to design a robust and resilient architecture for the application.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Deploy Amazon EC2 instances in a single Availability Zone. Deploy an RDS DB instance in the same Availability Zone. Use Amazon S3 with versioning enabled to store static assets.",
+    "B": "Deploy Amazon EC2 instances in an Auto Scaling group across multiple Availability Zones. Deploy a Multi-AZ RDS DB instance. Use Amazon CloudFront to distribute static assets.",
+    "C": "Deploy Amazon EC2 instances in a single Availability Zone. Deploy an RDS DB instance in a second Availability Zone for cross-AZ redundancy. Serve static assets directly from the EC2 instances.",
+    "D": "Use AWS Lambda functions to serve the web application. Use Amazon Aurora Serverless v2 for the database. Store static assets in Amazon Elastic File System (Amazon EFS) One Zone-Infrequent Access (One Zone-IA)."
+  },
+  "correct_answer": "B",
+  "explanation": "Auto Scaling across multiple AZs provides EC2 resilience. Multi-AZ RDS provides database high availability with automatic failover. CloudFront provides global static asset distribution with edge caching."
+}

@@ -1,0 +1,15 @@
+{
+  "question_number": 417,
+  "topic": 1,
+  "question_text": "A company uses Amazon EC2 instances and AWS Lambda functions to run its application. The company has VPCs with public subnets and private subnets in its AWS account. The EC2 instances run in a private subnet in one of the VPCs. The Lambda functions need direct network access to the EC2 instances for the application to work.\n\nThe application will run for at least 1 year. The company expects the number of Lambda functions that the application uses to increase during that time. The company wants to maximize its savings on all application resources and to keep network latency between the services low.\n\nWhich solution will meet these requirements?",
+  "options": {
+    "A": "Purchase an EC2 Instance Savings Plan Optimize the Lambda functions\u2019 duration and memory usage and the number of invocations. Connect the Lambda functions to the private subnet that contains the EC2 instances.",
+    "B": "Purchase an EC2 Instance Savings Plan Optimize the Lambda functions' duration and memory usage, the number of invocations, and the amount of data that is transferred. Connect the Lambda functions to a public subnet in the same VPC where the EC2 instances run.",
+    "C": "Correct Answer: C \ud83d\uddf3\ufe0f",
+    "D": "Purchase a Compute Savings Plan. Optimize the Lambda functions\u2019 duration and memory usage, the number of invocations, and the amount of data that is transferred. Keep the Lambda functions in the Lambda service VP"
+  },
+  "correct_answer": "C",
+  "community_vote": {
+    "C": "100%"
+  }
+}

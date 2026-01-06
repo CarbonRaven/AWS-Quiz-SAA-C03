@@ -1,0 +1,13 @@
+{
+  "id": 399,
+  "topic": "Topic 1",
+  "question": "A company has more than 5 TB of file data on Windows file servers that run on premises. Users and applications interact with the data each day.\n\nThe company is moving its Windows workloads to AWS. As the company continues with this process, the company requires access to AWS and on-premises file storage with minimum latency. The company needs a solution that minimizes operational overhead and requires no significant changes to the existing file storage architecture on premises.\n\nWhat should a solutions architect do to meet these requirements?",
+  "options": {
+    "A": "Deploy and configure Amazon FSx for Windows File Server on AWS. Move the on-premises file data to FSx for Windows File Server. Reconfigure the workloads to use FSx for Windows File Server on AWS.",
+    "B": "Deploy and configure an Amazon S3 File Gateway on premises. Move the on-premises file data to the S3 File Gateway. Reconfigure the on-premises workloads and the cloud workloads to use the S3 File Gateway.",
+    "C": "Deploy and configure an Amazon S3 File Gateway on premises. Move the on-premises file data to Amazon S3. Reconfigure the workloads to use either Amazon S3 directly or the S3 File Gateway, depending on each workload's location.",
+    "D": "Deploy and configure Amazon FSx for Windows File Server on AWS. Deploy and configure an Amazon FSx File Gateway on premises. Move the on-premises file data to the FSx File Gateway. Configure the cloud workloads to use FSx for Windows File Server on AWS. Configure the on-premises workloads to use the FSx File Gateway."
+  },
+  "correct_answer": "D",
+  "explanation": "FSx for Windows File Server provides Windows-compatible file storage in AWS. FSx File Gateway provides on-premises access to FSx with local caching for low latency. This maintains the existing Windows file storage architecture. S3 File Gateway uses S3 storage which changes the file system semantics. Moving all data to FSx alone adds latency for on-premises access."
+}

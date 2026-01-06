@@ -1,0 +1,13 @@
+{
+  "id": 992,
+  "topic": "Topic 1",
+  "question": "A company's software development team needs an Amazon RDS Multi-AZ cluster. The RDS cluster will serve as a backend for a desktop client that is deployed on premises. The desktop client requires direct connectivity to the RDS cluster.\n\nThe company must give the development team the ability to connect to the cluster by using the client when the team is in the office.\n\nWhich solution provides the required connectivity MOST securely?",
+  "options": {
+    "A": "Create a VPC and two public subnets. Create the RDS cluster in the public subnets. Use AWS Site-to-Site VPN with a customer gateway in the company's office.",
+    "B": "Create a VPC and two private subnets. Create the RDS cluster in the private subnets. Use AWS Site-to-Site VPN with a customer gateway in the company's office.",
+    "C": "Create a VPC and two private subnets. Create the RDS cluster in the private subnets. Use RDS security groups to allow the company's office IP ranges to access the cluster.",
+    "D": "Create a VPC and two public subnets. Create the RDS cluster in the public subnets. Create a cluster user for each developer. Use RDS security groups to allow the users to access the cluster."
+  },
+  "correct_answer": "B",
+  "explanation": "Private subnets with Site-to-Site VPN provides the most secure connectivity. The RDS cluster is not exposed to the internet, and the VPN creates an encrypted tunnel between the office and AWS. This is more secure than public subnets or IP-based security group rules."
+}
