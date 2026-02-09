@@ -14,7 +14,8 @@ A self-hosted quiz application for AWS Solutions Architect Associate (SAA-C03) e
   - **Wrong** - Review previously incorrect answers
   - **Due** - Spaced repetition review queue
 - **Configurable Sessions** - Choose 10, 20, 30, 50, or custom question counts
-- **Dark Mode UI** - Easy on the eyes during long study sessions
+- **Keyboard Shortcuts** - Press A-D to select answers, Enter to submit/advance
+- **Dark Mode UI** - Inter font, animated transitions, and toast notifications
 
 ## Quick Start (Docker)
 
@@ -215,7 +216,7 @@ docker cp questions-aws-quiz-1:/app/data/quiz.db ./backup-quiz.db
 
 - **Backend**: Python 3.12, Flask
 - **Database**: SQLite
-- **Frontend**: Alpine.js, Tailwind CSS, Chart.js
+- **Frontend**: Alpine.js, Tailwind CSS, Chart.js, Inter (Google Fonts)
 - **Server**: Gunicorn (production), Flask dev server (local)
 - **Container**: Docker, Docker Compose
 
