@@ -40,5 +40,8 @@ htmlcov/
 !screenshots/*.png
 /*.png
 
+# Claude Code
+CLAUDE.md
+
 # Temporary files
 /tmp/
