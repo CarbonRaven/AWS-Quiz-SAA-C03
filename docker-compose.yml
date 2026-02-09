@@ -5,6 +5,8 @@ services:
       dockerfile: aws-quiz/Dockerfile
     ports:
       - "5050:5050"
+    environment:
+      - SECRET_KEY=${SECRET_KEY:-}
     volumes:
       # Persist quiz progress data
       - quiz-data:/app/data

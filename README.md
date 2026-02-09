@@ -23,6 +23,10 @@ A self-hosted quiz application for AWS Solutions Architect Associate (SAA-C03) e
 git clone https://github.com/CarbonRaven/AWS-Quiz-SAA-C03.git
 cd AWS-Quiz-SAA-C03
 
+# (Optional) Set a secret key for persistent sessions across restarts
+# If not set, a random key is generated on each startup
+export SECRET_KEY=$(openssl rand -hex 32)
+
 # Start the application
 docker-compose up -d
 
@@ -168,6 +172,29 @@ docker-compose down -v
 ```
 
 ## Configuration
+
+### Secret Key
+Flask uses `SECRET_KEY` to cryptographically sign session cookies, which store your in-progress quiz state (current question, score, answers). Without a persistent key, sessions are invalidated whenever the app restarts — you'd need to start a new quiz session. Your quiz history and spaced repetition progress are stored in the SQLite database and are **not** affected.
+
+For a personal study app, leaving it unset is fine. To persist sessions across restarts, set it using any of these methods:
+
+**Option 1: Environment variable**
+```bash
+export SECRET_KEY=$(openssl rand -hex 32)
+docker-compose up -d
+```
+
+**Option 2: `.env` file** (automatically read by Docker Compose)
+```bash
+echo "SECRET_KEY=$(openssl rand -hex 32)" > .env
+docker-compose up -d
+```
+
+**Option 3: Hardcode in `docker-compose.yml`**
+```yaml
+environment:
+  - SECRET_KEY=your-secret-key-here
+```
 
 ### Port
 Default port is `5050`. To change, edit `docker-compose.yml`:
