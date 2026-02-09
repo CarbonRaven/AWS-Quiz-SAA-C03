@@ -11,6 +11,8 @@ from models import (
     get_question_explanation
 )
 
+VALID_FILTERS = {'all', 'new', 'wrong', 'due'}
+
 app = Flask(__name__)
 app.secret_key = os.environ.get('SECRET_KEY', secrets.token_hex(32))
 
@@ -18,6 +20,12 @@ app.secret_key = os.environ.get('SECRET_KEY', secrets.token_hex(32))
 def ensure_db():
     """Ensure database is initialized."""
     init_db()
+
+@app.before_request
+def csrf_check():
+    """Reject POST requests without JSON content type (CSRF protection)."""
+    if request.method == 'POST' and request.content_type != 'application/json':
+        return jsonify({'error': 'Content-Type must be application/json'}), 415
 
 # --- Page Routes ---
 
@@ -39,9 +47,22 @@ def dashboard():
 def start_session():
     """Start a new quiz session."""
     data = request.get_json()
+    if not data:
+        return jsonify({'error': 'Invalid JSON body'}), 400
+
     count = data.get('count', 10)
+    if not isinstance(count, int) or count < 1 or count > 100:
+        return jsonify({'error': 'Count must be an integer between 1 and 100'}), 400
+
     filter_mode = data.get('filter', 'all')
-    tags = data.get('tags')  # Optional list of AWS service tags
+    if filter_mode not in VALID_FILTERS:
+        return jsonify({'error': f'Invalid filter. Must be one of: {", ".join(VALID_FILTERS)}'}), 400
+
+    tags = data.get('tags')
+    if tags is not None:
+        if not isinstance(tags, list) or not all(isinstance(t, str) for t in tags):
+            return jsonify({'error': 'Tags must be a list of strings'}), 400
+        tags = [t for t in tags if t] or None  # Drop empty strings
 
     questions = get_questions_for_session(count, filter_mode, tags)
 
@@ -98,10 +119,12 @@ def submit_answer():
         return jsonify({'error': 'No active session'}), 400
 
     data = request.get_json()
-    answer = data.get('answer')
+    if not data:
+        return jsonify({'error': 'Invalid JSON body'}), 400
 
-    if not answer:
-        return jsonify({'error': 'No answer provided'}), 400
+    answer = data.get('answer')
+    if not isinstance(answer, str) or not answer.isalpha() or len(answer) > 5:
+        return jsonify({'error': 'Invalid answer'}), 400
 
     questions = session['questions']
     current_index = session.get('current_index', 0)
@@ -163,7 +186,8 @@ def get_stats():
 def get_counts():
     """Get question counts for each filter, optionally filtered by tags."""
     tags = request.args.getlist('tags')
-    return jsonify(get_filter_counts(tags if tags else None))
+    tags = [t for t in tags if isinstance(t, str) and t] or None
+    return jsonify(get_filter_counts(tags))
 
 @app.route('/api/tags')
 def get_tags():
