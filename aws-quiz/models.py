@@ -91,11 +91,13 @@ def get_questions_for_session(count, filter_mode="all", tags=None):
     """
     conn = get_db()
 
-    # Build tag filter clause
+    # Build tag filter clause with parameterized queries
     tag_filter = ""
+    tag_params = []
     if tags:
-        tag_conditions = " OR ".join([f"q.tags LIKE '%\"{tag}\"%'" for tag in tags])
-        tag_filter = f" AND ({tag_conditions})"
+        placeholders = " OR ".join(["q.tags LIKE ?" for _ in tags])
+        tag_filter = f" AND ({placeholders})"
+        tag_params = [f'%"{tag}"%' for tag in tags]
 
     if filter_mode == "new":
         query = f"""
@@ -129,7 +131,7 @@ def get_questions_for_session(count, filter_mode="all", tags=None):
             LIMIT ?
         """
 
-    rows = conn.execute(query, (count,)).fetchall()
+    rows = conn.execute(query, tag_params + [count]).fetchall()
     conn.close()
     return [dict(row) for row in rows]
 
@@ -276,33 +278,38 @@ def get_filter_counts(tags=None):
     """Get counts for each filter mode, optionally filtered by tags."""
     conn = get_db()
 
-    # Build tag filter clause
+    # Build tag filter clause with parameterized queries
     tag_filter = ""
+    tag_params = []
     if tags:
-        # Match any of the provided tags using JSON
-        tag_conditions = " OR ".join([f"q.tags LIKE '%\"{tag}\"%'" for tag in tags])
-        tag_filter = f" AND ({tag_conditions})"
+        placeholders = " OR ".join(["q.tags LIKE ?" for _ in tags])
+        tag_filter = f" AND ({placeholders})"
+        tag_params = [f'%"{tag}"%' for tag in tags]
 
     total = conn.execute(
-        f"SELECT COUNT(*) as count FROM questions q WHERE 1=1 {tag_filter}"
+        f"SELECT COUNT(*) as count FROM questions q WHERE 1=1 {tag_filter}",
+        tag_params
     ).fetchone()['count']
 
     new_count = conn.execute(
         f"""SELECT COUNT(*) as count FROM questions q
            LEFT JOIN question_stats qs ON q.id = qs.question_id
-           WHERE qs.question_id IS NULL {tag_filter}"""
+           WHERE qs.question_id IS NULL {tag_filter}""",
+        tag_params
     ).fetchone()['count']
 
     wrong_count = conn.execute(
         f"""SELECT COUNT(*) as count FROM questions q
            JOIN question_stats qs ON q.id = qs.question_id
-           WHERE qs.times_wrong > qs.times_correct {tag_filter}"""
+           WHERE qs.times_wrong > qs.times_correct {tag_filter}""",
+        tag_params
     ).fetchone()['count']
 
     due_count = conn.execute(
         f"""SELECT COUNT(*) as count FROM questions q
            JOIN question_stats qs ON q.id = qs.question_id
-           WHERE qs.next_review <= datetime('now') {tag_filter}"""
+           WHERE qs.next_review <= datetime('now') {tag_filter}""",
+        tag_params
     ).fetchone()['count']
 
     conn.close()
