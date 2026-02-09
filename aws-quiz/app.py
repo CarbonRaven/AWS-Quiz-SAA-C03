@@ -2,6 +2,8 @@
 """Flask application for AWS Quiz."""
 
 import json
+import os
+import secrets
 from flask import Flask, render_template, jsonify, request, session
 from models import (
     init_db, get_questions_for_session, get_question,
@@ -10,7 +12,7 @@ from models import (
 )
 
 app = Flask(__name__)
-app.secret_key = 'aws-quiz-secret-key-change-in-production'
+app.secret_key = os.environ.get('SECRET_KEY', secrets.token_hex(32))
 
 @app.before_request
 def ensure_db():
